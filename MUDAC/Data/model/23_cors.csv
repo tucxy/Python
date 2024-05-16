@@ -1,0 +1,910 @@
+﻿County,Route System,Centerline Miles,Lane Miles
+Aitkin,2 - US Highway,4.895E+01,9.790E+01
+Aitkin,3 - MN Highway,2.046E+02,4.100E+02
+Aitkin,4 - County State Aid Highway,3.818E+02,7.635E+02
+Aitkin,7 - County Road,1.315E+02,2.631E+02
+Aitkin,8 - Township Road,7.813E+02,1.563E+03
+Aitkin,9 - Unorganized Territory Road,6.049E+01,1.210E+02
+Aitkin,10 - Municipal Street,3.204E+01,6.408E+01
+Aitkin,12 - National Forest Road,2.982E+00,5.964E+00
+Aitkin,13 - Indian Tribe Nation Road,1.765E+00,3.715E+00
+Aitkin,14 - State Forest Road,9.460E+01,1.892E+02
+Aitkin,15 - State Park Road,6.909E+00,1.382E+01
+Aitkin,18 - Bureau of Fish and Wildlife Road,1.266E+01,2.532E+01
+Aitkin,"25 - Local Park, Forest or Reservation Agency Road",2.531E+00,5.063E+00
+Aitkin,30 - Alleyway,4.397E+00,8.795E+00
+Anoka,1 - Interstate,2.337E+01,1.046E+02
+Anoka,2 - US Highway,1.869E+01,8.738E+01
+Anoka,3 - MN Highway,5.289E+01,2.002E+02
+Anoka,4 - County State Aid Highway,3.117E+02,7.937E+02
+Anoka,5 - Municipal State Aid Street,3.527E+02,7.386E+02
+Anoka,7 - County Road,9.861E+01,1.975E+02
+Anoka,8 - Township Road,6.218E+01,1.244E+02
+Anoka,10 - Municipal Street,1.527E+03,3.055E+03
+Anoka,"25 - Local Park, Forest or Reservation Agency Road",1.508E+00,3.017E+00
+Anoka,26 - Other Local Road,6.111E-01,1.222E+00
+Anoka,30 - Alleyway,2.194E+01,4.370E+01
+Becker,2 - US Highway,5.878E+01,1.705E+02
+Becker,3 - MN Highway,8.145E+01,1.647E+02
+Becker,4 - County State Aid Highway,4.782E+02,9.572E+02
+Becker,5 - Municipal State Aid Street,2.595E+01,5.281E+01
+Becker,7 - County Road,1.908E+02,3.816E+02
+Becker,8 - Township Road,1.126E+03,2.252E+03
+Becker,10 - Municipal Street,8.062E+01,1.613E+02
+Becker,13 - Indian Tribe Nation Road,4.910E+01,9.821E+01
+Becker,14 - State Forest Road,1.768E+00,3.536E+00
+Becker,15 - State Park Road,3.657E-01,7.315E-01
+Becker,18 - Bureau of Fish and Wildlife Road,1.120E+01,2.239E+01
+Becker,30 - Alleyway,4.176E+00,8.172E+00
+Beltrami,2 - US Highway,5.589E+01,1.683E+02
+Beltrami,3 - MN Highway,1.659E+02,3.431E+02
+Beltrami,4 - County State Aid Highway,4.651E+02,9.308E+02
+Beltrami,5 - Municipal State Aid Street,2.106E+01,4.295E+01
+Beltrami,7 - County Road,2.497E+02,4.995E+02
+Beltrami,8 - Township Road,7.101E+02,1.420E+03
+Beltrami,9 - Unorganized Territory Road,5.122E+01,1.024E+02
+Beltrami,10 - Municipal Street,1.077E+02,2.159E+02
+Beltrami,12 - National Forest Road,1.488E+02,2.975E+02
+Beltrami,13 - Indian Tribe Nation Road,2.355E+02,4.710E+02
+Beltrami,14 - State Forest Road,6.720E+01,1.344E+02
+Beltrami,15 - State Park Road,2.583E+00,5.167E+00
+Beltrami,20 - Other State Agency Road,2.222E-01,4.444E-01
+Beltrami,30 - Alleyway,1.208E+01,2.416E+01
+Benton,2 - US Highway,2.075E+01,8.418E+01
+Benton,3 - MN Highway,6.351E+01,1.579E+02
+Benton,4 - County State Aid Highway,2.245E+02,4.517E+02
+Benton,5 - Municipal State Aid Street,2.048E+01,4.621E+01
+Benton,7 - County Road,2.265E+02,4.530E+02
+Benton,8 - Township Road,3.012E+02,6.024E+02
+Benton,10 - Municipal Street,1.125E+02,2.250E+02
+Benton,30 - Alleyway,1.552E+01,3.105E+01
+Big Stone,2 - US Highway,4.519E+01,9.037E+01
+Big Stone,3 - MN Highway,6.548E+01,1.310E+02
+Big Stone,4 - County State Aid Highway,2.101E+02,4.205E+02
+Big Stone,7 - County Road,1.947E+02,3.894E+02
+Big Stone,8 - Township Road,3.659E+02,7.318E+02
+Big Stone,10 - Municipal Street,4.058E+01,8.116E+01
+Big Stone,15 - State Park Road,3.912E+00,7.825E+00
+Big Stone,18 - Bureau of Fish and Wildlife Road,2.130E+00,4.260E+00
+Big Stone,30 - Alleyway,9.670E+00,1.934E+01
+Blue Earth,2 - US Highway,4.136E+01,1.221E+02
+Blue Earth,52 - Non-numbered US Highway,9.943E-02,4.049E-01
+Blue Earth,3 - MN Highway,1.126E+02,2.633E+02
+Blue Earth,32 - Former Highway,7.363E-02,1.490E-01
+Blue Earth,4 - County State Aid Highway,4.361E+02,8.935E+02
+Blue Earth,5 - Municipal State Aid Street,4.302E+01,1.079E+02
+Blue Earth,7 - County Road,3.044E+02,6.088E+02
+Blue Earth,8 - Township Road,6.140E+02,1.228E+03
+Blue Earth,10 - Municipal Street,2.050E+02,4.095E+02
+Blue Earth,15 - State Park Road,4.352E+00,8.704E+00
+Blue Earth,"25 - Local Park, Forest or Reservation Agency Road",2.694E-01,5.388E-01
+Blue Earth,30 - Alleyway,2.469E+01,4.939E+01
+Brown,2 - US Highway,3.504E+01,7.542E+01
+Brown,3 - MN Highway,5.713E+01,1.210E+02
+Brown,4 - County State Aid Highway,3.276E+02,6.552E+02
+Brown,5 - Municipal State Aid Street,1.803E+01,3.623E+01
+Brown,7 - County Road,1.827E+01,3.654E+01
+Brown,8 - Township Road,6.360E+02,1.272E+03
+Brown,10 - Municipal Street,1.203E+02,2.401E+02
+Brown,15 - State Park Road,2.751E+00,5.502E+00
+Brown,30 - Alleyway,4.276E+01,8.553E+01
+Carlton,1 - Interstate,3.185E+01,1.275E+02
+Carlton,3 - MN Highway,1.103E+02,2.328E+02
+Carlton,4 - County State Aid Highway,2.918E+02,5.939E+02
+Carlton,5 - Municipal State Aid Street,2.293E+01,4.616E+01
+Carlton,7 - County Road,1.865E+02,3.730E+02
+Carlton,8 - Township Road,3.881E+02,7.762E+02
+Carlton,9 - Unorganized Territory Road,4.505E+01,9.011E+01
+Carlton,10 - Municipal Street,9.644E+01,1.926E+02
+Carlton,13 - Indian Tribe Nation Road,1.845E+01,3.691E+01
+Carlton,14 - State Forest Road,3.243E+01,6.487E+01
+Carlton,15 - State Park Road,2.134E+00,4.267E+00
+Carlton,20 - Other State Agency Road,1.963E-01,3.926E-01
+Carlton,24 - Bureau of Indian Affairs Road,5.630E+00,1.126E+01
+Carlton,30 - Alleyway,6.432E+00,1.286E+01
+Carver,2 - US Highway,2.696E+01,9.690E+01
+Carver,52 - Non-numbered US Highway,6.305E-01,1.261E+00
+Carver,3 - MN Highway,7.258E+01,1.609E+02
+Carver,4 - County State Aid Highway,2.285E+02,4.834E+02
+Carver,5 - Municipal State Aid Street,7.656E+01,1.560E+02
+Carver,7 - County Road,4.169E+01,8.338E+01
+Carver,8 - Township Road,3.310E+02,6.621E+02
+Carver,10 - Municipal Street,3.684E+02,7.376E+02
+Carver,18 - Bureau of Fish and Wildlife Road,3.243E-01,6.486E-01
+Carver,"25 - Local Park, Forest or Reservation Agency Road",6.502E+00,1.300E+01
+Carver,30 - Alleyway,1.133E+01,2.265E+01
+Cass,2 - US Highway,3.374E+01,7.473E+01
+Cass,3 - MN Highway,2.312E+02,4.633E+02
+Cass,4 - County State Aid Highway,5.260E+02,1.052E+03
+Cass,7 - County Road,2.404E+02,4.807E+02
+Cass,8 - Township Road,8.458E+02,1.692E+03
+Cass,9 - Unorganized Territory Road,2.086E+01,4.171E+01
+Cass,10 - Municipal Street,1.297E+02,2.593E+02
+Cass,12 - National Forest Road,4.275E+02,8.551E+02
+Cass,13 - Indian Tribe Nation Road,6.253E+01,1.251E+02
+Cass,14 - State Forest Road,6.272E+01,1.254E+02
+Cass,15 - State Park Road,1.606E+00,3.213E+00
+Cass,23 - Airport Road,1.735E+00,3.470E+00
+Cass,30 - Alleyway,6.609E+00,1.322E+01
+Chippewa,2 - US Highway,6.773E+00,1.434E+01
+Chippewa,3 - MN Highway,1.131E+02,2.265E+02
+Chippewa,4 - County State Aid Highway,2.547E+02,5.098E+02
+Chippewa,5 - Municipal State Aid Street,9.267E+00,1.900E+01
+Chippewa,7 - County Road,5.368E+01,1.074E+02
+Chippewa,8 - Township Road,7.015E+02,1.403E+03
+Chippewa,10 - Municipal Street,6.778E+01,1.351E+02
+Chippewa,20 - Other State Agency Road,5.564E-01,1.113E+00
+Chippewa,30 - Alleyway,1.068E+01,2.136E+01
+Chisago,1 - Interstate,3.021E+01,1.208E+02
+Chisago,2 - US Highway,2.401E+01,4.826E+01
+Chisago,3 - MN Highway,3.076E+01,6.300E+01
+Chisago,4 - County State Aid Highway,2.373E+02,4.748E+02
+Chisago,5 - Municipal State Aid Street,5.949E+01,1.194E+02
+Chisago,7 - County Road,9.509E+01,1.902E+02
+Chisago,8 - Township Road,3.937E+02,7.875E+02
+Chisago,9 - Unorganized Territory Road,2.374E-01,4.748E-01
+Chisago,10 - Municipal Street,2.797E+02,5.594E+02
+Chisago,12 - National Forest Road,8.296E-01,1.659E+00
+Chisago,13 - Indian Tribe Nation Road,6.952E-01,1.390E+00
+Chisago,14 - State Forest Road,3.595E-01,7.190E-01
+Chisago,15 - State Park Road,8.291E+00,1.636E+01
+Chisago,"25 - Local Park, Forest or Reservation Agency Road",6.275E-01,1.255E+00
+Chisago,30 - Alleyway,2.241E+00,4.481E+00
+Clay,1 - Interstate,2.705E+01,1.087E+02
+Clay,2 - US Highway,6.502E+01,1.947E+02
+Clay,3 - MN Highway,8.643E+01,1.771E+02
+Clay,4 - County State Aid Highway,4.026E+02,8.059E+02
+Clay,5 - Municipal State Aid Street,5.185E+01,1.250E+02
+Clay,7 - County Road,3.350E+02,6.700E+02
+Clay,8 - Township Road,9.146E+02,1.829E+03
+Clay,10 - Municipal Street,2.314E+02,4.627E+02
+Clay,15 - State Park Road,1.721E+00,3.443E+00
+Clay,30 - Alleyway,1.249E+01,2.497E+01
+Clearwater,2 - US Highway,1.771E+01,7.088E+01
+Clearwater,3 - MN Highway,7.878E+01,1.576E+02
+Clearwater,4 - County State Aid Highway,3.244E+02,6.488E+02
+Clearwater,7 - County Road,1.026E+02,2.052E+02
+Clearwater,8 - Township Road,4.476E+02,8.952E+02
+Clearwater,9 - Unorganized Territory Road,1.340E+01,2.681E+01
+Clearwater,10 - Municipal Street,2.639E+01,5.267E+01
+Clearwater,13 - Indian Tribe Nation Road,1.153E+02,2.307E+02
+Clearwater,14 - State Forest Road,8.745E+01,1.749E+02
+Clearwater,15 - State Park Road,2.707E+01,5.415E+01
+Clearwater,"25 - Local Park, Forest or Reservation Agency Road",5.820E+00,1.164E+01
+Clearwater,30 - Alleyway,5.832E+00,1.166E+01
+Cook,3 - MN Highway,7.955E+01,1.595E+02
+Cook,4 - County State Aid Highway,1.783E+02,3.566E+02
+Cook,7 - County Road,6.697E+01,1.339E+02
+Cook,8 - Township Road,1.719E+01,3.438E+01
+Cook,9 - Unorganized Territory Road,2.355E+02,4.697E+02
+Cook,10 - Municipal Street,5.556E+00,1.111E+01
+Cook,12 - National Forest Road,3.301E+02,6.585E+02
+Cook,13 - Indian Tribe Nation Road,2.486E+01,4.972E+01
+Cook,14 - State Forest Road,3.789E+01,7.577E+01
+Cook,15 - State Park Road,5.819E+00,1.164E+01
+Cook,30 - Alleyway,1.909E+00,3.818E+00
+Cottonwood,2 - US Highway,2.308E+01,4.616E+01
+Cottonwood,3 - MN Highway,6.385E+01,1.599E+02
+Cottonwood,4 - County State Aid Highway,3.194E+02,6.389E+02
+Cottonwood,7 - County Road,9.646E+01,1.929E+02
+Cottonwood,8 - Township Road,6.973E+02,1.395E+03
+Cottonwood,10 - Municipal Street,6.647E+01,1.329E+02
+Cottonwood,18 - Bureau of Fish and Wildlife Road,4.016E-02,8.032E-02
+Cottonwood,20 - Other State Agency Road,2.535E-01,5.069E-01
+Cottonwood,30 - Alleyway,1.020E+01,2.041E+01
+Crow Wing,2 - US Highway,5.460E+00,1.401E+01
+Crow Wing,3 - MN Highway,1.432E+02,3.821E+02
+Crow Wing,4 - County State Aid Highway,3.769E+02,7.548E+02
+Crow Wing,5 - Municipal State Aid Street,3.704E+01,8.180E+01
+Crow Wing,7 - County Road,1.612E+02,3.235E+02
+Crow Wing,8 - Township Road,7.623E+02,1.525E+03
+Crow Wing,9 - Unorganized Territory Road,7.486E+01,1.497E+02
+Crow Wing,10 - Municipal Street,5.222E+02,1.044E+03
+Crow Wing,13 - Indian Tribe Nation Road,2.927E-01,5.854E-01
+Crow Wing,14 - State Forest Road,6.350E+00,1.270E+01
+Crow Wing,15 - State Park Road,1.226E+01,2.451E+01
+Crow Wing,30 - Alleyway,2.689E+01,5.377E+01
+Dakota,1 - Interstate,3.608E+01,1.992E+02
+Dakota,2 - US Highway,4.290E+01,1.501E+02
+Dakota,3 - MN Highway,1.218E+02,3.296E+02
+Dakota,53 - Non-numbered MN Highway,1.366E+00,2.732E+00
+Dakota,4 - County State Aid Highway,3.373E+02,8.907E+02
+Dakota,5 - Municipal State Aid Street,3.554E+02,8.071E+02
+Dakota,7 - County Road,7.368E+01,1.474E+02
+Dakota,8 - Township Road,3.373E+02,6.752E+02
+Dakota,10 - Municipal Street,1.383E+03,2.770E+03
+Dakota,15 - State Park Road,1.511E+00,3.022E+00
+Dakota,19 - Frontage Road,2.287E+00,4.084E+00
+Dakota,"25 - Local Park, Forest or Reservation Agency Road",1.502E+00,3.011E+00
+Dakota,26 - Other Local Road,4.268E-01,8.524E-01
+Dakota,30 - Alleyway,3.253E+01,6.506E+01
+Dodge,2 - US Highway,1.983E+01,7.796E+01
+Dodge,52 - Non-numbered US Highway,6.336E-01,1.267E+00
+Dodge,3 - MN Highway,5.600E+01,1.126E+02
+Dodge,32 - Former Highway,1.635E-01,3.473E-01
+Dodge,4 - County State Aid Highway,2.636E+02,5.277E+02
+Dodge,5 - Municipal State Aid Street,6.395E+00,1.279E+01
+Dodge,7 - County Road,5.458E+01,1.092E+02
+Dodge,8 - Township Road,4.527E+02,9.055E+02
+Dodge,10 - Municipal Street,7.259E+01,1.452E+02
+Dodge,30 - Alleyway,7.165E+00,1.433E+01
+Douglas,1 - Interstate,3.468E+01,1.387E+02
+Douglas,3 - MN Highway,6.647E+01,1.427E+02
+Douglas,32 - Former Highway,6.739E-02,1.194E-01
+Douglas,53 - Non-numbered MN Highway,2.301E-01,4.430E-01
+Douglas,4 - County State Aid Highway,3.974E+02,7.947E+02
+Douglas,5 - Municipal State Aid Street,3.325E+01,6.854E+01
+Douglas,7 - County Road,1.479E+02,2.958E+02
+Douglas,8 - Township Road,7.478E+02,1.496E+03
+Douglas,10 - Municipal Street,1.137E+02,2.274E+02
+Douglas,15 - State Park Road,2.209E+00,4.422E+00
+Douglas,18 - Bureau of Fish and Wildlife Road,1.266E+00,2.532E+00
+Douglas,30 - Alleyway,1.210E+01,2.420E+01
+Faribault,1 - Interstate,3.047E+01,1.218E+02
+Faribault,2 - US Highway,2.530E+01,5.323E+01
+Faribault,3 - MN Highway,5.508E+01,1.102E+02
+Faribault,4 - County State Aid Highway,3.583E+02,7.166E+02
+Faribault,7 - County Road,1.032E+02,2.064E+02
+Faribault,8 - Township Road,7.941E+02,1.588E+03
+Faribault,10 - Municipal Street,8.670E+01,1.734E+02
+Faribault,30 - Alleyway,2.159E+01,4.318E+01
+Fillmore,2 - US Highway,4.796E+01,9.859E+01
+Fillmore,3 - MN Highway,1.230E+02,2.461E+02
+Fillmore,4 - County State Aid Highway,4.060E+02,8.120E+02
+Fillmore,7 - County Road,6.889E+01,1.378E+02
+Fillmore,8 - Township Road,8.084E+02,1.617E+03
+Fillmore,10 - Municipal Street,1.234E+02,2.466E+02
+Fillmore,14 - State Forest Road,6.547E+00,1.309E+01
+Fillmore,15 - State Park Road,4.111E+00,8.222E+00
+Fillmore,30 - Alleyway,1.593E+01,3.187E+01
+Freeborn,1 - Interstate,5.612E+01,2.245E+02
+Freeborn,2 - US Highway,2.838E+01,7.149E+01
+Freeborn,3 - MN Highway,3.472E+01,7.876E+01
+Freeborn,4 - County State Aid Highway,4.443E+02,8.892E+02
+Freeborn,5 - Municipal State Aid Street,2.468E+01,5.185E+01
+Freeborn,7 - County Road,1.791E+02,3.581E+02
+Freeborn,8 - Township Road,6.493E+02,1.299E+03
+Freeborn,10 - Municipal Street,1.305E+02,2.575E+02
+Freeborn,15 - State Park Road,2.172E+00,4.342E+00
+Freeborn,30 - Alleyway,9.798E+00,1.960E+01
+Goodhue,2 - US Highway,6.017E+01,2.103E+02
+Goodhue,3 - MN Highway,1.169E+02,2.407E+02
+Goodhue,32 - Former Highway,1.210E-01,2.423E-01
+Goodhue,4 - County State Aid Highway,3.184E+02,6.368E+02
+Goodhue,5 - Municipal State Aid Street,2.587E+01,5.585E+01
+Goodhue,7 - County Road,8.053E+01,1.611E+02
+Goodhue,8 - Township Road,8.314E+02,1.663E+03
+Goodhue,10 - Municipal Street,1.917E+02,3.833E+02
+Goodhue,13 - Indian Tribe Nation Road,6.985E-01,1.415E+00
+Goodhue,14 - State Forest Road,5.983E-01,1.197E+00
+Goodhue,15 - State Park Road,1.073E+00,2.145E+00
+Goodhue,30 - Alleyway,2.025E+01,4.038E+01
+Grant,1 - Interstate,9.619E+00,3.842E+01
+Grant,2 - US Highway,1.863E+01,3.726E+01
+Grant,3 - MN Highway,8.985E+01,1.797E+02
+Grant,4 - County State Aid Highway,2.361E+02,4.721E+02
+Grant,7 - County Road,2.277E+02,4.553E+02
+Grant,8 - Township Road,4.304E+02,8.607E+02
+Grant,10 - Municipal Street,3.791E+01,7.581E+01
+Grant,18 - Bureau of Fish and Wildlife Road,1.066E+00,2.132E+00
+Grant,30 - Alleyway,4.688E+00,9.376E+00
+Hennepin,1 - Interstate,8.745E+01,5.668E+02
+Hennepin,2 - US Highway,5.221E+01,1.956E+02
+Hennepin,52 - Non-numbered US Highway,2.833E+00,9.881E+00
+Hennepin,3 - MN Highway,1.147E+02,4.707E+02
+Hennepin,4 - County State Aid Highway,5.358E+02,1.511E+03
+Hennepin,5 - Municipal State Aid Street,8.904E+02,2.069E+03
+Hennepin,7 - County Road,3.213E+01,6.493E+01
+Hennepin,8 - Township Road,3.023E-02,6.047E-02
+Hennepin,10 - Municipal Street,3.646E+03,7.256E+03
+Hennepin,15 - State Park Road,1.019E+01,2.055E+01
+Hennepin,16 - Military Road,2.956E-01,3.761E-01
+Hennepin,18 - Bureau of Fish and Wildlife Road,1.953E-01,3.906E-01
+Hennepin,19 - Frontage Road,1.060E+00,2.128E+00
+Hennepin,23 - Airport Road,1.975E+01,3.851E+01
+Hennepin,"25 - Local Park, Forest or Reservation Agency Road",9.060E-01,1.812E+00
+Hennepin,30 - Alleyway,5.010E+02,1.002E+03
+Houston,2 - US Highway,3.211E+00,1.289E+01
+Houston,3 - MN Highway,1.034E+02,2.083E+02
+Houston,4 - County State Aid Highway,2.485E+02,4.969E+02
+Houston,5 - Municipal State Aid Street,6.090E+00,1.218E+01
+Houston,7 - County Road,1.351E+01,2.702E+01
+Houston,8 - Township Road,4.606E+02,9.213E+02
+Houston,10 - Municipal Street,7.578E+01,1.516E+02
+Houston,14 - State Forest Road,3.336E+00,6.672E+00
+Houston,15 - State Park Road,1.355E+00,2.710E+00
+Houston,30 - Alleyway,9.070E+00,1.814E+01
+Hubbard,2 - US Highway,6.223E+01,1.389E+02
+Hubbard,3 - MN Highway,9.449E+01,1.960E+02
+Hubbard,4 - County State Aid Highway,3.223E+02,6.446E+02
+Hubbard,7 - County Road,1.971E+02,3.941E+02
+Hubbard,8 - Township Road,6.266E+02,1.253E+03
+Hubbard,10 - Municipal Street,5.410E+01,1.081E+02
+Hubbard,13 - Indian Tribe Nation Road,8.693E-01,1.739E+00
+Hubbard,14 - State Forest Road,1.322E+02,2.645E+02
+Hubbard,15 - State Park Road,2.268E+00,4.537E+00
+Hubbard,30 - Alleyway,7.493E+00,1.499E+01
+Isanti,3 - MN Highway,7.469E+01,1.815E+02
+Isanti,4 - County State Aid Highway,2.247E+02,4.499E+02
+Isanti,5 - Municipal State Aid Street,2.388E+01,5.235E+01
+Isanti,7 - County Road,1.303E+02,2.607E+02
+Isanti,8 - Township Road,5.158E+02,1.032E+03
+Isanti,9 - Unorganized Territory Road,1.027E-01,2.054E-01
+Isanti,10 - Municipal Street,8.557E+01,1.712E+02
+Isanti,30 - Alleyway,3.816E+00,7.631E+00
+Itasca,2 - US Highway,9.470E+01,2.615E+02
+Itasca,3 - MN Highway,2.442E+02,4.884E+02
+Itasca,4 - County State Aid Highway,6.457E+02,1.291E+03
+Itasca,5 - Municipal State Aid Street,2.589E+01,5.240E+01
+Itasca,7 - County Road,6.432E+02,1.286E+03
+Itasca,8 - Township Road,4.932E+02,9.864E+02
+Itasca,9 - Unorganized Territory Road,2.035E+02,4.071E+02
+Itasca,10 - Municipal Street,2.146E+02,4.293E+02
+Itasca,12 - National Forest Road,5.809E+02,1.162E+03
+Itasca,13 - Indian Tribe Nation Road,1.927E+01,3.852E+01
+Itasca,14 - State Forest Road,8.939E+01,1.788E+02
+Itasca,15 - State Park Road,8.718E-01,1.744E+00
+Itasca,17 - Other Federal Agency Road,3.490E-01,6.980E-01
+Itasca,30 - Alleyway,2.950E+01,5.900E+01
+Jackson,1 - Interstate,3.035E+01,1.214E+02
+Jackson,2 - US Highway,2.667E+01,5.599E+01
+Jackson,3 - MN Highway,4.614E+01,1.319E+02
+Jackson,4 - County State Aid Highway,3.674E+02,7.349E+02
+Jackson,7 - County Road,1.495E+02,2.990E+02
+Jackson,8 - Township Road,7.380E+02,1.476E+03
+Jackson,10 - Municipal Street,5.717E+01,1.144E+02
+Jackson,15 - State Park Road,6.280E-01,1.256E+00
+Jackson,18 - Bureau of Fish and Wildlife Road,1.197E+00,2.394E+00
+Jackson,30 - Alleyway,7.137E+00,1.427E+01
+Kanabec,3 - MN Highway,9.203E+01,1.841E+02
+Kanabec,4 - County State Aid Highway,2.112E+02,4.223E+02
+Kanabec,7 - County Road,2.102E+02,4.203E+02
+Kanabec,8 - Township Road,2.978E+02,5.957E+02
+Kanabec,10 - Municipal Street,3.239E+01,6.478E+01
+Kanabec,14 - State Forest Road,2.229E+00,4.459E+00
+Kanabec,30 - Alleyway,1.460E+00,2.921E+00
+Kandiyohi,2 - US Highway,6.272E+01,1.474E+02
+Kandiyohi,3 - MN Highway,8.930E+01,2.038E+02
+Kandiyohi,32 - Former Highway,1.171E-01,4.356E-01
+Kandiyohi,53 - Non-numbered MN Highway,9.925E-01,3.314E+00
+Kandiyohi,4 - County State Aid Highway,4.325E+02,8.714E+02
+Kandiyohi,5 - Municipal State Aid Street,2.845E+01,6.674E+01
+Kandiyohi,7 - County Road,2.126E+02,4.252E+02
+Kandiyohi,8 - Township Road,7.334E+02,1.467E+03
+Kandiyohi,10 - Municipal Street,1.319E+02,2.638E+02
+Kandiyohi,15 - State Park Road,4.170E+00,8.341E+00
+Kandiyohi,"25 - Local Park, Forest or Reservation Agency Road",6.479E-01,6.479E-01
+Kandiyohi,30 - Alleyway,6.185E+00,1.230E+01
+Kittson,2 - US Highway,7.328E+01,1.470E+02
+Kittson,3 - MN Highway,6.246E+01,1.249E+02
+Kittson,4 - County State Aid Highway,3.718E+02,7.436E+02
+Kittson,7 - County Road,9.345E+01,1.869E+02
+Kittson,8 - Township Road,9.155E+02,1.831E+03
+Kittson,9 - Unorganized Territory Road,3.862E+01,7.732E+01
+Kittson,10 - Municipal Street,4.121E+01,8.242E+01
+Kittson,15 - State Park Road,5.038E+00,1.008E+01
+Kittson,19 - Frontage Road,1.625E-01,1.625E-01
+Kittson,30 - Alleyway,6.122E+00,1.224E+01
+Koochiching,2 - US Highway,8.604E+01,1.734E+02
+Koochiching,3 - MN Highway,1.985E+02,3.994E+02
+Koochiching,4 - County State Aid Highway,2.530E+02,5.061E+02
+Koochiching,5 - Municipal State Aid Street,8.447E+00,1.689E+01
+Koochiching,7 - County Road,1.793E+02,3.585E+02
+Koochiching,9 - Unorganized Territory Road,3.390E+02,6.780E+02
+Koochiching,10 - Municipal Street,5.589E+01,1.117E+02
+Koochiching,13 - Indian Tribe Nation Road,3.450E+01,6.899E+01
+Koochiching,14 - State Forest Road,1.558E+02,3.116E+02
+Koochiching,15 - State Park Road,1.103E+00,2.205E+00
+Koochiching,30 - Alleyway,1.334E+01,2.669E+01
+Lac qui Parle,2 - US Highway,7.069E+01,1.421E+02
+Lac qui Parle,3 - MN Highway,3.916E+01,7.831E+01
+Lac qui Parle,4 - County State Aid Highway,3.635E+02,7.269E+02
+Lac qui Parle,7 - County Road,2.764E+01,5.528E+01
+Lac qui Parle,8 - Township Road,9.194E+02,1.839E+03
+Lac qui Parle,10 - Municipal Street,4.472E+01,8.943E+01
+Lac qui Parle,15 - State Park Road,2.387E+00,4.774E+00
+Lac qui Parle,30 - Alleyway,1.148E+01,2.297E+01
+Lake,3 - MN Highway,1.080E+02,2.313E+02
+Lake,4 - County State Aid Highway,2.263E+02,4.525E+02
+Lake,7 - County Road,8.387E+01,1.677E+02
+Lake,8 - Township Road,2.994E+02,5.989E+02
+Lake,9 - Unorganized Territory Road,8.095E+01,1.619E+02
+Lake,10 - Municipal Street,3.709E+01,7.419E+01
+Lake,12 - National Forest Road,2.714E+02,5.428E+02
+Lake,14 - State Forest Road,1.003E+02,2.006E+02
+Lake,15 - State Park Road,8.966E+00,1.759E+01
+Lake,"25 - Local Park, Forest or Reservation Agency Road",5.875E+01,1.175E+02
+Lake,30 - Alleyway,7.655E+00,1.531E+01
+Lake of the Woods,3 - MN Highway,6.785E+01,1.357E+02
+Lake of the Woods,4 - County State Aid Highway,1.938E+02,3.875E+02
+Lake of the Woods,7 - County Road,5.243E+01,1.049E+02
+Lake of the Woods,9 - Unorganized Territory Road,2.846E+02,5.692E+02
+Lake of the Woods,10 - Municipal Street,1.415E+01,2.830E+01
+Lake of the Woods,14 - State Forest Road,1.509E+02,3.018E+02
+Lake of the Woods,15 - State Park Road,6.050E+00,1.210E+01
+Lake of the Woods,30 - Alleyway,3.894E+00,7.787E+00
+Le Sueur,2 - US Highway,5.755E+00,2.297E+01
+Le Sueur,3 - MN Highway,8.421E+01,1.691E+02
+Le Sueur,4 - County State Aid Highway,2.793E+02,5.586E+02
+Le Sueur,5 - Municipal State Aid Street,3.107E+00,6.214E+00
+Le Sueur,7 - County Road,2.379E+02,4.759E+02
+Le Sueur,8 - Township Road,3.401E+02,6.802E+02
+Le Sueur,10 - Municipal Street,1.034E+02,2.068E+02
+Le Sueur,15 - State Park Road,2.062E+00,4.124E+00
+Le Sueur,30 - Alleyway,1.131E+01,2.262E+01
+Lincoln,2 - US Highway,5.021E+01,1.018E+02
+Lincoln,3 - MN Highway,3.377E+01,6.754E+01
+Lincoln,4 - County State Aid Highway,2.541E+02,5.082E+02
+Lincoln,7 - County Road,1.334E+02,2.668E+02
+Lincoln,8 - Township Road,5.649E+02,1.130E+03
+Lincoln,10 - Municipal Street,3.395E+01,6.790E+01
+Lincoln,30 - Alleyway,8.273E+00,1.655E+01
+Lyon,2 - US Highway,5.488E+01,1.115E+02
+Lyon,3 - MN Highway,9.049E+01,2.090E+02
+Lyon,4 - County State Aid Highway,3.188E+02,6.376E+02
+Lyon,5 - Municipal State Aid Street,1.950E+01,4.221E+01
+Lyon,7 - County Road,1.522E+02,3.044E+02
+Lyon,8 - Township Road,7.175E+02,1.435E+03
+Lyon,10 - Municipal Street,1.146E+02,2.291E+02
+Lyon,15 - State Park Road,3.408E+00,6.814E+00
+Lyon,"25 - Local Park, Forest or Reservation Agency Road",1.236E+00,2.471E+00
+Lyon,30 - Alleyway,2.007E+01,3.990E+01
+Mahnomen,2 - US Highway,2.466E+01,4.931E+01
+Mahnomen,3 - MN Highway,4.865E+01,9.730E+01
+Mahnomen,4 - County State Aid Highway,1.928E+02,3.856E+02
+Mahnomen,7 - County Road,8.228E+01,1.646E+02
+Mahnomen,8 - Township Road,2.965E+02,5.931E+02
+Mahnomen,10 - Municipal Street,1.462E+01,2.924E+01
+Mahnomen,13 - Indian Tribe Nation Road,6.867E+01,1.373E+02
+Mahnomen,30 - Alleyway,3.606E+00,7.213E+00
+Marshall,2 - US Highway,5.558E+01,1.112E+02
+Marshall,3 - MN Highway,1.198E+02,2.395E+02
+Marshall,4 - County State Aid Highway,6.391E+02,1.278E+03
+Marshall,7 - County Road,1.845E+02,3.690E+02
+Marshall,8 - Township Road,1.705E+03,3.409E+03
+Marshall,10 - Municipal Street,5.677E+01,1.135E+02
+Marshall,15 - State Park Road,7.733E-01,1.547E+00
+Marshall,18 - Bureau of Fish and Wildlife Road,4.056E+01,8.112E+01
+Marshall,"25 - Local Park, Forest or Reservation Agency Road",1.008E-01,2.016E-01
+Marshall,30 - Alleyway,1.373E+01,2.747E+01
+Martin,1 - Interstate,3.116E+01,1.246E+02
+Martin,3 - MN Highway,6.186E+01,1.292E+02
+Martin,4 - County State Aid Highway,3.793E+02,7.598E+02
+Martin,5 - Municipal State Aid Street,1.982E+01,4.125E+01
+Martin,7 - County Road,1.318E+02,2.636E+02
+Martin,8 - Township Road,7.760E+02,1.552E+03
+Martin,10 - Municipal Street,1.012E+02,2.023E+02
+Martin,30 - Alleyway,1.551E+01,3.102E+01
+McLeod,2 - US Highway,2.506E+01,7.114E+01
+McLeod,3 - MN Highway,6.695E+01,1.378E+02
+McLeod,4 - County State Aid Highway,2.519E+02,5.038E+02
+McLeod,5 - Municipal State Aid Street,2.777E+01,5.569E+01
+McLeod,7 - County Road,1.377E+02,2.753E+02
+McLeod,8 - Township Road,4.751E+02,9.503E+02
+McLeod,10 - Municipal Street,1.259E+02,2.518E+02
+McLeod,"25 - Local Park, Forest or Reservation Agency Road",1.112E+00,2.224E+00
+McLeod,30 - Alleyway,2.136E+01,4.272E+01
+Meeker,2 - US Highway,2.656E+01,5.651E+01
+Meeker,3 - MN Highway,1.176E+02,2.352E+02
+Meeker,4 - County State Aid Highway,2.724E+02,5.447E+02
+Meeker,5 - Municipal State Aid Street,8.899E+00,1.780E+01
+Meeker,8 - Township Road,7.897E+02,1.579E+03
+Meeker,10 - Municipal Street,7.465E+01,1.493E+02
+Meeker,"25 - Local Park, Forest or Reservation Agency Road",2.485E-01,4.970E-01
+Meeker,30 - Alleyway,8.176E+00,1.635E+01
+Mille Lacs,2 - US Highway,5.245E+01,1.845E+02
+Mille Lacs,3 - MN Highway,6.353E+01,1.270E+02
+Mille Lacs,4 - County State Aid Highway,2.562E+02,5.125E+02
+Mille Lacs,5 - Municipal State Aid Street,4.546E+00,9.091E+00
+Mille Lacs,7 - County Road,1.485E+02,2.970E+02
+Mille Lacs,8 - Township Road,4.300E+02,8.600E+02
+Mille Lacs,10 - Municipal Street,7.170E+01,1.434E+02
+Mille Lacs,13 - Indian Tribe Nation Road,1.670E+01,3.340E+01
+Mille Lacs,14 - State Forest Road,6.128E-01,1.226E+00
+Mille Lacs,15 - State Park Road,8.983E+00,1.797E+01
+Mille Lacs,30 - Alleyway,1.147E+01,2.295E+01
+Morrison,2 - US Highway,4.358E+01,1.748E+02
+Morrison,3 - MN Highway,1.132E+02,2.501E+02
+Morrison,4 - County State Aid Highway,4.473E+02,8.976E+02
+Morrison,5 - Municipal State Aid Street,1.970E+01,4.061E+01
+Morrison,7 - County Road,2.808E+02,5.616E+02
+Morrison,8 - Township Road,8.850E+02,1.770E+03
+Morrison,10 - Municipal Street,1.333E+02,2.666E+02
+Morrison,15 - State Park Road,8.449E-01,1.690E+00
+Morrison,"25 - Local Park, Forest or Reservation Agency Road",1.369E+00,2.739E+00
+Morrison,30 - Alleyway,1.997E+01,3.995E+01
+Mower,1 - Interstate,3.057E+01,1.222E+02
+Mower,2 - US Highway,3.295E+01,7.151E+01
+Mower,3 - MN Highway,6.863E+01,1.372E+02
+Mower,32 - Former Highway,1.153E-01,3.712E-01
+Mower,4 - County State Aid Highway,3.733E+02,7.490E+02
+Mower,5 - Municipal State Aid Street,2.915E+01,6.400E+01
+Mower,7 - County Road,3.180E+01,6.361E+01
+Mower,8 - Township Road,8.509E+02,1.702E+03
+Mower,10 - Municipal Street,1.499E+02,2.992E+02
+Mower,"25 - Local Park, Forest or Reservation Agency Road",1.614E+00,3.229E+00
+Mower,30 - Alleyway,1.601E+01,3.203E+01
+Murray,2 - US Highway,2.883E+01,5.766E+01
+Murray,3 - MN Highway,6.746E+01,1.349E+02
+Murray,4 - County State Aid Highway,3.521E+02,7.043E+02
+Murray,7 - County Road,6.578E+01,1.316E+02
+Murray,8 - Township Road,8.069E+02,1.614E+03
+Murray,10 - Municipal Street,5.087E+01,1.016E+02
+Murray,15 - State Park Road,3.659E+00,7.318E+00
+Murray,18 - Bureau of Fish and Wildlife Road,4.783E-01,9.565E-01
+Murray,30 - Alleyway,8.270E+00,1.654E+01
+Nicollet,2 - US Highway,4.812E+01,1.873E+02
+Nicollet,52 - Non-numbered US Highway,3.683E+00,8.545E+00
+Nicollet,3 - MN Highway,5.131E+01,1.031E+02
+Nicollet,32 - Former Highway,1.058E-01,2.109E-01
+Nicollet,4 - County State Aid Highway,2.443E+02,4.886E+02
+Nicollet,5 - Municipal State Aid Street,3.090E+01,6.667E+01
+Nicollet,7 - County Road,6.150E+01,1.230E+02
+Nicollet,8 - Township Road,3.516E+02,7.032E+02
+Nicollet,10 - Municipal Street,1.109E+02,2.217E+02
+Nicollet,15 - State Park Road,1.190E+00,2.380E+00
+Nicollet,26 - Other Local Road,1.961E-01,3.888E-01
+Nicollet,30 - Alleyway,1.467E+01,2.933E+01
+Nobles,1 - Interstate,3.026E+01,1.210E+02
+Nobles,2 - US Highway,2.009E+01,4.357E+01
+Nobles,3 - MN Highway,5.179E+01,1.431E+02
+Nobles,4 - County State Aid Highway,3.594E+02,7.217E+02
+Nobles,5 - Municipal State Aid Street,1.261E+01,2.528E+01
+Nobles,7 - County Road,9.134E+01,1.827E+02
+Nobles,8 - Township Road,8.423E+02,1.685E+03
+Nobles,10 - Municipal Street,8.792E+01,1.756E+02
+Nobles,30 - Alleyway,1.648E+01,3.295E+01
+Norman,2 - US Highway,2.427E+01,4.854E+01
+Norman,3 - MN Highway,9.408E+01,1.882E+02
+Norman,4 - County State Aid Highway,3.903E+02,7.805E+02
+Norman,7 - County Road,2.978E+02,5.955E+02
+Norman,8 - Township Road,6.501E+02,1.301E+03
+Norman,10 - Municipal Street,3.897E+01,7.794E+01
+Norman,30 - Alleyway,1.069E+01,2.139E+01
+Olmsted,1 - Interstate,2.719E+01,1.088E+02
+Olmsted,2 - US Highway,8.652E+01,2.860E+02
+Olmsted,3 - MN Highway,4.942E+01,9.887E+01
+Olmsted,32 - Former Highway,2.045E-01,7.965E-01
+Olmsted,4 - County State Aid Highway,3.053E+02,6.576E+02
+Olmsted,5 - Municipal State Aid Street,1.313E+02,3.274E+02
+Olmsted,7 - County Road,1.857E+02,3.720E+02
+Olmsted,8 - Township Road,6.132E+02,1.226E+03
+Olmsted,10 - Municipal Street,4.634E+02,9.271E+02
+Olmsted,14 - State Forest Road,7.622E-01,1.524E+00
+Olmsted,30 - Alleyway,1.277E+01,2.525E+01
+Otter Tail,1 - Interstate,3.269E+01,1.309E+02
+Otter Tail,2 - US Highway,7.331E+01,2.111E+02
+Otter Tail,3 - MN Highway,1.863E+02,3.743E+02
+Otter Tail,4 - County State Aid Highway,9.263E+02,1.854E+03
+Otter Tail,5 - Municipal State Aid Street,2.593E+01,5.662E+01
+Otter Tail,7 - County Road,1.327E+02,2.654E+02
+Otter Tail,8 - Township Road,2.383E+03,4.766E+03
+Otter Tail,10 - Municipal Street,2.247E+02,4.480E+02
+Otter Tail,15 - State Park Road,2.050E+01,4.099E+01
+Otter Tail,18 - Bureau of Fish and Wildlife Road,2.820E+00,5.640E+00
+Otter Tail,30 - Alleyway,1.714E+01,3.428E+01
+Pennington,2 - US Highway,1.684E+01,3.497E+01
+Pennington,3 - MN Highway,6.041E+01,1.208E+02
+Pennington,4 - County State Aid Highway,2.595E+02,5.191E+02
+Pennington,5 - Municipal State Aid Street,1.724E+01,3.456E+01
+Pennington,7 - County Road,3.696E+02,7.391E+02
+Pennington,8 - Township Road,3.398E+02,6.795E+02
+Pennington,10 - Municipal Street,5.343E+01,1.069E+02
+Pennington,13 - Indian Tribe Nation Road,2.067E-01,4.135E-01
+Pennington,30 - Alleyway,1.401E+01,2.802E+01
+Pine,1 - Interstate,5.012E+01,2.005E+02
+Pine,3 - MN Highway,1.108E+02,2.217E+02
+Pine,4 - County State Aid Highway,4.789E+02,9.577E+02
+Pine,7 - County Road,2.143E+02,4.286E+02
+Pine,8 - Township Road,8.375E+02,1.675E+03
+Pine,10 - Municipal Street,1.381E+02,2.760E+02
+Pine,13 - Indian Tribe Nation Road,3.721E+00,7.443E+00
+Pine,14 - State Forest Road,9.263E+01,1.853E+02
+Pine,15 - State Park Road,3.405E+01,6.809E+01
+Pine,18 - Bureau of Fish and Wildlife Road,1.279E-01,2.559E-01
+Pine,30 - Alleyway,3.839E+00,7.677E+00
+Pipestone,2 - US Highway,2.499E+01,5.000E+01
+Pipestone,3 - MN Highway,5.053E+01,1.024E+02
+Pipestone,4 - County State Aid Highway,2.413E+02,4.825E+02
+Pipestone,7 - County Road,2.304E+01,4.608E+01
+Pipestone,8 - Township Road,5.592E+02,1.118E+03
+Pipestone,10 - Municipal Street,5.841E+01,1.165E+02
+Pipestone,15 - State Park Road,9.395E-01,1.879E+00
+Pipestone,17 - Other Federal Agency Road,9.590E-01,1.918E+00
+Pipestone,30 - Alleyway,1.041E+01,2.083E+01
+Polk,2 - US Highway,1.548E+02,4.648E+02
+Polk,3 - MN Highway,1.092E+02,2.194E+02
+Polk,4 - County State Aid Highway,8.032E+02,1.606E+03
+Polk,5 - Municipal State Aid Street,2.935E+01,5.909E+01
+Polk,7 - County Road,1.502E+02,3.004E+02
+Polk,8 - Township Road,2.218E+03,4.436E+03
+Polk,10 - Municipal Street,1.378E+02,2.753E+02
+Polk,15 - State Park Road,1.733E+00,3.465E+00
+Polk,18 - Bureau of Fish and Wildlife Road,6.657E+00,1.331E+01
+Polk,30 - Alleyway,2.769E+01,5.538E+01
+Pope,3 - MN Highway,1.232E+02,2.480E+02
+Pope,4 - County State Aid Highway,2.963E+02,5.925E+02
+Pope,7 - County Road,7.054E+01,1.411E+02
+Pope,8 - Township Road,6.992E+02,1.398E+03
+Pope,10 - Municipal Street,6.229E+01,1.246E+02
+Pope,15 - State Park Road,1.815E+00,3.631E+00
+Pope,18 - Bureau of Fish and Wildlife Road,1.661E+00,3.323E+00
+Pope,19 - Frontage Road,2.026E-01,4.000E-01
+Pope,30 - Alleyway,7.169E+00,1.434E+01
+Ramsey,1 - Interstate,5.146E+01,3.166E+02
+Ramsey,2 - US Highway,2.482E+01,9.804E+01
+Ramsey,52 - Non-numbered US Highway,8.050E-01,2.817E+00
+Ramsey,3 - MN Highway,4.909E+01,1.682E+02
+Ramsey,53 - Non-numbered MN Highway,8.445E-01,2.727E+00
+Ramsey,4 - County State Aid Highway,2.621E+02,7.174E+02
+Ramsey,5 - Municipal State Aid Street,3.397E+02,7.277E+02
+Ramsey,7 - County Road,1.781E+01,3.563E+01
+Ramsey,8 - Township Road,4.199E+01,8.398E+01
+Ramsey,10 - Municipal Street,1.134E+03,2.254E+03
+Ramsey,16 - Military Road,1.934E+00,4.080E+00
+Ramsey,19 - Frontage Road,3.344E-01,5.087E-01
+Ramsey,"25 - Local Park, Forest or Reservation Agency Road",3.219E+00,5.970E+00
+Ramsey,26 - Other Local Road,2.037E-01,4.074E-01
+Ramsey,30 - Alleyway,2.708E+02,5.415E+02
+Red Lake,2 - US Highway,1.495E+01,3.659E+01
+Red Lake,3 - MN Highway,3.944E+01,7.889E+01
+Red Lake,4 - County State Aid Highway,1.866E+02,3.732E+02
+Red Lake,7 - County Road,1.763E+02,3.526E+02
+Red Lake,8 - Township Road,3.183E+02,6.366E+02
+Red Lake,10 - Municipal Street,2.874E+01,5.748E+01
+Red Lake,30 - Alleyway,6.294E+00,1.259E+01
+Redwood,2 - US Highway,4.892E+01,9.784E+01
+Redwood,3 - MN Highway,8.604E+01,1.721E+02
+Redwood,4 - County State Aid Highway,3.888E+02,7.777E+02
+Redwood,5 - Municipal State Aid Street,1.053E+01,2.107E+01
+Redwood,7 - County Road,1.175E+02,2.351E+02
+Redwood,8 - Township Road,9.672E+02,1.934E+03
+Redwood,10 - Municipal Street,8.625E+01,1.722E+02
+Redwood,13 - Indian Tribe Nation Road,1.950E+00,3.900E+00
+Redwood,30 - Alleyway,2.148E+01,4.296E+01
+Renville,2 - US Highway,7.295E+01,1.480E+02
+Renville,3 - MN Highway,5.158E+01,1.032E+02
+Renville,4 - County State Aid Highway,4.451E+02,8.909E+02
+Renville,7 - County Road,2.650E+02,5.301E+02
+Renville,8 - Township Road,9.699E+02,1.940E+03
+Renville,10 - Municipal Street,9.453E+01,1.891E+02
+Renville,15 - State Park Road,5.275E-01,1.055E+00
+Renville,30 - Alleyway,2.087E+01,4.174E+01
+Rice,1 - Interstate,2.513E+01,1.006E+02
+Rice,3 - MN Highway,9.890E+01,2.159E+02
+Rice,53 - Non-numbered MN Highway,5.095E-01,7.640E-01
+Rice,4 - County State Aid Highway,2.807E+02,5.657E+02
+Rice,5 - Municipal State Aid Street,4.512E+01,9.165E+01
+Rice,7 - County Road,1.443E+02,2.886E+02
+Rice,8 - Township Road,4.910E+02,9.820E+02
+Rice,10 - Municipal Street,1.796E+02,3.579E+02
+Rice,15 - State Park Road,9.140E-01,1.828E+00
+Rice,20 - Other State Agency Road,3.837E-01,7.673E-01
+Rice,"25 - Local Park, Forest or Reservation Agency Road",6.521E-01,1.304E+00
+Rice,30 - Alleyway,6.987E+00,1.397E+01
+Rock,1 - Interstate,2.049E+01,8.196E+01
+Rock,2 - US Highway,2.498E+01,4.997E+01
+Rock,3 - MN Highway,2.649E+01,5.297E+01
+Rock,4 - County State Aid Highway,2.625E+02,5.251E+02
+Rock,7 - County Road,5.731E+01,1.146E+02
+Rock,8 - Township Road,5.677E+02,1.135E+03
+Rock,10 - Municipal Street,4.854E+01,9.707E+01
+Rock,30 - Alleyway,8.840E+00,1.768E+01
+Roseau,3 - MN Highway,1.315E+02,2.630E+02
+Roseau,4 - County State Aid Highway,4.811E+02,9.621E+02
+Roseau,7 - County Road,2.366E+02,4.733E+02
+Roseau,8 - Township Road,1.069E+03,2.138E+03
+Roseau,9 - Unorganized Territory Road,1.609E+02,3.217E+02
+Roseau,10 - Municipal Street,5.610E+01,1.122E+02
+Roseau,13 - Indian Tribe Nation Road,1.540E-01,3.081E-01
+Roseau,14 - State Forest Road,9.067E+00,1.813E+01
+Roseau,15 - State Park Road,2.779E+00,5.557E+00
+Roseau,18 - Bureau of Fish and Wildlife Road,5.570E+00,1.114E+01
+Roseau,23 - Airport Road,6.944E-01,1.389E+00
+Roseau,"25 - Local Park, Forest or Reservation Agency Road",4.238E-01,8.477E-01
+Roseau,30 - Alleyway,1.117E+01,2.234E+01
+Saint Louis,1 - Interstate,1.596E+01,6.347E+01
+Saint Louis,2 - US Highway,2.218E+02,6.960E+02
+Saint Louis,52 - Non-numbered US Highway,5.643E-01,1.129E+00
+Saint Louis,3 - MN Highway,2.798E+02,6.332E+02
+Saint Louis,32 - Former Highway,7.413E-01,1.800E+00
+Saint Louis,4 - County State Aid Highway,1.380E+03,2.773E+03
+Saint Louis,5 - Municipal State Aid Street,2.134E+02,4.506E+02
+Saint Louis,7 - County Road,1.362E+03,2.724E+03
+Saint Louis,8 - Township Road,8.291E+02,1.658E+03
+Saint Louis,9 - Unorganized Territory Road,3.472E+02,6.943E+02
+Saint Louis,10 - Municipal Street,8.357E+02,1.669E+03
+Saint Louis,11 - National Park Road,3.361E+00,6.723E+00
+Saint Louis,12 - National Forest Road,1.811E+02,3.623E+02
+Saint Louis,13 - Indian Tribe Nation Road,9.212E+00,1.842E+01
+Saint Louis,14 - State Forest Road,4.831E+01,9.662E+01
+Saint Louis,15 - State Park Road,8.694E+00,1.739E+01
+Saint Louis,23 - Airport Road,8.714E-01,1.728E+00
+Saint Louis,24 - Bureau of Indian Affairs Road,2.601E+00,5.202E+00
+Saint Louis,"25 - Local Park, Forest or Reservation Agency Road",2.916E+00,5.832E+00
+Saint Louis,27 - Railroad Service Road,1.094E-01,2.187E-01
+Saint Louis,30 - Alleyway,1.824E+02,3.647E+02
+Scott,1 - Interstate,6.024E+00,2.410E+01
+Scott,2 - US Highway,3.188E+01,1.275E+02
+Scott,3 - MN Highway,5.309E+01,1.274E+02
+Scott,32 - Former Highway,1.007E+00,3.781E+00
+Scott,4 - County State Aid Highway,2.279E+02,5.764E+02
+Scott,5 - Municipal State Aid Street,1.270E+02,2.840E+02
+Scott,7 - County Road,8.080E+01,1.620E+02
+Scott,8 - Township Road,3.316E+02,6.631E+02
+Scott,10 - Municipal Street,4.941E+02,9.896E+02
+Scott,13 - Indian Tribe Nation Road,1.794E+01,3.785E+01
+Scott,15 - State Park Road,5.859E-01,1.172E+00
+Scott,18 - Bureau of Fish and Wildlife Road,1.026E+00,2.051E+00
+Scott,"25 - Local Park, Forest or Reservation Agency Road",2.655E+00,5.311E+00
+Scott,30 - Alleyway,2.216E+01,4.417E+01
+Sherburne,2 - US Highway,5.847E+01,2.338E+02
+Sherburne,3 - MN Highway,1.673E+01,3.458E+01
+Sherburne,4 - County State Aid Highway,2.413E+02,4.909E+02
+Sherburne,5 - Municipal State Aid Street,7.066E+01,1.531E+02
+Sherburne,7 - County Road,1.562E+02,3.123E+02
+Sherburne,8 - Township Road,5.035E+02,1.007E+03
+Sherburne,10 - Municipal Street,2.469E+02,4.945E+02
+Sherburne,14 - State Forest Road,7.579E+00,1.516E+01
+Sherburne,18 - Bureau of Fish and Wildlife Road,9.899E+00,1.980E+01
+Sherburne,30 - Alleyway,6.406E+00,1.281E+01
+Sibley,2 - US Highway,2.454E+00,9.865E+00
+Sibley,3 - MN Highway,1.020E+02,2.039E+02
+Sibley,32 - Former Highway,5.609E-02,9.532E-02
+Sibley,4 - County State Aid Highway,2.857E+02,5.734E+02
+Sibley,7 - County Road,9.575E+01,1.915E+02
+Sibley,8 - Township Road,5.857E+02,1.171E+03
+Sibley,10 - Municipal Street,6.585E+01,1.317E+02
+Sibley,30 - Alleyway,1.244E+01,2.488E+01
+Stearns,1 - Interstate,5.766E+01,2.307E+02
+Stearns,2 - US Highway,2.632E+01,5.264E+01
+Stearns,3 - MN Highway,1.471E+02,3.856E+02
+Stearns,53 - Non-numbered MN Highway,3.051E-03,6.102E-03
+Stearns,4 - County State Aid Highway,6.390E+02,1.332E+03
+Stearns,5 - Municipal State Aid Street,8.933E+01,2.165E+02
+Stearns,7 - County Road,3.119E+02,6.260E+02
+Stearns,8 - Township Road,1.367E+03,2.734E+03
+Stearns,10 - Municipal Street,5.993E+02,1.198E+03
+Stearns,14 - State Forest Road,1.723E+00,3.446E+00
+Stearns,30 - Alleyway,5.695E+01,1.137E+02
+Steele,1 - Interstate,2.459E+01,9.836E+01
+Steele,2 - US Highway,3.392E+01,1.040E+02
+Steele,3 - MN Highway,1.801E+01,3.603E+01
+Steele,4 - County State Aid Highway,3.025E+02,6.135E+02
+Steele,5 - Municipal State Aid Street,3.445E+01,7.286E+01
+Steele,7 - County Road,5.950E+01,1.190E+02
+Steele,8 - Township Road,3.844E+02,7.688E+02
+Steele,10 - Municipal Street,1.375E+02,2.749E+02
+Steele,15 - State Park Road,1.379E+00,2.758E+00
+Steele,"25 - Local Park, Forest or Reservation Agency Road",3.391E-01,6.781E-01
+Steele,30 - Alleyway,9.209E+00,1.842E+01
+Stevens,2 - US Highway,2.438E+01,4.876E+01
+Stevens,3 - MN Highway,5.254E+01,1.051E+02
+Stevens,4 - County State Aid Highway,2.435E+02,4.871E+02
+Stevens,5 - Municipal State Aid Street,8.804E+00,1.761E+01
+Stevens,7 - County Road,1.286E+02,2.571E+02
+Stevens,8 - Township Road,5.446E+02,1.089E+03
+Stevens,10 - Municipal Street,5.117E+01,1.023E+02
+Stevens,18 - Bureau of Fish and Wildlife Road,3.282E+00,6.564E+00
+Stevens,30 - Alleyway,1.310E+01,2.620E+01
+Swift,2 - US Highway,6.375E+01,1.275E+02
+Swift,3 - MN Highway,6.718E+01,1.344E+02
+Swift,4 - County State Aid Highway,3.275E+02,6.550E+02
+Swift,7 - County Road,1.314E+02,2.629E+02
+Swift,8 - Township Road,7.547E+02,1.509E+03
+Swift,10 - Municipal Street,6.987E+01,1.397E+02
+Swift,15 - State Park Road,1.138E+00,2.275E+00
+Swift,18 - Bureau of Fish and Wildlife Road,3.355E-01,6.709E-01
+Swift,"25 - Local Park, Forest or Reservation Agency Road",3.119E-01,6.238E-01
+Swift,30 - Alleyway,1.625E+01,3.250E+01
+Todd,1 - Interstate,5.873E+00,2.357E+01
+Todd,2 - US Highway,6.104E+01,1.475E+02
+Todd,3 - MN Highway,7.398E+01,1.480E+02
+Todd,4 - County State Aid Highway,4.105E+02,8.222E+02
+Todd,7 - County Road,1.994E+02,3.988E+02
+Todd,8 - Township Road,1.038E+03,2.076E+03
+Todd,10 - Municipal Street,7.639E+01,1.527E+02
+Todd,18 - Bureau of Fish and Wildlife Road,8.311E-02,1.662E-01
+Todd,30 - Alleyway,1.417E+01,2.835E+01
+Traverse,2 - US Highway,3.100E+01,6.200E+01
+Traverse,3 - MN Highway,4.648E+01,9.296E+01
+Traverse,4 - County State Aid Highway,2.451E+02,4.902E+02
+Traverse,7 - County Road,2.412E+02,4.824E+02
+Traverse,8 - Township Road,4.982E+02,9.964E+02
+Traverse,10 - Municipal Street,2.993E+01,5.985E+01
+Traverse,18 - Bureau of Fish and Wildlife Road,1.568E-01,3.137E-01
+Traverse,30 - Alleyway,7.104E+00,1.421E+01
+Wabasha,2 - US Highway,5.205E+01,1.447E+02
+Wabasha,3 - MN Highway,6.330E+01,1.273E+02
+Wabasha,4 - County State Aid Highway,2.733E+02,5.467E+02
+Wabasha,5 - Municipal State Aid Street,8.234E+00,1.647E+01
+Wabasha,7 - County Road,9.099E+01,1.820E+02
+Wabasha,8 - Township Road,4.121E+02,8.242E+02
+Wabasha,10 - Municipal Street,9.361E+01,1.869E+02
+Wabasha,14 - State Forest Road,7.741E+00,1.548E+01
+Wabasha,15 - State Park Road,6.995E-01,1.399E+00
+Wabasha,18 - Bureau of Fish and Wildlife Road,2.985E-01,5.969E-01
+Wabasha,30 - Alleyway,7.286E+00,1.450E+01
+Wadena,2 - US Highway,4.520E+01,1.104E+02
+Wadena,3 - MN Highway,4.183E+00,8.366E+00
+Wadena,4 - County State Aid Highway,2.360E+02,4.726E+02
+Wadena,7 - County Road,2.062E+02,4.124E+02
+Wadena,8 - Township Road,3.771E+02,7.543E+02
+Wadena,10 - Municipal Street,6.581E+01,1.308E+02
+Wadena,14 - State Forest Road,8.910E+00,1.782E+01
+Wadena,30 - Alleyway,1.159E+01,2.318E+01
+Waseca,2 - US Highway,2.156E+01,8.626E+01
+Waseca,3 - MN Highway,5.355E+01,1.071E+02
+Waseca,4 - County State Aid Highway,2.666E+02,5.332E+02
+Waseca,5 - Municipal State Aid Street,7.777E+00,1.555E+01
+Waseca,7 - County Road,1.237E+02,2.474E+02
+Waseca,8 - Township Road,3.508E+02,7.017E+02
+Waseca,10 - Municipal Street,5.152E+01,1.030E+02
+Waseca,30 - Alleyway,7.719E+00,1.507E+01
+Washington,1 - Interstate,2.489E+01,1.370E+02
+Washington,2 - US Highway,3.031E+01,9.936E+01
+Washington,3 - MN Highway,6.426E+01,1.524E+02
+Washington,32 - Former Highway,7.227E-02,3.318E-01
+Washington,4 - County State Aid Highway,2.356E+02,5.404E+02
+Washington,5 - Municipal State Aid Street,2.232E+02,5.122E+02
+Washington,7 - County Road,5.515E+01,1.107E+02
+Washington,8 - Township Road,1.873E+02,3.745E+02
+Washington,10 - Municipal Street,1.170E+03,2.340E+03
+Washington,15 - State Park Road,5.461E+00,1.097E+01
+Washington,19 - Frontage Road,1.111E+01,2.184E+01
+Washington,"25 - Local Park, Forest or Reservation Agency Road",1.072E+00,2.141E+00
+Washington,30 - Alleyway,8.955E+00,1.776E+01
+Watonwan,3 - MN Highway,7.574E+01,2.125E+02
+Watonwan,32 - Former Highway,1.309E-01,3.747E-01
+Watonwan,4 - County State Aid Highway,2.333E+02,4.667E+02
+Watonwan,7 - County Road,1.230E+02,2.460E+02
+Watonwan,8 - Township Road,3.939E+02,7.878E+02
+Watonwan,10 - Municipal Street,5.534E+01,1.105E+02
+Watonwan,"25 - Local Park, Forest or Reservation Agency Road",7.131E-01,1.426E+00
+Watonwan,30 - Alleyway,9.882E+00,1.976E+01
+Wilkin,1 - Interstate,1.123E+01,4.485E+01
+Wilkin,2 - US Highway,4.654E+01,9.391E+01
+Wilkin,3 - MN Highway,7.017E+01,1.403E+02
+Wilkin,4 - County State Aid Highway,3.123E+02,6.246E+02
+Wilkin,7 - County Road,1.941E+02,3.882E+02
+Wilkin,8 - Township Road,7.296E+02,1.460E+03
+Wilkin,10 - Municipal Street,4.783E+01,9.566E+01
+Wilkin,30 - Alleyway,1.012E+01,2.025E+01
+Winona,1 - Interstate,4.391E+01,1.759E+02
+Winona,2 - US Highway,5.785E+01,1.896E+02
+Winona,3 - MN Highway,5.974E+01,1.217E+02
+Winona,32 - Former Highway,4.774E-02,2.309E-01
+Winona,53 - Non-numbered MN Highway,1.283E-01,2.415E-01
+Winona,4 - County State Aid Highway,3.122E+02,6.252E+02
+Winona,5 - Municipal State Aid Street,2.286E+01,5.277E+01
+Winona,7 - County Road,6.789E+01,1.358E+02
+Winona,8 - Township Road,4.753E+02,9.505E+02
+Winona,10 - Municipal Street,1.858E+02,3.706E+02
+Winona,14 - State Forest Road,6.032E+00,1.206E+01
+Winona,15 - State Park Road,6.345E+00,1.269E+01
+Winona,18 - Bureau of Fish and Wildlife Road,1.944E-01,3.889E-01
+Winona,30 - Alleyway,1.968E+01,3.936E+01
+Wright,1 - Interstate,2.703E+01,1.273E+02
+Wright,2 - US Highway,2.574E+01,5.634E+01
+Wright,3 - MN Highway,7.750E+01,1.845E+02
+Wright,4 - County State Aid Highway,4.055E+02,8.296E+02
+Wright,5 - Municipal State Aid Street,1.008E+02,2.039E+02
+Wright,7 - County Road,1.031E+02,2.061E+02
+Wright,8 - Township Road,8.898E+02,1.780E+03
+Wright,10 - Municipal Street,5.321E+02,1.064E+03
+Wright,15 - State Park Road,2.989E+00,5.979E+00
+Wright,18 - Bureau of Fish and Wildlife Road,1.141E-01,2.282E-01
+Wright,"25 - Local Park, Forest or Reservation Agency Road",3.199E-01,6.397E-01
+Wright,30 - Alleyway,1.273E+01,2.539E+01
+Yellow Medicine,2 - US Highway,4.241E+01,8.502E+01
+Yellow Medicine,3 - MN Highway,9.331E+01,1.924E+02
+Yellow Medicine,53 - Non-numbered MN Highway,4.643E-01,9.286E-01
+Yellow Medicine,4 - County State Aid Highway,3.395E+02,6.790E+02
+Yellow Medicine,7 - County Road,1.720E+02,3.440E+02
+Yellow Medicine,8 - Township Road,7.840E+02,1.568E+03
+Yellow Medicine,10 - Municipal Street,5.618E+01,1.124E+02
+Yellow Medicine,13 - Indian Tribe Nation Road,7.114E+00,1.339E+01
+Yellow Medicine,15 - State Park Road,4.684E+00,9.368E+00
+Yellow Medicine,"25 - Local Park, Forest or Reservation Agency Road",1.622E-01,3.245E-01
+Yellow Medicine,30 - Alleyway,1.456E+01,2.912E+01
+,Grand Total (static number),1.431E+05,2.943E+05
