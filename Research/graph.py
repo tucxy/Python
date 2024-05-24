@@ -221,26 +221,68 @@ def merge_lengths(*graphs):#merge()[l, ['lengths mod 7 for each length']]
 
     result = [[length, list(sorted(mod_lengths))] for length, mod_lengths in sorted(merged_lengths_map.items())]
     return result
-#notebook
-'''5/15 (61) cases'''
-#G1
-s1 = star(5,[16,15,17,14])
-p1 = path([9,1,14])
-l1 =path([0,13])
-G1 = merge(s1,p1,l1)
-print(lengths(G1),"\n")
-#G2
-s2 = star(4,[14,15,13,16])
-p2 = path([18,5,13])
-l2 =path([7,17])
-G2 = merge(s2,p2,l2)
-print(lengths(G2),"\n")
-#G3
-s3 = star(17,[4,9,6,8])
-p3 = path([7,16,6])
-l3 =path([1,13])
-G3 = merge(s3,p3,l3)
-print(lengths(G3),"\n")
 
-print(merge_lengths(G1,G2,G3))
-visualize_graph(G3,"G3")
+#notebook
+def starify(h,a,b,c):
+    leaves = [(h+a)%21,(h-a)%21,(h+b)%21,(h-b)%21,(h+c)%21,(h-c)%21]
+    G = Graph()
+    G.add_vertex(h)
+    for node in leaves:
+        G.add_vertex(node)
+        G.add_edge(h,node)
+    return G
+
+def brute(a,b,c):
+    h1,h2 = 0,0
+    L = list(range(0,22,1))
+    count = 1
+    pairs = []
+    for i in L[:]:  # Use a copy of L for iteration
+        h1 = i
+        tempL = L.copy()
+        tempL.remove(i)
+        for j in tempL:
+            h2 = j
+            if len(str(merge_lengths(starify(h1,a,b,c), starify(h2,a,b,c)))) <= 55:
+                #print("iteration:",count,": fail because ",str(merge_lengths(starify(h1), starify(h2))))
+                count+= 1
+            else:
+                #print("iteration:",count,": success! h1=",h1," and h2=",h2)
+                pairs.append((h1,h2))
+
+    count = 1
+    h3 = 0
+    triples = []
+    for k in L[:]:
+        h3 = k
+        tempL = L.copy()
+        tempL.remove(k)
+        for pair in pairs:
+            h1 = pair[0]
+            h2 = pair[1]
+
+            if len(str(merge_lengths(starify(h1,a,b,c), starify(h2,a,b,c),starify(h3,a,b,c)))) <= 76:
+                    #print("iteration:",count,": fail because ",str(merge_lengths(starify(h1), starify(h2))))
+                    count+= 1
+            else:
+                #print("iteration:",count,": success! h1=",h1,", h2=",h2,", and h3=",h3)
+                triples.append((h1,h2,h3))
+    return pairs, triples
+'''
+L = list(range(1,10,1))
+for i in L[:]:  # Use a copy of L for iteration
+        a = i
+        tempL = L.copy()
+        tempL.remove(i)
+        for j in tempL:
+            b = j
+            tempL2 = tempL.copy()
+            tempL2.remove(j)
+            for k in tempL2:
+                c = k
+                if brute(a,b,c)[1] != []:
+                    print(brute(a,b,c))
+                else:
+                    print("no")
+'''
+        
