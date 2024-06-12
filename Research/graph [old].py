@@ -223,7 +223,7 @@ def merge_lengths(*graphs):#merge()[l, ['lengths mod 7 for each length']]
     return result
 
 #notebook
-def starify(h,a,b,c):
+def starify(h,a,b,c): #(a,b,c)=8,9,10 for our original case
     leaves = [(h+a)%21,(h-a)%21,(h+b)%21,(h-b)%21,(h+c)%21,(h-c)%21]
     G = Graph()
     G.add_vertex(h)
@@ -232,7 +232,7 @@ def starify(h,a,b,c):
         G.add_edge(h,node)
     return G
 
-def brute(a,b,c):
+def brute(a,b,c): #brute force checks that any lengths (a,b,c) \in [1,10]- the (62) star with the trivial path, there is no labeling
     h1,h2 = 0,0
     L = list(range(0,22,1))
     count = 1
@@ -267,9 +267,9 @@ def brute(a,b,c):
             else:
                 #print("iteration:",count,": success! h1=",h1,", h2=",h2,", and h3=",h3)
                 triples.append((h1,h2,h3))
-    return pairs, triples
-'''
-L = list(range(1,10,1))
+    return pairs, triples, merge_lengths(starify(h1,a,b,c), starify(h2,a,b,c),starify(h3,a,b,c))
+
+L = list(range(1,11,1))
 for i in L[:]:  # Use a copy of L for iteration
         a = i
         tempL = L.copy()
@@ -283,6 +283,4 @@ for i in L[:]:  # Use a copy of L for iteration
                 if brute(a,b,c)[1] != []:
                     print(brute(a,b,c))
                 else:
-                    print("no")
-'''
-        
+                    print("no -",brute(a,b,c)[2],brute(a,b,c)[1])        

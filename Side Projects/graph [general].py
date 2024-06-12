@@ -1,9 +1,9 @@
 import networkx as nx
-import sys
-sys.path.append('path/to/containing/directory')
-from graph_visualization import multivisualize
+from Gvis import *
 from itertools import combinations
-import math 
+
+'''For built in graphs in networkx visit: https://networkx.org/documentation/stable/reference/generators.html'''
+
 # how to merge two graphs:
 '''
 # Create two graphs
@@ -111,20 +111,7 @@ def trees(n):
 
     return all_trees
 #notebook
-P1 = path([20,11,1,math.inf,0,9])
-P2 = path([10,2,12])
-G1 = merge(P1,P2)
 
-P3 = path([5,13,2,math.inf,3,11])
-P4 = path([19,8,20])
-G2 = merge(P3,P4)
+    
 
-P5 = path([3,12,4,math.inf,5,14])
-P6 = path([11,0,8])
-G3 = merge(P5,P6)
 
-P7 = path([13,0,10,1,9,18])
-P8 = path([math.inf,6,17])
-G4 = merge(P7,P8)
-
-multivisualize([G1,G2,G3,G4],'multitest')
