@@ -3,7 +3,8 @@ import sys
 sys.path.append('path/to/containing/directory')
 from graph_visualization import multivisualize
 from itertools import combinations
-import math 
+import math
+
 # how to merge two graphs:
 '''
 # Create two graphs
@@ -111,6 +112,10 @@ def trees(n):
 
     return all_trees
 #notebook
+
+'''
+8 (mod 14) case example:
+
 P1 = path([20,11,1,math.inf,0,9])
 P2 = path([10,2,12])
 G1 = merge(P1,P2)
@@ -128,3 +133,28 @@ P8 = path([math.inf,6,17])
 G4 = merge(P7,P8)
 
 multivisualize([G1,G2,G3,G4],'multitest')
+'''
+
+#7 (mod 14) example: 
+S1 = star(0,[8,9,10])
+P11 = path([6,18,7])
+P12 = path([1,13,5])
+G1 = merge(S1,P11,P12)
+
+S2 = star(1,[9,10,11])
+P21 = path([12,0,13])
+P22 = path([6,17,4])
+G2 = merge(S2,P21,P22)
+
+S3 = star(2,[10,11,13])
+P31 = path([17,5,16])
+P32 = path([1,12,4])
+G3 = merge(S3,P31,P32)
+
+S0 = star(0,[4,5,6])
+P01 = path([1,8,7])
+P02 = path([11,9,12])
+G0 = merge(S0,P01,P02)
+multivisualize([G1,G2,G3,G0],'test', location="default")
+
+
