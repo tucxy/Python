@@ -112,29 +112,25 @@ def trees(n):
 
     return all_trees
 #notebook
+T1 = merge(path([20,11,1,math.inf,0]),path([11,2]))
+P1 = path([17,9,19])
+G1 = merge(T1,P1)
+
+T2 = merge(path([13,2,math.inf,3,11]),path([12,2]))
+P2 = path([16,6,19])
+G2 = merge(T2,P2)
+
+T3 = merge(path([12,4,math.inf,5,14]),path([17,5]))
+P3 = path([9,0,11])
+G3 = merge(T3,P3)
+
+T4 = merge(path([13,0,10,1,9]),path([0,8]))
+P4 = path([17,6,math.inf])
+G4 = merge(T4,P4)
+
+multivisualize([G1,G2,G3,G4], 'test', location = 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)')
 
 '''
-8 (mod 14) case example:
-
-P1 = path([20,11,1,math.inf,0,9])
-P2 = path([10,2,12])
-G1 = merge(P1,P2)
-
-P3 = path([5,13,2,math.inf,3,11])
-P4 = path([19,8,20])
-G2 = merge(P3,P4)
-
-P5 = path([3,12,4,math.inf,5,14])
-P6 = path([11,0,8])
-G3 = merge(P5,P6)
-
-P7 = path([13,0,10,1,9,18])
-P8 = path([math.inf,6,17])
-G4 = merge(P7,P8)
-
-multivisualize([G1,G2,G3,G4],'multitest')
-'''
-
 #7 (mod 14) example: 
 S1 = star(0,[8,9,10])
 P11 = path([6,18,7])
@@ -156,5 +152,5 @@ P01 = path([1,8,7])
 P02 = path([11,9,12])
 G0 = merge(S0,P01,P02)
 multivisualize([G1,G2,G3,G0],'test', location="default")
-
+'''
 

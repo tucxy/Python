@@ -71,9 +71,9 @@ def draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_e
         x, y = edge
         l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
         if x == math.inf:
-            l_mod_7 = y
+            l_mod_7 = y % 7
         elif y == math.inf:
-            l_mod_7 = x
+            l_mod_7 = x % 7
         else:
             l_mod_7 = (x + y) % 7
 
@@ -220,9 +220,9 @@ def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_ve
             x, y = edge
             l_e = "$\\infty$" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
             if x == math.inf:
-                l_mod_7 = y
+                l_mod_7 = y % 7
             elif y == math.inf:
-                l_mod_7 = x
+                l_mod_7 = x % 7
             else:
                 l_mod_7 = (x + y) % 7
 
@@ -283,16 +283,15 @@ def multivisualize(graphs, name, location="default"):
     for G, pos in zip(graphs, pos_list):
         edge_lengths = []
         l_mod_7_values = {8: [], 9: [], 10: [], '∞': []}
-        lengths = []
 
         for edge in G.edges():
             x, y = edge
             l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
 
             if x == math.inf:
-                l_mod_7 = y
+                l_mod_7 = y % 7
             elif y == math.inf:
-                l_mod_7 = x
+                l_mod_7 = x % 7
             else:
                 l_mod_7 = (x + y) % 7
             edge_lengths.append(l_e)
