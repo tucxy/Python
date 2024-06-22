@@ -244,7 +244,7 @@ def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_ve
     print(f"LaTeX code saved to {os.path.join(output_dir, f'{name}.tex')}")
 
 # Function to visualize multiple graphs using Pygame
-def multivisualize(graphs, name, location="default"):
+def visualize(graphs, name, location="default"):
     pygame.init()
     WIDTH, HEIGHT = DEFAULT_WIDTH, DEFAULT_HEIGHT
     screen = pygame.display.set_mode((WIDTH, HEIGHT))

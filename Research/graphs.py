@@ -1,7 +1,7 @@
 import networkx as nx
 import sys
 sys.path.append('path/to/containing/directory')
-from graph_visualization import multivisualize
+from graph_visualization import visualize
 from itertools import combinations
 import math
 
@@ -112,45 +112,15 @@ def trees(n):
 
     return all_trees
 #notebook
-T1 = merge(path([20,11,1,math.inf,0]),path([11,2]))
-P1 = path([17,9,19])
-G1 = merge(T1,P1)
 
-T2 = merge(path([13,2,math.inf,3,11]),path([12,2]))
-P2 = path([16,6,19])
-G2 = merge(T2,P2)
+#8 ( mod 14)
 
-T3 = merge(path([12,4,math.inf,5,14]),path([17,5]))
-P3 = path([9,0,11])
-G3 = merge(T3,P3)
+#(61)-1
+G1  = merge(path([20,11,1,math.inf, 0, 9, 19]), path([2,10]))
+G2 = merge(path([5,13,2,math.inf, 3, 11, 0]), path([19,8]))
+G3 = merge(path([3,12,4,math.inf, 5, 14, 1]), path([19,8]))
+G4 = merge(path([3,13,0,10, 1, 9, 18]), path([math.inf,6]))
+G5 = merge(path([0,6,1,5, 2, 9, 7]), path([3,4]))
 
-T4 = merge(path([13,0,10,1,9]),path([0,8]))
-P4 = path([17,6,math.inf])
-G4 = merge(T4,P4)
-
-multivisualize([G1,G2,G3,G4], 'test', location = 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)')
-
-'''
-#7 (mod 14) example: 
-S1 = star(0,[8,9,10])
-P11 = path([6,18,7])
-P12 = path([1,13,5])
-G1 = merge(S1,P11,P12)
-
-S2 = star(1,[9,10,11])
-P21 = path([12,0,13])
-P22 = path([6,17,4])
-G2 = merge(S2,P21,P22)
-
-S3 = star(2,[10,11,13])
-P31 = path([17,5,16])
-P32 = path([1,12,4])
-G3 = merge(S3,P31,P32)
-
-S0 = star(0,[4,5,6])
-P01 = path([1,8,7])
-P02 = path([11,9,12])
-G0 = merge(S0,P01,P02)
-multivisualize([G1,G2,G3,G0],'test', location="default")
-'''
+visualize([G1,G2,G3,G4,G5], '(61)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 

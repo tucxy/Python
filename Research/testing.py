@@ -1,11 +1,6 @@
 import math
+from sympy import solve, symbols
 
-lengths = [1,2,3,4,5,6,7,8,9,10,'∞']
-values = {}
-for l in lengths:
-    values[l]=[l]
+x = symbols('x')
 
-#values= dict.fromkeys(lengths, [])
-
-print(values)
-
+print(solve(x**3 - 32*x**2 +23*x -2,x))
