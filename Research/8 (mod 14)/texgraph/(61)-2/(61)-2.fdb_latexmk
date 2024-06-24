@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1719126294.56282 "c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-1/(61)-1.tex" "(61)-1.pdf" "(61)-1" 1719126295.73209 0
-  "(61)-1.aux" 1719126295 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "(61)-1.tex" 1719126293 4627 dbfbb520fae284e09bb82a6507082f30 ""
-  "c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-1/(61)-1.tex" 1719126293 4627 dbfbb520fae284e09bb82a6507082f30 ""
+["pdflatex"] 1719126645.85162 "c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-2/(61)-2.tex" "(61)-2.pdf" "(61)-2" 1719126646.99672 0
+  "(61)-2.aux" 1719126646 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "(61)-2.tex" 1719126643 4627 dbfbb520fae284e09bb82a6507082f30 ""
+  "c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-2/(61)-2.tex" 1719126643 4627 dbfbb520fae284e09bb82a6507082f30 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1706144016 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1706144016 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1706148342 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -97,7 +97,7 @@
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1706151986 8210992 50eca61535bfacacd4d39eb1fcf3b582 ""
   "c:/texlive/2023/texmf.cnf" 1706151766 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "(61)-1.aux"
-  "(61)-1.log"
-  "(61)-1.pdf"
+  "(61)-2.aux"
+  "(61)-2.log"
+  "(61)-2.pdf"
   (rewritten before read)

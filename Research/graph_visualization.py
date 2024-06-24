@@ -142,10 +142,19 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
         box_start_y = start_y + 10
 
         T = graph_data['T']
-        grid = ["", "", "", "", "", "", "", "", ""]
-        positions = [(0, 0), (1, 0), (0, 1), (1, 1), (0, 2), (1, 2), (1, 1)]
+        distinct_lengths = set(T)
+        # Sort the lengths and place them in the specified order
+        sorted_lengths = sorted(T, key=lambda x: float('inf') if x == '∞' else x)
+        grid = [""] * 9
 
-        for i, length in enumerate(T):
+        if len(distinct_lengths) > 4: 
+            #sets 'standard order' on square if there are more than 4 distinct lengths
+            positions = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 1)]
+        else:
+            #sets custom column-wise order if there are only 4 distinct lengths, namely: 8,9,10,math.inf
+            positions = [(0, 0), (1, 0), (0, 1), (1, 1), (0, 2), (1, 2), (2, 1)]
+
+        for i, length in enumerate(sorted_lengths):
             if i < 6:
                 row, col = positions[i]
                 grid[row * 3 + col] = length
@@ -158,23 +167,30 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
                 screen.blit(text, (start_x + j * cell_size + 10, box_start_y + i * cell_size))
 
         # Draw l_mod_7 chart
-        headers = [8, 9, 10, '∞']
         chart_start_y = box_start_y + 3 * cell_size + 10  # Reduced space between chart and box
-        for i, header in enumerate(headers):
-            text = l_mod_7_font.render(str(header), True, DARK_GREEN)  # DARK_GREEN
-            screen.blit(text, (start_x + i * (chart_width // len(headers)) + 10, chart_start_y))
-        # Draw continuous underline for headers
-        line_end_x = start_x + chart_width
-        pygame.draw.line(screen, (0, 0, 0), (start_x, chart_start_y + 30), (line_end_x, chart_start_y + 30), 2)
 
-        # Draw l_mod_7 values sorted below their respective headers
-        l_mod_7_values = graph_data['l_mod_7_values']
-        max_rows = max(len(l_mod_7_values[8]), len(l_mod_7_values[9]), len(l_mod_7_values[10]), len(l_mod_7_values['∞']))
-        for i, header in enumerate(headers):
-            values = sorted(l_mod_7_values[header])
-            for j, value in enumerate(values):
-                text = l_mod_7_font.render(str(value), True, (255, 0, 0))  # RED
-                screen.blit(text, (start_x + i * (chart_width // len(headers)) + 10, chart_start_y + 40 + j * int(30 * scale_factor)))
+        if len(distinct_lengths) > 4:
+            # Draw the interval [1,7] header
+            interval_text = l_mod_7_font.render("[1,7]", True, DARK_GREEN)  # DARK_GREEN
+            screen.blit(interval_text, (start_x + chart_width // 2 - interval_text.get_width() // 2, chart_start_y))
+            pygame.draw.line(screen, (0, 0, 0), (start_x, chart_start_y + 30), (start_x + chart_width, chart_start_y + 30), 2)
+        else:
+            headers = [8, 9, 10, '∞']
+            for i, header in enumerate(headers):
+                text = l_mod_7_font.render(str(header), True, DARK_GREEN)  # DARK_GREEN
+                screen.blit(text, (start_x + i * (chart_width // len(headers)) + 10, chart_start_y))
+            # Draw continuous underline for headers
+            line_end_x = start_x + chart_width
+            pygame.draw.line(screen, (0, 0, 0), (start_x, chart_start_y + 30), (line_end_x, chart_start_y + 30), 2)
+
+            # Draw l_mod_7 values sorted below their respective headers
+            l_mod_7_values = graph_data['l_mod_7_values']
+            max_rows = max(len(l_mod_7_values[8]), len(l_mod_7_values[9]), len(l_mod_7_values[10]), len(l_mod_7_values['∞']))
+            for i, header in enumerate(headers):
+                values = sorted(l_mod_7_values[header])
+                for j, value in enumerate(values):
+                    text = l_mod_7_font.render(str(value), True, (255, 0, 0))  # RED
+                    screen.blit(text, (start_x + i * (chart_width // len(headers)) + 10, chart_start_y + 40 + j * int(30 * scale_factor)))
 
         start_y = chart_start_y + 40 + max_rows * int(30 * scale_factor) + 10  # Reduced vertical spacing
 
@@ -300,7 +316,7 @@ def visualize(graphs, name, location="default"):
             else:
                 l_mod_7_values[l_e] = [l_mod_7] 
 
-        T = ['8'] * len(l_mod_7_values[8]) + ['9'] * len(l_mod_7_values[9]) + ['10'] * len(l_mod_7_values[10]) + ['∞'] * len(l_mod_7_values['∞'])
+        T = edge_lengths
         all_graph_data.append({'T': T, 'l_mod_7_values': l_mod_7_values})
 
     running = True
@@ -366,12 +382,12 @@ def visualize(graphs, name, location="default"):
                 if dragging_slider:
                     mouse_y = event.pos[1]
                     new_y = mouse_y - dragging_slider_offset
-                    slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 180)
+                    slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 180) #increases upper limit for left tab silder
                     scale_factor = 1 - ((slider_rect.y - (HEIGHT - 180)) / 160)
                 if dragging_vertical_slider:
                     mouse_y = event.pos[1]
                     new_y = mouse_y - dragging_vertical_slider_offset
-                    vertical_slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 180)
+                    vertical_slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 250) #increases upper limit for right tab silder
                     vertex_scale = 1 - ((vertical_slider_rect.y - (HEIGHT - 180)) / 160)
 
         screen.fill((255, 255, 255))  # Clear the screen

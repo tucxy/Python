@@ -124,3 +124,15 @@ G5 = merge(path([0,6,1,5, 2, 9, 7]), path([3,4]))
 
 visualize([G1,G2,G3,G4,G5], '(61)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
+
+'''
+#(61-2)
+G1  = merge(path([9,0,math.inf,1,11,20]),path([1,13]), path([2,12]))
+G2  = merge(path([13,2,math.inf,3,11,0]),path([3,16]), path([12,20]))
+G3  = merge(path([3,12,4,math.inf,5,14]),path([math.inf,6]), path([0,8]))
+G4  = merge(path([13,0,10,1,9,18]),path([1,12]), path([6,17]))
+G5  = merge(path([0,6,1,5,2,9]),path([5,3]), path([7,8]))
+
+visualize([G1,G2,G3,G4,G5], '(61)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+'''
+
