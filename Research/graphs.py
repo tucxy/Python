@@ -122,17 +122,41 @@ G3 = merge(path([3,12,4,math.inf, 5, 14, 1]), path([19,8]))
 G4 = merge(path([3,13,0,10, 1, 9, 18]), path([math.inf,6]))
 G5 = merge(path([0,6,1,5, 2, 9, 7]), path([3,4]))
 
-visualize([G1,G2,G3,G4,G5], '(61)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+F_61_1 = [G1,G2,G3,G4,G5] #defines the decomposition 'object' a list of graph labelings
 
+#visualize(F_61_1, '(61)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
-'''
-#(61-2)
+#(61)-2
 G1  = merge(path([9,0,math.inf,1,11,20]),path([1,13]), path([2,12]))
 G2  = merge(path([13,2,math.inf,3,11,0]),path([3,16]), path([12,20]))
 G3  = merge(path([3,12,4,math.inf,5,14]),path([math.inf,6]), path([0,8]))
 G4  = merge(path([13,0,10,1,9,18]),path([1,12]), path([6,17]))
 G5  = merge(path([0,6,1,5,2,9]),path([5,3]), path([7,8]))
 
-visualize([G1,G2,G3,G4,G5], '(61)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
-'''
+F_61_2 = [G1,G2,G3,G4,G5]
+
+#visualize(F_61_2, '(61)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#(61)-3
+G1 = merge(path([11,1,math.inf,0,9,17]),path([9,19]), path([4,13]))
+G2  = merge(path([11,3,math.inf,2,13,5]),path([1,13]), path([7,18]))
+G3  = merge(path([14,5,math.inf,4,12,3]),path([1,12]), path([7,15]))
+G4  = merge(path([9,1,10,0,13,3]),path([13,math.inf]), path([2,11]))
+G5  = merge(path([0,6,1,5,2,9]),path([2,4]), path([7,8]))
+
+F_61_3 = [G1,G2,G3,G4,G5]
+
+#visualize(F_61_3, '(61)-3', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#(61)-4
+G1 = merge(star(1,[14,11,13,math.inf]),path([20,7,math.inf]), path([8,19]))
+G2 = merge(star(3,[13,math.inf,16,11]),path([9,0,11]), path([6,19]))
+G3 = merge(star(math.inf,[2,5,6,4]),path([3,12,4]), path([7,19]))
+G4 = merge(star(9,[20,18,19,1]),path([0,10,1]), path([4,13]))
+G5 = merge(star(1,[5,6,7,4]),path([9,2,4]), path([11,10]))
+
+F_61_4 = [G1,G2,G3,G4,G5]
+
+visualize(F_61_4, '(61)-4', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
 
