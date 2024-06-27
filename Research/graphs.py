@@ -123,7 +123,6 @@ G4 = merge(path([3,13,0,10, 1, 9, 18]), path([math.inf,6]))
 G5 = merge(path([0,6,1,5, 2, 9, 7]), path([3,4]))
 
 F_61_1 = [G1,G2,G3,G4,G5] #defines the decomposition 'object' a list of graph labelings
-
 #visualize(F_61_1, '(61)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #(61)-2
@@ -134,7 +133,6 @@ G4  = merge(path([13,0,10,1,9,18]),path([1,12]), path([6,17]))
 G5  = merge(path([0,6,1,5,2,9]),path([5,3]), path([7,8]))
 
 F_61_2 = [G1,G2,G3,G4,G5]
-
 #visualize(F_61_2, '(61)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #(61)-3
@@ -145,7 +143,6 @@ G4  = merge(path([9,1,10,0,13,3]),path([13,math.inf]), path([2,11]))
 G5  = merge(path([0,6,1,5,2,9]),path([2,4]), path([7,8]))
 
 F_61_3 = [G1,G2,G3,G4,G5]
-
 #visualize(F_61_3, '(61)-3', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #(61)-4
@@ -156,7 +153,24 @@ G4 = merge(star(9,[20,18,19,1]),path([0,10,1]), path([4,13]))
 G5 = merge(star(1,[5,6,7,4]),path([9,2,4]), path([11,10]))
 
 F_61_4 = [G1,G2,G3,G4,G5]
+#visualize(F_61_4, '(61)-4', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
-visualize(F_61_4, '(61)-4', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+#(61)-5
+G1 = merge(path([7,math.inf,1,13,0]),path([14,1,11]), path([8,19]))
+G2 = merge(path([0,11,3,16,7]),path([13,3,math.inf]), path([6,19]))
+G3 = merge(path([12,4,math.inf,5,17]),path([2,math.inf,6]), path([7,19]))
+G4 = merge(path([10,1,9,18,6]),path([20,9,19]), path([7,17]))
+G5 = merge(path([3,8,1,4,2]),path([5,1,7]), path([9,10]))
 
+F_61_5 = [G1,G2,G3,G4,G5]
+#visualize(F_61_5, '(61)-5', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
+#(61)-6
+G1 = merge(star(7,[20,15,math.inf]),star(1,[math.inf,13,11]),path([8,19]))
+G2 = merge(star(0,[9,12,11]),star(3,[11,16,math.inf]),path([4,13]))
+G3 = merge(star(12,[20,3,4]),star(math.inf,[4,6,5]),path([2,13]))
+G4 = merge(star(12,[20,3,4]),star(math.inf,[4,6,5]),path([2,13]))
+G3 = merge(star(12,[20,3,4]),star(math.inf,[4,6,5]),path([2,13]))
+
+F_61_6 = [G1,G2,G3,G4,G5]
+visualize(F_61_6, '(61)-6', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')

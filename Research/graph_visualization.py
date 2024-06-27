@@ -3,11 +3,12 @@ import networkx as nx
 import os
 import math
 
-# Screen dimensions
+# Updated constants for new left tab width
+NEW_LEFT_TAB_WIDTH = 300  # New width for the left tab
 DEFAULT_WIDTH, DEFAULT_HEIGHT = 1200, 800
-LEFT_TAB_WIDTH = 200
 RIGHT_TAB_WIDTH = 200
 MARGIN = 20  # Margin for better spacing
+DARK_GREEN = (0, 128, 0)
 
 # Darker green color
 DARK_GREEN = (0, 128, 0)
@@ -124,34 +125,31 @@ def draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_e
             else:
                 screen.blit(sub_text, (pos[node][0] + 8, pos[node][1] - 5))
 
-# Function to draw the boxes and charts for each graph
 def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
     edge_font = pygame.font.SysFont('Arial', int(24 * scale_factor))
     l_mod_7_font = pygame.font.SysFont('Arial', int(20 * scale_factor))
     cell_size = int(50 * scale_factor)
-    grid_width = cell_size * 3
-    chart_width = grid_width  # Make the chart width equal to the grid width
+    horizontal_margin = 10  # Adjust margin as needed
+    total_width = NEW_LEFT_TAB_WIDTH - 2 * horizontal_margin
+    grid_width = total_width // 2 - horizontal_margin
+    chart_width = total_width // 2 - horizontal_margin
     start_y = MARGIN
 
     for graph_data in all_graph_data:
-        # Center horizontally in the left tab
-        start_x = (LEFT_TAB_WIDTH - grid_width) // 2
+        start_x = horizontal_margin
 
         # Draw edge lengths grid
-        pygame.draw.rect(screen, (0, 0, 0), (start_x, start_y, grid_width, cell_size * 3), 2)  # Border for the edge length grid
+        pygame.draw.rect(screen, (0, 0, 0), (start_x, start_y, grid_width, cell_size * 3), 2)
         box_start_y = start_y + 10
 
         T = graph_data['T']
         distinct_lengths = set(T)
-        # Sort the lengths and place them in the specified order
         sorted_lengths = sorted(T, key=lambda x: float('inf') if x == '∞' else x)
         grid = [""] * 9
 
-        if len(distinct_lengths) > 4: 
-            #sets 'standard order' on square if there are more than 4 distinct lengths
+        if len(distinct_lengths) > 4:
             positions = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 1)]
         else:
-            #sets custom column-wise order if there are only 4 distinct lengths, namely: 8,9,10,math.inf
             positions = [(0, 0), (1, 0), (0, 1), (1, 1), (0, 2), (1, 2), (2, 1)]
 
         for i, length in enumerate(sorted_lengths):
@@ -163,36 +161,38 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
 
         for i in range(3):
             for j in range(3):
-                text = edge_font.render(str(grid[i * 3 + j]), True, DARK_GREEN)  # DARK_GREEN
-                screen.blit(text, (start_x + j * cell_size + 10, box_start_y + i * cell_size))
+                text = edge_font.render(str(grid[i * 3 + j]), True, DARK_GREEN)
+                text_rect = text.get_rect(center=(start_x + j * cell_size + cell_size // 2, box_start_y + i * cell_size + cell_size // 2))
+                screen.blit(text, text_rect.topleft)
 
         # Draw l_mod_7 chart
-        chart_start_y = box_start_y + 3 * cell_size + 10  # Reduced space between chart and box
+        chart_start_x = start_x + grid_width + horizontal_margin
+        chart_start_y = start_y
+        max_rows = 0
 
         if len(distinct_lengths) > 4:
-            # Draw the interval [1,7] header
-            interval_text = l_mod_7_font.render("[1,7]", True, DARK_GREEN)  # DARK_GREEN
-            screen.blit(interval_text, (start_x + chart_width // 2 - interval_text.get_width() // 2, chart_start_y))
-            pygame.draw.line(screen, (0, 0, 0), (start_x, chart_start_y + 30), (start_x + chart_width, chart_start_y + 30), 2)
+            headers = [8, 9, 10, '∞']
+            max_rows = max(len(graph_data['l_mod_7_values'].get(key, [])) for key in headers)
+            interval_text = l_mod_7_font.render("[1,7]", True, DARK_GREEN)
+            screen.blit(interval_text, (chart_start_x + chart_width // 2 - interval_text.get_width() // 2, chart_start_y))
+            pygame.draw.line(screen, (0, 0, 0), (chart_start_x, chart_start_y + 30), (chart_start_x + chart_width, chart_start_y + 30), 2)
         else:
             headers = [8, 9, 10, '∞']
             for i, header in enumerate(headers):
-                text = l_mod_7_font.render(str(header), True, DARK_GREEN)  # DARK_GREEN
-                screen.blit(text, (start_x + i * (chart_width // len(headers)) + 10, chart_start_y))
-            # Draw continuous underline for headers
-            line_end_x = start_x + chart_width
-            pygame.draw.line(screen, (0, 0, 0), (start_x, chart_start_y + 30), (line_end_x, chart_start_y + 30), 2)
+                text = l_mod_7_font.render(str(header), True, DARK_GREEN)
+                screen.blit(text, (chart_start_x + i * (chart_width // len(headers)) + 10, chart_start_y))
+            line_end_x = chart_start_x + chart_width
+            pygame.draw.line(screen, (0, 0, 0), (chart_start_x, chart_start_y + 30), (line_end_x, chart_start_y + 30), 2)
 
-            # Draw l_mod_7 values sorted below their respective headers
             l_mod_7_values = graph_data['l_mod_7_values']
-            max_rows = max(len(l_mod_7_values[8]), len(l_mod_7_values[9]), len(l_mod_7_values[10]), len(l_mod_7_values['∞']))
             for i, header in enumerate(headers):
-                values = sorted(l_mod_7_values[header])
+                values = sorted(l_mod_7_values.get(header, []))
                 for j, value in enumerate(values):
-                    text = l_mod_7_font.render(str(value), True, (255, 0, 0))  # RED
-                    screen.blit(text, (start_x + i * (chart_width // len(headers)) + 10, chart_start_y + 40 + j * int(30 * scale_factor)))
+                    text = l_mod_7_font.render(str(value), True, (255, 0, 0))
+                    screen.blit(text, (chart_start_x + i * (chart_width // len(headers)) + 10, chart_start_y + 40 + j * int(30 * scale_factor)))
 
-        start_y = chart_start_y + 40 + max_rows * int(30 * scale_factor) + 10  # Reduced vertical spacing
+        start_y = max(chart_start_y + 40 + max_rows * int(30 * scale_factor) + 10, start_y + cell_size * 3 + 10)
+
 
 # Function to draw the slider
 def draw_slider(screen, slider_rect, scale_factor):
@@ -259,7 +259,6 @@ def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_ve
     
     print(f"LaTeX code saved to {os.path.join(output_dir, f'{name}.tex')}")
 
-# Function to visualize multiple graphs using Pygame
 def visualize(graphs, name, location="default"):
     pygame.init()
     WIDTH, HEIGHT = DEFAULT_WIDTH, DEFAULT_HEIGHT
@@ -275,11 +274,11 @@ def visualize(graphs, name, location="default"):
         pos = {}
         start_y = i * section_height + MARGIN
         components = list(nx.connected_components(G))
-        component_width = (WIDTH - LEFT_TAB_WIDTH - RIGHT_TAB_WIDTH) // len(components)
+        component_width = (WIDTH - NEW_LEFT_TAB_WIDTH - RIGHT_TAB_WIDTH) // len(components)
 
         for j, component in enumerate(components):
             subgraph = G.subgraph(component)
-            arrange_tree(subgraph, pos, LEFT_TAB_WIDTH + j * component_width + MARGIN, start_y, component_width, section_height)
+            arrange_tree(subgraph, pos, NEW_LEFT_TAB_WIDTH + j * component_width + MARGIN, start_y, component_width, section_height)
 
         pos_list.append(pos)
 
@@ -288,7 +287,7 @@ def visualize(graphs, name, location="default"):
     scale_factor = 1.0
     vertex_scale = 1.0  # Default size set to 1.0
 
-    slider_rect = pygame.Rect(LEFT_TAB_WIDTH - 20, HEIGHT - 180, 20, 160)
+    slider_rect = pygame.Rect(NEW_LEFT_TAB_WIDTH - 20, HEIGHT - 180, 20, 160)
     vertical_slider_rect = pygame.Rect(WIDTH - RIGHT_TAB_WIDTH + MARGIN + 160, HEIGHT - 180, 20, 160)
     show_vertex_labels = True
     show_vertex_sublabels = True
@@ -333,20 +332,12 @@ def visualize(graphs, name, location="default"):
                 running = False
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_x, mouse_y = event.pos
-                if left_tab_open and LEFT_TAB_WIDTH - 20 < mouse_x < LEFT_TAB_WIDTH and HEIGHT // 2 - 20 < mouse_y < HEIGHT // 2 + 20:
-                    left_tab_open = not left_tab_open
-                elif not left_tab_open and 0 < mouse_x < 20 and HEIGHT // 2 - 20 < mouse_y < HEIGHT // 2 + 20:
-                    left_tab_open = not left_tab_open
-                elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH <= mouse_x < WIDTH - RIGHT_TAB_WIDTH + 20 and HEIGHT // 2 - 20 < mouse_y < HEIGHT // 2 + 20:
-                    right_tab_open = not right_tab_open
-                elif not right_tab_open and WIDTH - 20 <= mouse_x < WIDTH and HEIGHT // 2 - 20 < mouse_y < HEIGHT // 2 + 20:
-                    right_tab_open = not right_tab_open
-                elif right_tab_open and vertical_slider_rect.collidepoint(event.pos):  # Check if clicked on the vertical slider
-                    dragging_vertical_slider = True
-                    dragging_vertical_slider_offset = mouse_y - vertical_slider_rect.y
-                elif left_tab_open and slider_rect.collidepoint(event.pos):  # Check if clicked on the left tab slider
+                if left_tab_open and NEW_LEFT_TAB_WIDTH - 20 < mouse_x < NEW_LEFT_TAB_WIDTH and HEIGHT - 180 < mouse_y < HEIGHT - 20:
                     dragging_slider = True
                     dragging_slider_offset = mouse_y - slider_rect.y
+                elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH + MARGIN + 160 < mouse_x < WIDTH - RIGHT_TAB_WIDTH + MARGIN + 180 and HEIGHT - 180 < mouse_y < HEIGHT - 20:
+                    dragging_vertical_slider = True
+                    dragging_vertical_slider_offset = mouse_y - vertical_slider_rect.y
                 else:
                     for pos in pos_list:
                         for node in pos:
@@ -355,7 +346,6 @@ def visualize(graphs, name, location="default"):
                                 selected_node = node
                                 selected_pos = pos
                                 break
-                # Check if any right tab button is clicked
                 if right_tab_open:
                     if WIDTH - RIGHT_TAB_WIDTH + MARGIN <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + MARGIN + 140 and 50 <= mouse_y <= 110:
                         generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels)
@@ -382,12 +372,12 @@ def visualize(graphs, name, location="default"):
                 if dragging_slider:
                     mouse_y = event.pos[1]
                     new_y = mouse_y - dragging_slider_offset
-                    slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 180) #increases upper limit for left tab silder
+                    slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 180)
                     scale_factor = 1 - ((slider_rect.y - (HEIGHT - 180)) / 160)
                 if dragging_vertical_slider:
                     mouse_y = event.pos[1]
                     new_y = mouse_y - dragging_vertical_slider_offset
-                    vertical_slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 250) #increases upper limit for right tab silder
+                    vertical_slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 250)
                     vertex_scale = 1 - ((vertical_slider_rect.y - (HEIGHT - 180)) / 160)
 
         screen.fill((255, 255, 255))  # Clear the screen
@@ -396,19 +386,16 @@ def visualize(graphs, name, location="default"):
             draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale)
 
         if left_tab_open:
-            pygame.draw.rect(screen, (200, 200, 200), (0, 0, LEFT_TAB_WIDTH, HEIGHT))  # Shaded gray background for left tab
+            pygame.draw.rect(screen, (200, 200, 200), (0, 0, NEW_LEFT_TAB_WIDTH, HEIGHT))  # Shaded gray background for left tab
             draw_boxes_and_charts(screen, all_graph_data, scale_factor)
             draw_slider(screen, slider_rect, scale_factor)
 
         if right_tab_open:
-            # Draw right tab with buttons
             pygame.draw.rect(screen, (200, 200, 200), (WIDTH - RIGHT_TAB_WIDTH, 0, RIGHT_TAB_WIDTH, HEIGHT))
-            # Draw Save button
-            pygame.draw.rect(screen, (0, 128, 0), (WIDTH - RIGHT_TAB_WIDTH + MARGIN, 50, 140, 60))  # DARK_GREEN
-            save_text = pygame.font.SysFont('Arial', 18).render("Save", True, (0, 0, 0))  # BLACK
+            pygame.draw.rect(screen, (0, 128, 0), (WIDTH - RIGHT_TAB_WIDTH + MARGIN, 50, 140, 60))
+            save_text = pygame.font.SysFont('Arial', 18).render("Save", True, (0, 0, 0))
             screen.blit(save_text, (WIDTH - RIGHT_TAB_WIDTH + MARGIN + 70 - save_text.get_width() // 2, 80 - save_text.get_height() // 2))
 
-            # Draw toggle buttons
             buttons = [
                 {"label": "vertex labels", "state": show_vertex_labels, "pos": (WIDTH - RIGHT_TAB_WIDTH + MARGIN, 130)},
                 {"label": "vertex subscript labels", "state": show_vertex_sublabels, "pos": (WIDTH - RIGHT_TAB_WIDTH + MARGIN, 210)},
@@ -417,30 +404,27 @@ def visualize(graphs, name, location="default"):
             ]
 
             for button in buttons:
-                color = (0, 128, 0) if button["state"] else (255, 0, 0)  # DARK_GREEN
-                text = f"{button['label']} {'on' if button['state'] else 'off'}"
+                color = (0, 128, 0) if button["state"] else (255, 0, 0)
+                text = f"{button['label']} {'on' if button["state"] else 'off'}"
                 button_font_size = 18
                 button_font = pygame.font.SysFont('Arial', button_font_size)
-                button_text = button_font.render(text, True, (0, 0, 0))  # BLACK
+                button_text = button_font.render(text, True, (0, 0, 0))
                 
-                # Adjust font size to fit inside button
                 while button_text.get_width() > 140 - MARGIN * 2 and button_font_size > 10:
                     button_font_size -= 1
                     button_font = pygame.font.SysFont('Arial', button_font_size)
-                    button_text = button_font.render(text, True, (0, 0, 0))  # BLACK
+                    button_text = button_font.render(text, True, (0, 0, 0))
                 
                 pygame.draw.rect(screen, color, (*button["pos"], 140, 60))
                 screen.blit(button_text, (button["pos"][0] + 70 - button_text.get_width() // 2, button["pos"][1] + 30 - button_text.get_height() // 2))
 
-            # Draw vertical slider for vertex and label size
             draw_vertical_slider(screen, vertical_slider_rect, vertex_scale)
 
-        # Draw tab toggle buttons
         tab_button_font = pygame.font.SysFont('Arial', 14)
         if left_tab_open:
-            pygame.draw.rect(screen, (150, 150, 150), (LEFT_TAB_WIDTH - 20, HEIGHT // 2 - 20, 20, 40))
+            pygame.draw.rect(screen, (150, 150, 150), (NEW_LEFT_TAB_WIDTH - 20, HEIGHT // 2 - 20, 20, 40))
             tab_text = tab_button_font.render("<", True, (0, 0, 0))
-            screen.blit(tab_text, (LEFT_TAB_WIDTH - 20 + 10 - tab_text.get_width() // 2, HEIGHT // 2 - 20 + 20 - tab_text.get_height() // 2))
+            screen.blit(tab_text, (NEW_LEFT_TAB_WIDTH - 20 + 10 - tab_text.get_width() // 2, HEIGHT // 2 - 20 + 20 - tab_text.get_height() // 2))
         else:
             pygame.draw.rect(screen, (150, 150, 150), (0, HEIGHT // 2 - 20, 20, 40))
             tab_text = tab_button_font.render(">", True, (0, 0, 0))
@@ -455,6 +439,6 @@ def visualize(graphs, name, location="default"):
             tab_text = tab_button_font.render("<", True, (0, 0, 0))
             screen.blit(tab_text, (WIDTH - 10 - tab_text.get_width() // 2, HEIGHT // 2 - 20 + 20 - tab_text.get_height() // 2))
 
-        pygame.display.flip()  # Update the display
+        pygame.display.flip()
 
     pygame.quit()
