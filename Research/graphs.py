@@ -113,7 +113,9 @@ def trees(n):
     return all_trees
 #notebook
 
-#8 ( mod 14)
+'''8 ( mod 14)'''
+
+'''(61)'''
 
 #(61)-1
 G1  = merge(path([20,11,1,math.inf, 0, 9, 19]), path([2,10]))
@@ -169,8 +171,30 @@ F_61_5 = [G1,G2,G3,G4,G5]
 G1 = merge(star(7,[20,15,math.inf]),star(1,[math.inf,13,11]),path([8,19]))
 G2 = merge(star(0,[9,12,11]),star(3,[11,16,math.inf]),path([4,13]))
 G3 = merge(star(12,[20,3,4]),star(math.inf,[4,6,5]),path([2,13]))
-G4 = merge(star(12,[20,3,4]),star(math.inf,[4,6,5]),path([2,13]))
-G3 = merge(star(12,[20,3,4]),star(math.inf,[4,6,5]),path([2,13]))
+G4 = merge(star(10,[20,0,1]),star(9,[1,19,18]),path([2,math.inf]))
+G5 = merge(star(8,[7,4,1]),star(6,[1,0,3]),path([9,11]))
 
 F_61_6 = [G1,G2,G3,G4,G5]
-visualize(F_61_6, '(61)-6', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+#visualize(F_61_6, '(61)-6', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+'''(52)'''
+
+#(52)-3
+G1 = merge(path([11,1,math.inf, 0,9]),path([math.inf,6]),path([5,15,7]))
+G2 = merge(path([18,6,16,math.inf,3]),path([16,4]),path([12,2,10]))
+G3 = merge(path([3,12,4,math.inf,5]),path([4,17]),path([6,19,7]))
+G4 = merge(path([11,0,10,1,9]),path([10,20]),path([15,6,14]))
+G5 = merge(path([5,11,9,12,7]),path([9,10]),path([1,8,4]))
+
+F_52_3 = [G1,G2,G3,G4,G5]
+#visualize(F_52_3, '(52)-3', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#(52)-4
+G1 = merge(path([11,1,math.inf,0]),path([12,1,math.inf,6]), path([15,7,16]))
+G2 = merge(path([6,16,math.inf,3]),path([4,16,math.inf,5]), path([12,2,10]))
+G3 = merge(path([3,12,4,math.inf]),path([0,12,4,17]), path([18,6,19]))
+G4 = merge(path([0,10,1,9]),path([20,10,1,13]), path([6,14,4]))
+G5 = merge(path([3,8,1,7]),path([4,8,1,6]), path([10,9,11]))
+
+F_52_4 = [G1,G2,G3,G4,G5]
+visualize(F_52_4, '(52)-4', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')

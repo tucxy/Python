@@ -4,132 +4,17 @@ import os
 import math
 
 # Updated constants for new left tab width
-NEW_LEFT_TAB_WIDTH = 350  # New width for the left tab
+NEW_LEFT_TAB_WIDTH = 350  # Further increased width for the left tab
 DEFAULT_WIDTH, DEFAULT_HEIGHT = 1200, 800
 RIGHT_TAB_WIDTH = 200
 MARGIN = 20  # Margin for better spacing
 DARK_GREEN = (0, 128, 0)
 
-# Darker green color
-DARK_GREEN = (0, 128, 0)
-
-# Function to find the longest path in a tree
-def find_longest_path(tree):
-    def bfs_longest_path_length(tree, start):
-        visited = {start}
-        queue = [(start, [start])]
-        max_path = []
-        while queue:
-            node, path = queue.pop(0)
-            for neighbor in tree.neighbors(node):
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    new_path = path + [neighbor]
-                    queue.append((neighbor, new_path))
-                    if len(new_path) > len(max_path):
-                        max_path = new_path
-        return max_path
-
-    longest_path = []
-    for node in tree.nodes():
-        path = bfs_longest_path_length(tree, node)
-        if len(path) > len(longest_path):
-            longest_path = path
-    return longest_path
-
-# Function to arrange nodes along the longest path and branch out leaves
-def arrange_tree(tree, pos, start_x, start_y, width, height, x_spacing=50, y_spacing=50):
-    longest_path = find_longest_path(tree)
-    x = start_x
-    y = start_y
-
-    # Arrange nodes along the longest path
-    for i, node in enumerate(longest_path):
-        pos[node] = (x, y)
-        x += x_spacing
-
-    # Arrange other nodes branching out from the longest path
-    for i, node in enumerate(longest_path):
-        leaf_y = y + y_spacing
-        for neighbor in tree.neighbors(node):
-            if neighbor not in pos:
-                pos[neighbor] = (pos[node][0], leaf_y)
-                leaf_y += y_spacing
-
-    # Arrange any remaining nodes that might not be connected
-    remaining_nodes = set(tree.nodes()) - set(pos.keys())
-    for node in remaining_nodes:
-        pos[node] = (x, y)
-        y += y_spacing
-
-    return pos
-
-# Function to draw the graph with labels
-def draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale):
-    for edge in G.edges():
-        pygame.draw.line(screen, (200, 200, 200), pos[edge[0]], pos[edge[1]], int(2 * vertex_scale))  # GRAY
-        # Calculate edge label
-        x, y = edge
-        l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
-        if x == math.inf:
-            l_mod_7 = y % 7
-        elif y == math.inf:
-            l_mod_7 = x % 7
-        else:
-            l_mod_7 = (x + y) % 7
-
-        mid_x = (pos[edge[0]][0] + pos[edge[1]][0]) / 2
-        mid_y = (pos[edge[0]][1] + pos[edge[1]][1]) / 2
-        angle = math.atan2(pos[edge[1]][1] - pos[edge[0]][1], pos[edge[0]][0] - pos[edge[1]][0])
-        angle_deg = math.degrees(angle)
-
-        if angle_deg < -90 or angle_deg > 90:
-            angle_deg += 180
-            angle_deg %= 360
-
-        font = pygame.font.SysFont('Arial', int(12 * vertex_scale))
-        sub_font = pygame.font.SysFont('Arial', int(10 * vertex_scale))
-
-        if show_edge_labels:
-            text = font.render(str(l_e), True, DARK_GREEN)  # DARK_GREEN
-            text = pygame.transform.rotate(text, -angle_deg)
-            text_rect = text.get_rect(center=(mid_x, mid_y))
-            screen.blit(text, text_rect.topleft)
-
-        if show_edge_sublabels:
-            sub_text = sub_font.render(str(l_mod_7), True, (255, 0, 0))  # RED
-            sub_text = pygame.transform.rotate(sub_text, -angle_deg)
-            sub_text_rect = sub_text.get_rect(center=(mid_x, mid_y))
-            if show_edge_labels:
-                screen.blit(sub_text, (text_rect.right - 5, text_rect.bottom - 5))
-            else:
-                screen.blit(sub_text, sub_text_rect.topleft)
-
-    for node in G.nodes():
-        pygame.draw.circle(screen, (0, 0, 255), (int(pos[node][0]), int(pos[node][1])), int(5 * vertex_scale))  # BLUE
-        # Draw custom node labels with subscript
-        node_label = "∞" if node == math.inf else str(node % 21)
-        sub_label = "" if node == math.inf else str(node % 7)
-        font = pygame.font.SysFont('Arial', int(12 * vertex_scale))
-        sub_font = pygame.font.SysFont('Arial', int(10 * vertex_scale))
-
-        if show_vertex_labels:
-            text = font.render(node_label, True, (0, 0, 0))  # BLACK
-            text_rect = text.get_rect()
-            screen.blit(text, (pos[node][0] + 8, pos[node][1] - 5))  # Moved the label beside the node
-
-        if show_vertex_sublabels and sub_label:
-            sub_text = sub_font.render(sub_label, True, (255, 0, 0))  # RED
-            if show_vertex_labels:
-                screen.blit(sub_text, (pos[node][0] + 8 + text_rect.width - 2, pos[node][1] - 5 + text_rect.height - 2))
-            else:
-                screen.blit(sub_text, (pos[node][0] + 8, pos[node][1] - 5))
-
 def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
     edge_font = pygame.font.SysFont('Arial', int(24 * scale_factor))
     l_mod_7_font = pygame.font.SysFont('Arial', int(20 * scale_factor))
     cell_size = int(50 * scale_factor)
-    horizontal_margin = 5  # Adjust margin as needed controls size of box
+    horizontal_margin = 10  # Adjust margin as needed
     total_width = NEW_LEFT_TAB_WIDTH - 2 * horizontal_margin
     grid_width = total_width // 2 - horizontal_margin
     chart_width = total_width // 2 - horizontal_margin
@@ -193,21 +78,77 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
 
         start_y = max(chart_start_y + 40 + max_rows * int(30 * scale_factor) + 10, start_y + cell_size * 3 + 10)
 
+def draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale):
+    for edge in G.edges():
+        pygame.draw.line(screen, (200, 200, 200), pos[edge[0]], pos[edge[1]], int(2 * vertex_scale))  # GRAY
+        # Calculate edge label
+        x, y = edge
+        l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
+        if x == math.inf:
+            l_mod_7 = y % 7
+        elif y == math.inf:
+            l_mod_7 = x % 7
+        else:
+            l_mod_7 = (x + y) % 7
 
-# Function to draw the slider
+        mid_x = (pos[edge[0]][0] + pos[edge[1]][0]) / 2
+        mid_y = (pos[edge[0]][1] + pos[edge[1]][1]) / 2
+        angle = math.atan2(pos[edge[1]][1] - pos[edge[0]][1], pos[edge[0]][0] - pos[edge[1]][0])
+        angle_deg = math.degrees(angle)
+
+        if angle_deg < -90 or angle_deg > 90:
+            angle_deg += 180
+            angle_deg %= 360
+
+        font = pygame.font.SysFont('Arial', int(12 * vertex_scale))
+        sub_font = pygame.font.SysFont('Arial', int(10 * vertex_scale))
+
+        if show_edge_labels:
+            text = font.render(str(l_e), True, DARK_GREEN)  # DARK_GREEN
+            text = pygame.transform.rotate(text, -angle_deg)
+            text_rect = text.get_rect(center=(mid_x, mid_y))
+            screen.blit(text, text_rect.topleft)
+
+        if show_edge_sublabels:
+            sub_text = sub_font.render(str(l_mod_7), True, (255, 0, 0))  # RED
+            sub_text = pygame.transform.rotate(sub_text, -angle_deg)
+            sub_text_rect = sub_text.get_rect(center=(mid_x, mid_y))
+            if show_edge_labels:
+                screen.blit(sub_text, (text_rect.right - 5, text_rect.bottom - 5))
+            else:
+                screen.blit(sub_text, sub_text_rect.topleft)
+
+    for node in G.nodes():
+        pygame.draw.circle(screen, (0, 0, 255), (int(pos[node][0]), int(pos[node][1])), int(5 * vertex_scale))  # BLUE
+        # Draw custom node labels with subscript
+        node_label = "∞" if node == math.inf else str(node % 21)
+        sub_label = "" if node == math.inf else str(node % 7)
+        font = pygame.font.SysFont('Arial', int(12 * vertex_scale))
+        sub_font = pygame.font.SysFont('Arial', int(10 * vertex_scale))
+
+        if show_vertex_labels:
+            text = font.render(node_label, True, (0, 0, 0))  # BLACK
+            text_rect = text.get_rect()
+            screen.blit(text, (pos[node][0] + 8, pos[node][1] - 5))  # Moved the label beside the node
+
+        if show_vertex_sublabels and sub_label:
+            sub_text = sub_font.render(sub_label, True, (255, 0, 0))  # RED
+            if show_vertex_labels:
+                screen.blit(sub_text, (pos[node][0] + 8 + text_rect.width - 2, pos[node][1] - 5 + text_rect.height - 2))
+            else:
+                screen.blit(sub_text, (pos[node][0] + 8, pos[node][1] - 5))
+
 def draw_slider(screen, slider_rect, scale_factor):
     pygame.draw.rect(screen, (200, 200, 200), slider_rect)  # Slider background
     handle_rect = pygame.Rect(slider_rect.x, slider_rect.y + int((1 - scale_factor) * slider_rect.height), slider_rect.width, 10)
     pygame.draw.rect(screen, (0, 128, 0), handle_rect)  # Slider handle (DARK_GREEN)
 
-# Function to draw the vertical slider for vertex and label size
-def draw_vertical_slider(screen, slider_rect, vertex_scale):
+def draw_vertical_slider(screen, slider_rect, scale_factor):
     pygame.draw.rect(screen, (200, 200, 200), slider_rect)  # Slider background
-    handle_y = slider_rect.y + int((1 - vertex_scale) * slider_rect.height)
+    handle_y = slider_rect.y + int((1 - scale_factor) * slider_rect.height)
     handle_rect = pygame.Rect(slider_rect.x, handle_y, slider_rect.width, 10)
     pygame.draw.rect(screen, (0, 128, 0), handle_rect)  # Slider handle (DARK_GREEN)
 
-# Function to generate LaTeX code and save to specified location
 def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels):
     output_dir = os.path.join(location if location != "default" else os.path.dirname(os.path.abspath(__file__)), name)
     if not os.path.exists(output_dir):
@@ -338,14 +279,6 @@ def visualize(graphs, name, location="default"):
                 elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH + MARGIN + 160 < mouse_x < WIDTH - RIGHT_TAB_WIDTH + MARGIN + 180 and HEIGHT - 180 < mouse_y < HEIGHT - 20:
                     dragging_vertical_slider = True
                     dragging_vertical_slider_offset = mouse_y - vertical_slider_rect.y
-                elif left_tab_open and NEW_LEFT_TAB_WIDTH - 20 <= mouse_x <= NEW_LEFT_TAB_WIDTH and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    left_tab_open = not left_tab_open
-                elif not left_tab_open and 0 <= mouse_x <= 20 and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    left_tab_open = not left_tab_open
-                elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + 20 and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    right_tab_open = not right_tab_open
-                elif not right_tab_open and WIDTH - 20 <= mouse_x <= WIDTH and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    right_tab_open = not right_tab_open
                 else:
                     for pos in pos_list:
                         for node in pos:
@@ -450,3 +383,52 @@ def visualize(graphs, name, location="default"):
         pygame.display.flip()
 
     pygame.quit()
+
+def arrange_tree(tree, pos, start_x, start_y, width, height, x_spacing=50, y_spacing=50):
+    longest_path = find_longest_path(tree)
+    x = start_x
+    y = start_y
+
+    # Arrange nodes along the longest path
+    for i, node in enumerate(longest_path):
+        pos[node] = (x, y)
+        x += x_spacing
+
+    # Arrange other nodes branching out from the longest path
+    for i, node in enumerate(longest_path):
+        leaf_y = y + y_spacing
+        for neighbor in tree.neighbors(node):
+            if neighbor not in pos:
+                pos[neighbor] = (pos[node][0], leaf_y)
+                leaf_y += y_spacing
+
+    # Arrange any remaining nodes that might not be connected
+    remaining_nodes = set(tree.nodes()) - set(pos.keys())
+    for node in remaining_nodes:
+        pos[node] = (x, y)
+        y += y_spacing
+
+    return pos
+
+def find_longest_path(tree):
+    def bfs_longest_path_length(tree, start):
+        visited = {start}
+        queue = [(start, [start])]
+        max_path = []
+        while queue:
+            node, path = queue.pop(0)
+            for neighbor in tree.neighbors(node):
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    new_path = path + [neighbor]
+                    queue.append((node, new_path))
+                    if len(new_path) > len(max_path):
+                        max_path = new_path
+        return max_path
+
+    longest_path = []
+    for node in tree.nodes():
+        path = bfs_longest_path_length(tree, node)
+        if len(path) > len(longest_path):
+            longest_path = path
+    return longest_path
