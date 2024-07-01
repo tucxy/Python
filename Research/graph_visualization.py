@@ -10,9 +10,6 @@ RIGHT_TAB_WIDTH = 200
 MARGIN = 20  # Margin for better spacing
 DARK_GREEN = (0, 128, 0)
 
-# Darker green color
-DARK_GREEN = (0, 128, 0)
-
 # Function to find the longest path in a tree
 def find_longest_path(tree):
     def bfs_longest_path_length(tree, start):
@@ -326,54 +323,71 @@ def visualize(graphs, name, location="default"):
     dragging_slider_offset = 0
     dragging_vertical_slider_offset = 0
 
+    # Variables for graph dragging
+    dragging_graph = False
+    initial_click_position = (0, 0)
+
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_x, mouse_y = event.pos
-                if left_tab_open and NEW_LEFT_TAB_WIDTH - 20 < mouse_x < NEW_LEFT_TAB_WIDTH and HEIGHT - 180 < mouse_y < HEIGHT - 20:
-                    dragging_slider = True
-                    dragging_slider_offset = mouse_y - slider_rect.y
-                elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH + MARGIN + 160 < mouse_x < WIDTH - RIGHT_TAB_WIDTH + MARGIN + 180 and HEIGHT - 180 < mouse_y < HEIGHT - 20:
-                    dragging_vertical_slider = True
-                    dragging_vertical_slider_offset = mouse_y - vertical_slider_rect.y
-                elif left_tab_open and NEW_LEFT_TAB_WIDTH - 20 <= mouse_x <= NEW_LEFT_TAB_WIDTH and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    left_tab_open = not left_tab_open
-                elif not left_tab_open and 0 <= mouse_x <= 20 and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    left_tab_open = not left_tab_open
-                elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + 20 and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    right_tab_open = not right_tab_open
-                elif not right_tab_open and WIDTH - 20 <= mouse_x <= WIDTH and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
-                    right_tab_open = not right_tab_open
-                else:
+                if event.button == 1:  # Left click
+                    if left_tab_open and NEW_LEFT_TAB_WIDTH - 20 < mouse_x < NEW_LEFT_TAB_WIDTH and HEIGHT - 180 < mouse_y < HEIGHT - 20:
+                        dragging_slider = True
+                        dragging_slider_offset = mouse_y - slider_rect.y
+                    elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH + MARGIN + 160 < mouse_x < WIDTH - RIGHT_TAB_WIDTH + MARGIN + 180 and HEIGHT - 180 < mouse_y < HEIGHT - 20:
+                        dragging_vertical_slider = True
+                        dragging_vertical_slider_offset = mouse_y - vertical_slider_rect.y
+                    elif left_tab_open and NEW_LEFT_TAB_WIDTH - 20 <= mouse_x <= NEW_LEFT_TAB_WIDTH and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
+                        left_tab_open = not left_tab_open
+                    elif not left_tab_open and 0 <= mouse_x <= 20 and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
+                        left_tab_open = not left_tab_open
+                    elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + 20 and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
+                        right_tab_open = not right_tab_open
+                    elif not right_tab_open and WIDTH - 20 <= mouse_x <= WIDTH and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
+                        right_tab_open = not right_tab_open
+                    else:
+                        for pos in pos_list:
+                            for node in pos:
+                                node_x, node_y = pos[node]
+                                if (node_x - mouse_x) ** 2 + (node_y - mouse_y) ** 2 < 10 ** 2:
+                                    selected_node = node
+                                    selected_pos = pos
+                                    break
+                        if right_tab_open:
+                            if WIDTH - RIGHT_TAB_WIDTH + MARGIN <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + MARGIN + 140 and 50 <= mouse_y <= 110:
+                                generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels)
+                            for button in buttons:
+                                button_rect = pygame.Rect(button["pos"][0], button["pos"][1], 140, 60)
+                                if button_rect.collidepoint(event.pos):
+                                    button["state"] = not button["state"]
+                                    if button["label"] == "vertex labels":
+                                        show_vertex_labels = button["state"]
+                                    elif button["label"] == "vertex subscript labels":
+                                        show_vertex_sublabels = button["state"]
+                                    elif button["label"] == "edge labels":
+                                        show_edge_labels = button["state"]
+                                    elif button["label"] == "edge subscript labels":
+                                        show_edge_sublabels = button["state"]
+                elif event.button == 3:  # Right click
                     for pos in pos_list:
                         for node in pos:
                             node_x, node_y = pos[node]
                             if (node_x - mouse_x) ** 2 + (node_y - mouse_y) ** 2 < 10 ** 2:
-                                selected_node = node
+                                dragging_graph = True
                                 selected_pos = pos
+                                initial_click_position = (mouse_x, mouse_y)
                                 break
-                if right_tab_open:
-                    if WIDTH - RIGHT_TAB_WIDTH + MARGIN <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + MARGIN + 140 and 50 <= mouse_y <= 110:
-                        generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels)
-                    for button in buttons:
-                        button_rect = pygame.Rect(button["pos"][0], button["pos"][1], 140, 60)
-                        if button_rect.collidepoint(event.pos):
-                            button["state"] = not button["state"]
-                            if button["label"] == "vertex labels":
-                                show_vertex_labels = button["state"]
-                            elif button["label"] == "vertex subscript labels":
-                                show_vertex_sublabels = button["state"]
-                            elif button["label"] == "edge labels":
-                                show_edge_labels = button["state"]
-                            elif button["label"] == "edge subscript labels":
-                                show_edge_sublabels = button["state"]
 
             elif event.type == pygame.MOUSEBUTTONUP:
-                selected_node = None
-                dragging_slider = False
-                dragging_vertical_slider = False
+                if event.button == 1:
+                    selected_node = None
+                    dragging_slider = False
+                    dragging_vertical_slider = False
+                elif event.button == 3:
+                    dragging_graph = False
             elif event.type == pygame.MOUSEMOTION:
                 if selected_node is not None:
                     selected_pos[selected_node] = event.pos
@@ -387,6 +401,13 @@ def visualize(graphs, name, location="default"):
                     new_y = mouse_y - dragging_vertical_slider_offset
                     vertical_slider_rect.y = max(min(new_y, HEIGHT - 20), HEIGHT - 250)
                     vertex_scale = 1 - ((vertical_slider_rect.y - (HEIGHT - 180)) / 160)
+                if dragging_graph:
+                    mouse_x, mouse_y = event.pos
+                    dx = mouse_x - initial_click_position[0]
+                    dy = mouse_y - initial_click_position[1]
+                    for node in selected_pos:
+                        selected_pos[node] = (selected_pos[node][0] + dx, selected_pos[node][1] + dy)
+                    initial_click_position = (mouse_x, mouse_y)
 
         screen.fill((255, 255, 255))  # Clear the screen
 
