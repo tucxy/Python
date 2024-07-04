@@ -10,6 +10,9 @@ RIGHT_TAB_WIDTH = 200
 MARGIN = 20  # Margin for better spacing
 DARK_GREEN = (0, 128, 0)
 
+# New grid toggle state
+show_grid = False
+
 # Function to find the longest path in a tree
 def find_longest_path(tree):
     def bfs_longest_path_length(tree, start):
@@ -190,6 +193,12 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
 
         start_y = max(chart_start_y + 40 + max_rows * int(30 * scale_factor) + 10, start_y + cell_size * 3 + 10)
 
+# Function to draw the grid
+def draw_grid(screen, width, height, spacing_x, spacing_y):
+    for x in range(0, width, spacing_x):
+        pygame.draw.line(screen, (200, 200, 200), (x, 0), (x, height))
+    for y in range(0, height, spacing_y):
+        pygame.draw.line(screen, (200, 200, 200), (0, y), (width, y))
 
 # Function to draw the slider
 def draw_slider(screen, slider_rect, scale_factor):
@@ -257,6 +266,7 @@ def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_ve
     print(f"LaTeX code saved to {os.path.join(output_dir, f'{name}.tex')}")
 
 def visualize(graphs, name, location="default"):
+    global show_grid  # Declare the variable as global
     pygame.init()
     WIDTH, HEIGHT = DEFAULT_WIDTH, DEFAULT_HEIGHT
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -266,6 +276,7 @@ def visualize(graphs, name, location="default"):
     section_height = HEIGHT // num_graphs
 
     pos_list = []
+    x_spacing, y_spacing = 50, 50
 
     for i, G in enumerate(graphs):
         pos = {}
@@ -275,7 +286,7 @@ def visualize(graphs, name, location="default"):
 
         for j, component in enumerate(components):
             subgraph = G.subgraph(component)
-            arrange_tree(subgraph, pos, NEW_LEFT_TAB_WIDTH + j * component_width + MARGIN, start_y, component_width, section_height)
+            arrange_tree(subgraph, pos, NEW_LEFT_TAB_WIDTH + j * component_width + MARGIN, start_y, component_width, section_height, x_spacing, y_spacing)
 
         pos_list.append(pos)
 
@@ -327,6 +338,9 @@ def visualize(graphs, name, location="default"):
     dragging_graph = False
     initial_click_position = (0, 0)
 
+    # Button for toggling the grid
+    grid_button = {"label": "Toggle Grid", "state": False, "pos": (WIDTH - RIGHT_TAB_WIDTH + MARGIN, 450)}
+
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -348,6 +362,9 @@ def visualize(graphs, name, location="default"):
                         right_tab_open = not right_tab_open
                     elif not right_tab_open and WIDTH - 20 <= mouse_x <= WIDTH and HEIGHT // 2 - 20 <= mouse_y <= HEIGHT // 2 + 20:
                         right_tab_open = not right_tab_open
+                    elif right_tab_open and WIDTH - RIGHT_TAB_WIDTH + MARGIN <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + MARGIN + 140 and 450 <= mouse_y <= 510:
+                        show_grid = not show_grid
+                        grid_button["state"] = show_grid
                     else:
                         for pos in pos_list:
                             for node in pos:
@@ -411,6 +428,9 @@ def visualize(graphs, name, location="default"):
 
         screen.fill((255, 255, 255))  # Clear the screen
 
+        if show_grid:
+            draw_grid(screen, WIDTH, HEIGHT, x_spacing, y_spacing)
+
         for G, pos in zip(graphs, pos_list):
             draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale)
 
@@ -447,6 +467,12 @@ def visualize(graphs, name, location="default"):
                 pygame.draw.rect(screen, color, (*button["pos"], 140, 60))
                 screen.blit(button_text, (button["pos"][0] + 70 - button_text.get_width() // 2, button["pos"][1] + 30 - button_text.get_height() // 2))
 
+            # Draw grid toggle button
+            grid_button_color = (0, 128, 0) if grid_button["state"] else (255, 0, 0)
+            pygame.draw.rect(screen, grid_button_color, (*grid_button["pos"], 140, 60))
+            grid_button_text = pygame.font.SysFont('Arial', 18).render(grid_button["label"], True, (0, 0, 0))
+            screen.blit(grid_button_text, (grid_button["pos"][0] + 70 - grid_button_text.get_width() // 2, grid_button["pos"][1] + 30 - grid_button_text.get_height() // 2))
+
             draw_vertical_slider(screen, vertical_slider_rect, vertex_scale)
 
         tab_button_font = pygame.font.SysFont('Arial', 14)
@@ -466,7 +492,7 @@ def visualize(graphs, name, location="default"):
         else:
             pygame.draw.rect(screen, (150, 150, 150), (WIDTH - 20, HEIGHT // 2 - 20, 20, 40))
             tab_text = tab_button_font.render("<", True, (0, 0, 0))
-            screen.blit(tab_text, (WIDTH - 10 - tab_text.get_width() // 2, HEIGHT // 2 - 20 + 20 - tab_text.get_height() // 2))
+            screen.blit(tab_text, (WIDTH - 10 - tab_text.get_width() // 2, HEIGHT // 2 - 20 + 20 - tab_text.get.height() // 2))
 
         pygame.display.flip()
 

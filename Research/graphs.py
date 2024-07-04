@@ -193,10 +193,10 @@ G1 = merge(star(math.inf,[7,2,1,6,3]),path([math.inf,1,13]),path([0,9]))
 G2 = merge(star(5,[math.inf,14,17,13,16]),path([4,math.inf,5]),path([0,10]))
 G3 = merge(star(11,[0,2,3,19,20]),path([11,3,16]),path([6,17]))
 G4 = merge(star(1,[10,14,9,11,12]),path([1,9,20]),path([0,13]))
-G5 = merge(star(1,[5,6,7,8,4]),path([3,5,1]),path([1,10]))
+G5 = merge(star(1,[5,6,7,8,4]),path([3,5,1]),path([9,10]))
 
-F_61_8 = [G1,G2,G3,G4,G5]
-visualize(F_61_8, '(61)-8', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+F_61_81 = [G1,G2,G3,G4,G5]
+visualize(F_61_81, '(61)-81', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 '''(52)'''
 
