@@ -1,9 +1,9 @@
-PWD c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-81
+PWD c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-8
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-81/(61)-81.tex
-OUTPUT (61)-81.log
+INPUT c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-8/(61)-8.tex
+OUTPUT (61)-8.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
@@ -147,10 +147,10 @@ INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
 INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./(61)-81.aux
-INPUT ./(61)-81.aux
-INPUT (61)-81.aux
-OUTPUT (61)-81.aux
+INPUT ./(61)-8.aux
+INPUT ./(61)-8.aux
+INPUT (61)-8.aux
+OUTPUT (61)-8.aux
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -159,5 +159,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-OUTPUT (61)-81.pdf
-INPUT (61)-81.aux
+OUTPUT (61)-8.pdf
+INPUT c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT (61)-8.aux
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

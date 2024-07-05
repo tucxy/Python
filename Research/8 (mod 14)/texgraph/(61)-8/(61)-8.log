@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  2 JUL 2024 16:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  3 JUL 2024 21:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-81/(61)-81.tex"
-(c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-81/(61)-81.tex
+**"c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-8/(61)-8.tex"
+(c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/8 (mod 14)/texgraph/(61)-8/(61)-8.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (c:/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
@@ -259,8 +259,8 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box63
-) (./(61)-81.aux)
-\openout1 = `(61)-81.aux'.
+) (./(61)-8.aux)
+\openout1 = `(61)-8.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -294,27 +294,32 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) [1
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+ [1
 
-] (./(61)-81.aux)
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./(61)-8.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12623 strings out of 474221
- 261457 string characters out of 5750188
- 1949978 words of memory out of 5000000
- 34688 multiletter control sequences out of 15000+600000
+ 12632 strings out of 474221
+ 261600 string characters out of 5750188
+ 1968978 words of memory out of 5000000
+ 34696 multiletter control sequences out of 15000+600000
  558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,486b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on (61)-81.pdf (1 page, 4706 bytes).
+ 102i,7n,107p,484b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on (61)-8.pdf (1 page, 25358 bytes).
 PDF statistics:
- 11 PDF objects out of 1000 (max. 8388607)
- 7 compressed objects within 1 object stream
+ 21 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
