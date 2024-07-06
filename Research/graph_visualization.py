@@ -38,7 +38,7 @@ def find_longest_path(tree):
     return longest_path
 
 # Function to arrange nodes along the longest path and branch out leaves
-def arrange_tree(tree, pos, start_x, start_y, width, height, x_spacing=50, y_spacing=50):
+def arrange_tree(tree, pos, start_x, start_y, x_spacing=50, y_spacing=50):
     longest_path = find_longest_path(tree)
     x = start_x
     y = start_y
@@ -276,17 +276,20 @@ def visualize(graphs, name, location="default"):
     section_height = HEIGHT // num_graphs
 
     pos_list = []
-    x_spacing, y_spacing = 50, 50
+    x_spacing, y_spacing = 50, 50  # Default node spacing
+    component_spacing = 100  # Increased spacing between components
 
     for i, G in enumerate(graphs):
         pos = {}
         start_y = i * section_height + MARGIN
         components = list(nx.connected_components(G))
-        component_width = (WIDTH - NEW_LEFT_TAB_WIDTH - RIGHT_TAB_WIDTH) // len(components)
+        component_start_x = NEW_LEFT_TAB_WIDTH + MARGIN
 
         for j, component in enumerate(components):
             subgraph = G.subgraph(component)
-            arrange_tree(subgraph, pos, NEW_LEFT_TAB_WIDTH + j * component_width + MARGIN, start_y, component_width, section_height, x_spacing, y_spacing)
+            arrange_tree(subgraph, pos, component_start_x, start_y, x_spacing, y_spacing)
+            max_x = max(pos[node][0] for node in component)
+            component_start_x = max_x + component_spacing  # Add spacing for next component
 
         pos_list.append(pos)
 
