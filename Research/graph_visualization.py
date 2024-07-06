@@ -492,7 +492,7 @@ def visualize(graphs, name, location="default"):
         else:
             pygame.draw.rect(screen, (150, 150, 150), (WIDTH - 20, HEIGHT // 2 - 20, 20, 40))
             tab_text = tab_button_font.render("<", True, (0, 0, 0))
-            screen.blit(tab_text, (WIDTH - 10 - tab_text.get_width() // 2, HEIGHT // 2 - 20 + 20 - tab_text.get.height() // 2))
+            screen.blit(tab_text, (WIDTH - 10 - tab_text.get_width() // 2, HEIGHT // 2 - 20 + 20 - tab_text.get_height() // 2))
 
         pygame.display.flip()
 
