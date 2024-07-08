@@ -599,4 +599,4 @@ G4 = merge(path([0,math.inf,8]),path([10,18]),path([5,17]),path([2,14]),path([7,
 G5 = merge(path([0,6,1]),path([4,8]),path([2,5]),path([3,10]),path([7,9]),path([11,12]))
 
 F_211111_1 = [G1,G2,G3,G4,G5]
-visualize(F_211111_1, '(211111)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+#visualize(F_211111_1, '(211111)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
