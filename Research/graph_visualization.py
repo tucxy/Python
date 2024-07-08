@@ -277,7 +277,8 @@ def visualize(graphs, name, location="default"):
 
     pos_list = []
     x_spacing, y_spacing = 50, 50  # Default node spacing
-    component_spacing = 100  # Increased spacing between components
+    component_spacing = 50  # Increased spacing between components
+    vertical_spacing = 75  # Spacing between rows of components
 
     for i, G in enumerate(graphs):
         pos = {}
@@ -286,6 +287,9 @@ def visualize(graphs, name, location="default"):
         component_start_x = NEW_LEFT_TAB_WIDTH + MARGIN
 
         for j, component in enumerate(components):
+            if j > 0 and j % 3 == 0:  # Move to next row after every 3 components
+                component_start_x = NEW_LEFT_TAB_WIDTH + MARGIN
+                start_y += vertical_spacing
             subgraph = G.subgraph(component)
             arrange_tree(subgraph, pos, component_start_x, start_y, x_spacing, y_spacing)
             max_x = max(pos[node][0] for node in component)

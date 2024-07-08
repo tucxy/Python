@@ -445,4 +445,158 @@ G4 = merge(path([1,10,0,13]),path([18,5,17,6]),path([math.inf,20]))
 G5 = merge(path([0,6,1,5]),path([2,9,7,10]),path([3,4]))
 
 F_331_1 = [G1,G2,G3,G4,G5]
-visualize(F_331_1, '(331)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+#visualize(F_331_1, '(331)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#*(331)-2
+G1 = merge(star(16,[3,5,6]),path([1,math.inf,0,9]),path([7,19]))
+G2 = merge(star(8,[20,19,18]),path([2,math.inf,3,11]),path([1,10]))
+G3 = merge(star(14,[1,3,6]),path([15,2,11,0]),path([4,13]))
+G4 = merge(star(math.inf,[4,13,19]),path([6,17,5,18]),path([12,20]))
+G5 = merge(star(0,[4,5,6]),path([11,9,10,7]),path([1,8]))
+
+F_331_2 = [G1,G2,G3,G4,G5]
+#visualize(F_331_2, '(331)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#*(331)-3
+G1 = merge(star(math.inf,[11,13,19]),star(16,[3,5,6]),path([2,15]))
+G2 = merge(star(math.inf,[2,3,15]),star(8,[20,19,18]),path([1,10]))
+G3 = merge(star(11,[20,2,0]),star(14,[6,3,1]),path([5,18]))
+G4 = merge(star(17,[6,5,4]),star(7,[math.inf,19,16]),path([12,20]))
+G5 = merge(star(0,[4,5,6]),star(9,[10,11,12]),path([1,8]))
+
+F_331_3 = [G1,G2,G3,G4,G5]
+#visualize(F_331_3, '(331)-3', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#! (322)
+
+#*(322)-1
+G1 = merge(path([1,math.inf,0,9]),path([6,18,8]),path([10,2,12]))
+G2 = merge(path([9,math.inf,3,11]),path([5,13,2]),path([19,8,20]))
+G3 = merge(path([18,math.inf,5,14]),path([3,12,4]),path([8,0,11]))
+G4 = merge(path([13,0,10,1]),path([8,16,4]),path([17,6,math.inf]))
+G5 = merge(path([0,6,1,5]),path([8,10,9]),path([11,4,7]))
+
+F_322_1 = [G1,G2,G3,G4,G5]
+#visualize(F_322_1, '(322)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#*(322)-2
+G1 = merge(star(16,[3,5,6]),path([1,math.inf,7]),path([12,0,9]))
+G2 = merge(star(8,[20,19,18]),path([2,math.inf,10]),path([15,3,11]))
+G3 = merge(star(14,[1,3,6]),path([0,11,20]),path([8,16,4]))
+G4 = merge(star(math.inf,[20,5,4]),path([11,19,6]),path([13,3,12]))
+G5 = merge(star(0,[6,5,4]),path([1,8,7]),path([11,9,12]))
+
+F_322_2 = [G1,G2,G3,G4,G5]
+#visualize(F_322_2, '(322)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#! (3211)
+
+#*(3211)-1
+G1 = merge(path([1,math.inf,0,9]),path([12,2,10]),path([5,13]),path([6,16]))
+G2 = merge(path([2,math.inf,3,11]),path([18,6,15]),path([1,12]),path([0,8]))
+G3 = merge(path([0,11,2,15]),path([5,math.inf,4]),path([7,19]),path([8,18]))
+G4 = merge(path([18,5,17,6]),path([10,0,13]),path([3,15]),path([math.inf,20]))
+G5 = merge(path([0,6,1,5]),path([8,10,7]),path([4,11]),path([2,3]))
+
+F_3211_1 = [G1,G2,G3,G4,G5]
+#visualize(F_3211_1, '(3211)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#*(3211)-2
+G1 = merge(star(16,[3,5,6]),path([math.inf,0,9]),path([1,13]),path([2,15]))
+G2 = merge(star(math.inf,[2,3,15]),path([18,8,19]),path([1,10]),path([0,12]))
+G3 = merge(star(11,[0,2,20]),path([6,14,3]),path([5,18]),path([7,15]))
+G4 = merge(star(math.inf,[11,13,19]),path([6,17,5]),path([10,18]),path([12,20]))
+G5 = merge(star(0,[4,5,6]),path([11,9,12]),path([2,3]),path([1,8]))
+
+F_3211_2 = [G1,G2,G3,G4,G5]
+#visualize(F_3211_2, '(3211)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#! (4111)
+
+#*(4111)-1
+G1 = merge(path([11,1,math.inf,7,16]),path([2,10]),path([9,19]),path([5,13]))
+G2 = merge(path([13,2,math.inf,3,11]),path([6,18]),path([8,20]),path([1,12]))
+G3 = merge(path([12,4,math.inf,5,14]),path([0,8]),path([7,18]),path([2,11]))
+G4 = merge(path([13,0,10,1,9]),path([6,17]),path([3,12]),path([20,math.inf]))
+G5 = merge(path([0,6,1,5,2]),path([3,10]),path([7,9]),path([11,12]))
+
+F_4111_1 = [G1,G2,G3,G4,G5]
+#visualize(F_4111_1, '(4111)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#*(4111)-2
+G1 = merge(path([11,1,math.inf,0]),path([1,9]),path([3,16]),path([5,13]),path([2,12]))
+G2 = merge(path([13,2,math.inf,3]),path([2,11]),path([8,20]),path([6,18]),path([1,12]))
+G3 = merge(path([12,4,math.inf,19]),path([4,17]),path([7,18]),path([0,8]),path([5,14]))
+G4 = merge(path([13,0,10,1]),path([0,9]),path([6,17]),path([3,12]),path([20,math.inf]))
+G5 = merge(path([4,8,1,7]),path([1,6]),path([3,5]),path([9,12]),path([10,11]))
+
+F_4111_2 = [G1,G2,G3,G4,G5]
+#visualize(F_4111_2, '(4111)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#*(4111)-3
+G1 = merge(star(16,[7,6,5,4]),path([10,18]),path([0,12]),path([14,math.inf]))
+G2 = merge(star(8,[20,19,18,17]),path([5,13]),path([2,math.inf]),path([1,9]))
+G3 = merge(star(14,[6,4,3,1]),path([10,math.inf]),path([9,17]),path([11,20]))
+G4 = merge(star(math.inf,[20,12,4,1]),path([3,13]),path([5,17]),path([11,19]))
+G5 = merge(star(0,[6,5,4,3]),path([1,8]),path([10,11]),path([7,9]))
+
+F_4111_3 = [G1,G2,G3,G4,G5]
+#visualize(F_4111_3, '(4111)-3', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#! (2221)
+
+#*(2221)-1
+G1 = merge(path([1,math.inf,0]),path([8,18,6]),path([10,2,12]),path([7,16]))
+G2 = merge(path([9,math.inf,3]),path([2,13,5]),path([19,8,20]),path([10,18]))
+G3 = merge(path([18,math.inf,5]),path([3,12,4]),path([8,0,11]),path([7,19]))
+G4 = merge(path([1,10,0]),path([8,16,4]),path([17,6,math.inf]),path([7,20]))
+G5 = merge(path([0,6,1]),path([4,8,5]),path([2,9,7]),path([10,11]))
+
+F_2221_1 = [G1,G2,G3,G4,G5]
+#visualize(F_2221_1, '(2221)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#! (31111)
+
+#*(31111)-1
+G1 = merge(path([8,math.inf,0,9]),path([1,11]),path([6,18]),path([2,10]),path([5,16]))
+G2 = merge(path([9,math.inf,3,11]),path([6,16]),path([5,13]),path([1,12]),path([8,20]))
+G3 = merge(path([11,math.inf,5,14]),path([10,19]),path([7,18]),path([4,12]),path([0,8]))
+G4 = merge(path([1,10,0,13]),path([2,15]),path([6,17]),path([4,16]),path([20,math.inf]))
+G5 = merge(path([0,6,1,5]),path([2,9]),path([8,10]),path([4,7]),path([11,12]))
+
+F_31111_1 = [G1,G2,G3,G4,G5]
+#visualize(F_31111_1, '(31111)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#*(31111)-2
+G1 = merge(star(math.inf,[19,13,11]),path([1,10]),path([8,20]),path([5,16]),path([2,15]))
+G2 = merge(star(math.inf,[3,8,16]),path([1,11]),path([5,15]),path([9,20]),path([4,12]))
+G3 = merge(star(14,[6,3,1]),path([0,11]),path([4,13]),path([9,18]),path([2,10]))
+G4 = merge(star(17,[6,5,4]),path([0,math.inf]),path([7,19]),path([2,14]),path([12,20]))
+G5 = merge(star(0,[6,5,4]),path([2,3]),path([9,11]),path([1,8]),path([7,10]))
+
+F_31111_2 = [G1,G2,G3,G4,G5]
+#visualize(F_31111_2, '(31111)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#! (22111)
+
+#*(22111)-1
+G1 = merge(path([11,math.inf,13]),path([14,6,17]),path([1,10]),path([5,16]),path([8,20]))
+G2 = merge(path([16,math.inf,3]),path([2,15,5]),path([1,11]),path([9,20]),path([4,12]))
+G3 = merge(path([1,14,3]),path([0,11,20]),path([9,18]),path([2,10]),path([5,math.inf]))
+G4 = merge(path([4,17,5]),path([0,math.inf,8]),path([2,14]),path([7,19]),path([12,20]))
+G5 = merge(path([0,6,1]),path([4,8,5]),path([3,10]),path([7,9]),path([11,12]))
+
+F_22111_1 = [G1,G2,G3,G4,G5]
+#visualize(F_22111_1, '(22111)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+
+#! (211111)
+
+#*(211111)-1
+G1 = merge(path([11,math.inf,13]),path([4,12]),path([6,17]),path([1,10]),path([5,16]),path([8,20]))
+G2 = merge(path([16,math.inf,3]),path([1,9]),path([5,15]),path([8,18]),path([2,13]),path([6,14]))
+G3 = merge(path([0,11,20]),path([1,14]),path([7,17]),path([9,18]),path([2,10]),path([5,math.inf]))
+G4 = merge(path([0,math.inf,8]),path([10,18]),path([5,17]),path([2,14]),path([7,19]),path([12,20]))
+G5 = merge(path([0,6,1]),path([4,8]),path([2,5]),path([3,10]),path([7,9]),path([11,12]))
+
+F_211111_1 = [G1,G2,G3,G4,G5]
+visualize(F_211111_1, '(211111)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
