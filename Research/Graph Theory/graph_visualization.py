@@ -65,12 +65,12 @@ def arrange_tree(tree, pos, start_x, start_y, x_spacing=50, y_spacing=50):
     return pos
 
 # Function to draw the graph with labels
-def draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale):
+def draw_graph(mod, screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale):
     for edge in G.edges():
         pygame.draw.line(screen, (200, 200, 200), pos[edge[0]], pos[edge[1]], int(2 * vertex_scale))  # GRAY
         # Calculate edge label
         x, y = edge
-        l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
+        l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), mod - abs(x - y))
         if x == math.inf:
             l_mod_7 = y % 7
         elif y == math.inf:
@@ -108,7 +108,7 @@ def draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_e
     for node in G.nodes():
         pygame.draw.circle(screen, (0, 0, 255), (int(pos[node][0]), int(pos[node][1])), int(5 * vertex_scale))  # BLUE
         # Draw custom node labels with subscript
-        node_label = "∞" if node == math.inf else str(node % 21)
+        node_label = "∞" if node == math.inf else str(node % mod)
         sub_label = "" if node == math.inf else str(node % 7)
         font = pygame.font.SysFont('Arial', int(12 * vertex_scale))
         sub_font = pygame.font.SysFont('Arial', int(10 * vertex_scale))
@@ -214,7 +214,7 @@ def draw_vertical_slider(screen, slider_rect, vertex_scale):
     pygame.draw.rect(screen, (0, 128, 0), handle_rect)  # Slider handle (DARK_GREEN)
 
 # Function to generate LaTeX code and save to specified location
-def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels):
+def generate_latex(mod, pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels):
     output_dir = os.path.join(location if location != "default" else os.path.dirname(os.path.abspath(__file__)), name)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -225,7 +225,7 @@ def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_ve
     for idx, (pos, G) in enumerate(zip(pos_list, graphs)):
         graph_label = f"G{idx+1}"
         for node, (x, y) in pos.items():
-            node_label = "\\infty" if node == math.inf else str(node % 21)
+            node_label = "\\infty" if node == math.inf else str(node % mod)
             sub_label = "" if node == math.inf else str(node % 7)
             y = DEFAULT_HEIGHT - y  # Reflect y-coordinate for LaTeX
             node_id = f"{graph_label}N{node}"
@@ -240,7 +240,7 @@ def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_ve
         
         for edge in G.edges():
             x, y = edge
-            l_e = "$\\infty$" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
+            l_e = "$\\infty$" if x == math.inf or y == math.inf else min(abs(x - y), mod - abs(x - y))
             if x == math.inf:
                 l_mod_7 = y % 7
             elif y == math.inf:
@@ -265,7 +265,7 @@ def generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_ve
     
     print(f"LaTeX code saved to {os.path.join(output_dir, f'{name}.tex')}")
 
-def visualize(graphs, name, location="default"):
+def visualize(mod, graphs, name, location="default"):
     global show_grid  # Declare the variable as global
     pygame.init()
     WIDTH, HEIGHT = DEFAULT_WIDTH, DEFAULT_HEIGHT
@@ -281,6 +281,13 @@ def visualize(graphs, name, location="default"):
     vertical_spacing = 75  # Spacing between rows of components
 
     for i, G in enumerate(graphs):
+        # Debug information
+        print(f"Graph {i}: Type {type(G)}, Value {G}")
+
+        if not isinstance(G, nx.Graph):
+            print(f"Error: Expected a networkx graph but got {type(G)}")
+            continue
+
         pos = {}
         start_y = i * section_height + MARGIN
         components = list(nx.connected_components(G))
@@ -316,7 +323,7 @@ def visualize(graphs, name, location="default"):
 
         for edge in G.edges():
             x, y = edge
-            l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), 21 - abs(x - y))
+            l_e = "∞" if x == math.inf or y == math.inf else min(abs(x - y), mod - abs(x - y))
 
             if x == math.inf:
                 l_mod_7 = y % 7
@@ -382,7 +389,7 @@ def visualize(graphs, name, location="default"):
                                     break
                         if right_tab_open:
                             if WIDTH - RIGHT_TAB_WIDTH + MARGIN <= mouse_x <= WIDTH - RIGHT_TAB_WIDTH + MARGIN + 140 and 50 <= mouse_y <= 110:
-                                generate_latex(pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels)
+                                generate_latex(mod,pos_list, graphs, location, name, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels)
                             for button in buttons:
                                 button_rect = pygame.Rect(button["pos"][0], button["pos"][1], 140, 60)
                                 if button_rect.collidepoint(event.pos):
@@ -439,7 +446,7 @@ def visualize(graphs, name, location="default"):
             draw_grid(screen, WIDTH, HEIGHT, x_spacing, y_spacing)
 
         for G, pos in zip(graphs, pos_list):
-            draw_graph(screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale)
+            draw_graph(mod,screen, G, pos, show_vertex_labels, show_vertex_sublabels, show_edge_labels, show_edge_sublabels, vertex_scale=1.0)
 
         if left_tab_open:
             pygame.draw.rect(screen, (200, 200, 200), (0, 0, NEW_LEFT_TAB_WIDTH, HEIGHT))  # Shaded gray background for left tab

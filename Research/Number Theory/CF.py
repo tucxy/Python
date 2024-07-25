@@ -26,7 +26,7 @@ def fincf(x, r, n):
     return X, A, term
 
 
-x = Decimal(1.4142135623730950488016887242096980785696718753769480731766797379)
+x = Decimal(math.sqrt(2))
 r = Decimal(3) / Decimal(2)
 n = 100
 
