@@ -129,7 +129,7 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
     edge_font = pygame.font.SysFont('Arial', int(24 * scale_factor))
     l_mod_7_font = pygame.font.SysFont('Arial', int(20 * scale_factor))
     cell_size = int(50 * scale_factor)
-    horizontal_margin = 5  # Adjust margin as needed controls size of box
+    horizontal_margin = 5  # Adjust margin as needed; controls size of margin between box and charts on left tab
     total_width = NEW_LEFT_TAB_WIDTH - 2 * horizontal_margin
     grid_width = total_width // 2 - horizontal_margin
     chart_width = total_width // 2 - horizontal_margin

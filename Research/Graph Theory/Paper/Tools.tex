@@ -1,0 +1,135 @@
+I am putting various theorems and constructions with way too much detail here so we can trim them down.
+\begin{definition}\label{sigmapm}
+  \cite{FreyTran} A $\sigma^{+-}$ labeling of $G$ is an injection $f:V(G) \rightarrow \{0,1,\hdots, 2m-2\}$ which induces a bijective length function $\ell:E(G)\rightarrow \{1, 2,\hdots, m\}$ where $\ell(uv) = f(b)-f(u)$ for every edge $uv\in E(G)$ with $u\in A$ and $v\in B$, $a<b$ and $f$ has the additional property that $f(u)-f(v) \neq m$ for all $u\in A$ and $v\in B$.
+\end{definition}
+
+\begin{thm}\label{sigmadesign}
+  (Freyberg and Tran, \cite{FreyTran}). Let $G$ be a bipartite graph with $m$ edges and a $\sigma^{+-}$-labeling such that the edge of length $m$ is a pendant edge $e$. Then there exists a $G$-decomposition of $K_{2mr}$ and $K_{2mr+1}$ for every positive integer $r$.
+\end{thm}
+
+\begin{observation}\label{Knlen}
+  Consider $K_{n}$ for any $n\in \mathbb{N}$ and $\ell$ on it's edges as stated in Definition \ref{sigmapm}. For any edge $e\in E(K_{21}),\;\ell(e)\in \{1,\hdots,\floor{\frac{n}{2}}\}$ and there exist $n$ edges with each distinct length in  $\{1,\hdots,\floor{\frac{n}{2}}\}$. Equivalently, each vertex $v\in V(K_{21})$ is a member of exactly two distinct edges $e_{1},e_{2}$ of each length in $\{1,\hdots,\floor{\frac{n}{2}}\}$.
+\end{observation}
+\newpage
+\begin{construction}\label{K21design}
+    Let $F$ be a forest on $7$ edges and consider $K_{21}$. By \ref{Knlen}, any edge in $K_{21}$ has a length in $L=\{1,\hdots,10\}$ via $\ell$ as stated in  Definition \ref{sigmapm}. Next, by Theorem \ref{sigmadesign}, if $F_{\sigma}$ is a $\sigma^{+-}-$labeling of $F$, then $B_{\sigma}=\langle F_{\sigma}\rangle$ via $\phi_{1}:=v\mapsto v+1$ contains all edges of $K_{21}$ with lengths in $L_{\sigma}=\{1,\hdots,7\}$ by the union of it's members. Additionally, all $G\in B_{\sigma}$ are isomorphic to $F$.
+
+    Now, clearly each edge in $K_{21}$ is uniquely determined by it's endpoints. So naturally observe that if we partition the vertices of $K_{21}$ modulo $7$, a singleton edge partition of $K_{21}$ modulo $7\times 7$ is induced. Let $\ell:=ab\mapsto a+b\Mod{7}$. We now partition the edges of $K_{21}$ modulo $\sim$ where $ab\sim cd\text{ if } \ell(ab)=\ell(cd)\text{ and }\ell_{7}(ab)=\ell_{7}(cd)$, and specify each partite set $P_{i,j}$ via $ab\in P_{i,j}$ if $\ell\times \ell_{7}(ab)=(i,j)$. Each $P_{i,j}$ contains three edges in the same equivalence class modulo $\sim$; three edges of the same length $i$ which are in the same endpoint equivalence class modulo $7\times 7$. Lastly, let $L_{i}=\{uv\in E(K_{21})\mid \ell(uv)=i\},\forall i\in L$, then  $L_{i}=\bigcup_{j\in \mathbb{Z}_{7}}P_{i,j}$.
+
+    Let $\phi_{7}:=v\mapsto v+7$ and $H_{i,j}\subseteq K_{21}$ be a subgraph containing some edge $ab$ such that $\ell\times \ell_{7}(ab)=(i,j)$. Then if $G_{i,j}=\bigcup_{G\in \langle H_{i,j}\rangle_{\phi_{7}}}G,\;P_{i,j}\subseteq E(G_{i,j});$ each $G_{i,j}$ contains the partition $P_{i,j}$. Then since for any $(i,j)\in L\times \ZZ_{7},$ such a subgraph $H_{i,j}$ exists, so does such a $G_{i,j}$. Therefore, for any $i\in L$, $L_{i}\subseteq E(\bigcup_{j\in \ZZ_{7}}G_{i,j})$ for such $G_{i,j}$. In other words, we can generate all edges of length $i\in L$ in $K_{21}$ by finding subgraphs containing edges of length $i$ from each distinct equivalence class modulo $7\times 7$ and applying $\phi_{7}$ to their vertices.
+
+    So finally, if there exist $\ell\times \ell_{7}-$wise edge-disjoint subgraphs $F_{1},F_{2},F_{3}\cong F$ of $K_{21}$ with only edges of lengths in $L^{*}=\{8,9,10\}$, let $B_{i}=\langle F_{i}\rangle_{\phi_{7}}$ for each $i=1,2,3$. Then $\bigcup_{i=1,2,3}B_{i}$ must contain all edges of $K_{21}$ with lengths in $L^{*}$ by the union of it's members. Let $B_{21}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}$ and recall that $B_{\sigma}$ contains all edges of lengths in $L_{\sigma}$ by the union of it's members. So then since $L=L_{\sigma}\cup L^{*},\;K_{21}=\bigcup_{G\in B_{21}}G,$ and all $G\in B_{21}$ are isomorphic to $F$ and edge disjoint by definition. Therefore,
+    \begin{center}
+    the existence of such subgraphs $F_{\sigma},F_{1},F_{2},F_{3}$ give $B_{21}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}$, an $F-$decomposition of $K_{21}.$
+    \end{center}
+\end{construction}
+
+\begin{construction}\label{K22design}
+    Let $F$ be a forest graph on seven edges and consider $K_{22}$. For this construction we simply take the $22$nd vertex to be $\infty$; we add $\infty$ to the neighborhood of each vertex in $K_{21}$, and let $\ell(x\infty)=\infty$ for all $x\in V(K_{22})$. Next, we let $B_{\sigma}$ refer to the same block as previously described in Construction \ref{K21design}. Similarly to in the previous construction, if $F_{1},F_{2},F_{3},F_{4}\cong F$ are $\ell\times \ell_{7}-$wise edge-wise disjoint subgraphs of $K_{21}$ with only edges of lengths in $L^{*}=\{8,9,10\}\cup \{\infty\}$, we let $B_{i}=\langle F_{i}\rangle_{\phi_{7}}$ via $\phi_{7}$ as defined in Construction \ref{K21design} with the new condition $\ell(x\infty)=x\Mod{7}.$ Then $B_{22}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}\cup B_{4}$ has the same properties as $B_{21}$ from Construction \ref{K21design} with $L^{*}$ as defined in this construction.
+    Therefore,
+
+    \begin{center}
+    the existence of such subgraphs $F_{\sigma},F_{1},F_{2},F_{3},F_{4}$ give $B_{22}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}\cup B_{4}$, an $F-$decomposition of $K_{22}.$
+    \end{center}
+\end{construction}
+\newpage
+\begin{construction}\label{7,8mod14}
+    Let $F$ be a forest on seven edges and consider $K_{14t+7}$ and $K_{14t+8}$ for some $t > 1\in \NN$. By Observation \ref{Knlen}, $K_{14t+7}$ has edge-lengths in $L = [1,7t+3]$.
+    Let us define the following edge length intervals: $L_{\sigma}=[1,7],\;I_{0}=[8,10]$ and $I_{j}=(I_{\sigma}+10)+7(j-1)=[11+7(j-1),17+7(j-1)]$ for all $0<j\leq t$. Lastly let $L_{\sigma}^{*}=\bigcup_{0<j\leq t} I_{j}$ and $L^{*}=[8,10]$.
+
+    Then if there exists a $\sigma^{+-}-$labeling $F_{\sigma}$ of $F$, we let $B_{\sigma}$ be defined as in Constructions \ref{K21design} and \ref{K22design}, and notice that all edges from $K_{14t+7}$ and $K_{14t+8}$ with lengths in $I_{\sigma}$ are contained in the union of the members of $B_{\sigma}$. Next, recall the vertex partition of $F_{\sigma}$ where all for all $u\in A$ and $v\in B$ with $uv\in E(F_{\sigma})$, $u<v$ and additionally $\ell(uv)=|u-v|$. 
+
+    Let $\varphi_{j}:=v\mapsto v+10(j-1)$ for all $0<j\leq t$ and let $F^{j}_{\sigma}$ simply be $F_{\sigma}$ with $\varphi_{j}$ on $B$ and subsequently each $ab\mapsto a\varphi_{j}(b)$. Also let $B_{\sigma}^{j}=\langle F^{j}_{\sigma}\rangle_{\phi_{7}}$, for each $0<j\leq t$ Recall that since $F_{\sigma}$ contains no wraparound edges in in $K_{21}$, for any edge $ab$ with length $|a-b|\in I_{\sigma}$, $|a-\varphi_{j}(b)|\in I_{j}$. So then since $uv$ is a wraparound edge of $K_{14t+7}$ and $K_{14t+8}$ if and only if $|a-b|>7t+3$, the maximal edge length, $F^{j}_{\sigma}$ must not contain any wraparound edges for each $0<j\leq t$. So then each $F^{j}_{\sigma}$ must contain exactly one edge of each length in $I_{j}$. Therefore for any $1<j\leq t$, since $|B_{\sigma}^{j}|=14t+7$, $B_{\sigma}^{j}$ must contain all edges $K_{14t+7}$ and $K_{14t+8}$ with lengths in $I_{j}$. Therefore $B_{\sigma}^{*}=\bigcup_{0<j\leq t} B_{\sigma}^{j}$ must contain all edges of $K_{14t+7}$ and $K_{14t+8}$ lengths in $L_{\sigma}^{*}$ in the union of it's members. 
+
+    Now, if $\ell\times \ell_{7}-$wise edge-disjoint subgraphs isomorphic to $F$ with the properties defined at end of Constructions \ref{K21design} and \ref{K22design} exist in $K_{14t+7}$ and $K_{14t+8}$, respectively, let $B_{1},B_{2},B_{3}$ be defined as in Construction \ref{K21design} and $\beta_{i}= B_{i}$ from Construction \ref{K22design} for $i=1,2,3,4$. Finally, let $B_{14t+7}=B_{\sigma}\cup B_{\sigma}^{*}\cup B_{1}\cup B_{2}\cup B_{3}$ and let $B_{14t+8}=B_{\sigma}\cup B_{\sigma}^{*}\cup \beta_{1}\cup \beta_{2}\cup \beta_{3}\cup \beta_{4}$. Notice that $B_{14t+7}$ contains all edges in $K_{14t+7}$ of lengths in $L= L_{\sigma}\cup L_{\sigma}^{*}\cup L^{*}$ and $B_{14t+8}$ contains all edges in $K_{14t+8}$ of lengths in $L\cup \{\infty\}=L_{\sigma}\cup L_{\sigma}^{*}\cup L^{*}\cup \{\infty\}$. Therefore since all $G\in B_{14t+7}\cup B_{14t+8}$ are isomorphic to $F$ and edge-disjoint,
+
+    \begin{center}
+    the existence of such subgraphs give $B_{14t+7}$ and $B_{14t+8},F-$decompositions of $K_{14t+7}$ and $K_{14t+8}$, respectively.
+    \end{center}
+    
+\end{construction}
+
+\begin{thm} \label{wraplarger}
+In $K_{n}$, $uv$ is a wraparound edge if and only if the absolute difference of its endpoints is greater than the maximal length in $K_{n};\floor{\frac{n}{2}}<|u-v|$. 
+\begin{proof}
+    Let $uv$ be an edge in $K_{n}$ via $\ell$ defined previously. If $uv$ is a wraparound edge, then $n-|u-v|<|u-v|$. So then $\frac{n}{2}-\frac{|u-v|}{2}<\frac{|u-v|}{2}$, and therefore $\floor{\frac{n}{2}}\leq \frac{n}{2}<|u-v|$. If $\floor{\frac{n}{2}}\leq \frac{n}{2}<|u-v|$, note that without loss of generality $u<v$. Then necessarily $n-|u-v|=n-(v-u)<v-u=|u-v|$, so then $n<2(v-u)$ and $\floor{\frac{n}{2}}\leq\frac{n}{2}<(v-u)<|u-v|.$
+
+    Thus,
+    $$\floor{\frac{n}{2}}<|u-v|\Longleftrightarrow\text{ uv is a wraparound edge.}$$
+\end{proof}
+\end{thm}
+\newpage
+\begin{thm}\label{genmaps}
+    Let us refer to $K_{n}$ whose vertices we take to be $\ZZ_{n}$ and $\ZZ_{n}\cup \{\infty\}$ when $n\equiv 7\,\text{ or }\,8\Mod{14}$, respectively, as simply $K_{n}$. Next let us define the edge operation $\ell_{n}:=\ell_{n}(uv)=\mathrm{min}\{|u-v|,n-|u-v|\}$, and let $t>1,\;m>0$ with $h = 14(t-1)$. For wraparound edge $ab$ in $K_{21}$, without loss of generality $a<b$ and\begin{align*}
+        &\ell_{14t+7}[(a-mh)\;(b-(m-1)h)]=\ell_{14t+7}[(a+(m-1)h\;(b+mh))]=\ell_{21}[ab],\\
+        &(a-mh)+(b-(m-1)h) \equiv (a+(m-1)h + (b+mh)) \equiv a+b\Mod{7}.\\
+    \end{align*} Note that $K_{14t+7}$ and $K_{14t+8}$ share vertex labels with the exception of $\infty$ in $K_{14t+8}$ and both come equipped with the $\ell_{14t+7}$ for all non-$\infty$ edges.
+
+    \begin{proof}
+        Consider some wraparound edge $ab\in K_{21}$ with $\ell_{21}(ab)=\ell_{ab}$, without loss of generality $a<b$ and $|a-b|=b-a$. Then by definition, $\ell_{ab}=21-(b-a)$ and $\ell_{ab}=(21+a)-b$. Note that $a<b<21\Rightarrow b<21+a$. Suppose $a>13$, then $|a-b|=b-a<21-13=8<10$, the maximal length in $K_{21}$, so by Theorem \ref{wraplarger}, $ab$ is not a wraparound edge, a contradiction. Therefore, $a\leq 13.$
+
+        Let $t>1,\;h = 14(t-1)$ and let $\alpha = a-h,\beta=b\in V(K_{14t+7})$. Well, $(14t+7)-(14(t-1))=14(t-(t-1))+7=21$, so $21+a = (14t+7)-(14(t-1))+a = a-h\in V(K_{14t+7})$. So then since $a\leq 13$, $21+a\leq 34<14t+7$. So, $|\alpha-\beta| = |(21+a)-b|=|\ell_{ab}|=\ell_{ab}.$ Now recall that $\ell_{ab}\leq \floor{\frac{21}{2}}=10,$ the maximal length in $K_{21}$. Therefore, $|\alpha-\beta|\leq 10 = \floor{\frac{14(1)+7}{2}}<\floor{\frac{14t+7}{2}}$ and so by Theorem \ref{wraplarger}, $ \floor{\frac{14t+7}{2}}\not<|\alpha-\beta|\Rightarrow \alpha\beta$ is not a wraparound edge and therefore by definition $\ell_{14t+7}(\alpha\beta) = |\alpha-\beta|=\ell_{ab}= \ell_{14t+7}[(a-h)\;b] = \ell_{21}(ab)$. 
+        
+        Now let $\alpha' = a, \beta' = b+h\in V(K_{14t+7})$. Well, $\alpha'<\beta'$ and so $|\alpha'-\beta'|=\beta'-\alpha'=b+h-a=(b-a)+h$. Since, $ab$ is a wraparound edge in $K_{21}$, $b-a>10$, the maximal length. So $10+14(t-1)=14t-4<|\alpha'-\beta'|$. $(\floor{\frac{14n+7}{2}})\text{ and }(\floor{\frac{28n-8}{2}})$ are arithmetic sequences with increments $7$ and $14$, respectively, which are equal at $n=1$. So for $t>1$, $\floor{\frac{14t+7}{2}}<\floor{\frac{28t-8}{2}}=14t-4<|\alpha'-\beta'|$ and $\alpha'\beta'$ is a wraparound edge. Therefore, $\ell_{14t+7}(\alpha'\beta')=14t+7-|\alpha'-\beta'|=14t+7-((b-a)+h)=(14t+7)-(14(t-1))-(b-a)=21-(b-a)=\ell_{ab}=\ell_{21}(ab)$ as well. Now by \cite{FreyTran}, for any edge $uv\in E(K_{n}),$ edge length via $\ell_{n}$ is preserved under the operation $uv\mapsto (u+1)\;(v+1)$ modulo $n$. So then the edge lengths of $\alpha\beta$ and $\alpha'\beta'$ are also preserved under $\theta:=uv\mapsto (u-(m-1)h)\;(v-(m-1)h)$ and $\theta':=uv\mapsto (u+(m-1)h)\;(v+(m-1)h)$, respectively.
+        
+        Finally, $(a-mh)+(b-(m-1)h)=a+b+((m-1)-m)(t-1)14\equiv a+b+((m-1)+m)(t-1)14\equiv (a+(m-1)h + (b+mh))\equiv a+b\Mod{7}$. So then,
+        \begin{align*}
+            \alpha\beta\overset{\theta}{\mapsto} (\alpha-(m-1)h)\;(\beta-(m-1)h)=(a-mh)\;(b-(m-1)h),\\
+            \alpha'\beta'\overset{\theta'}{\mapsto} (\alpha'+(m-1)h)\;(\beta'+(m-1)h)=(a+(m-1)h)\;(b+mh)
+        \end{align*}
+        preserves edge length and sum modulo 7 and therefore the statement is proven.
+        
+    \end{proof}
+\end{thm}
+\newpage
+\begin{thm}\label{safemapping}
+    Let us refer to $K_{n}$ whose vertices we take to be $\ZZ_{n}$ and $\ZZ_{n}\cup \{\infty\}$ when $n\equiv 7\,\text{ or }\,8\Mod{14}$, respectively, as simply $K_{n}$. Next, let $a,b$ be distinct vertices in $K_{21}$ with $a<b$. 
+    
+    If $t>1,\;h = 14(t-1)$ and $\alpha = a-h,\;\beta  = b+h\in V(K_{14t+7})$, then
+
+        $$b-a\neq 7\text{ or }b\not\equiv a\Mod{7}\Rightarrow \alpha\neq \beta.$$
+
+    Note that since we let $V(K_{14t+8})=V(K_{14t+7})\cup \{\infty\}$ this statement also holds for all non-$\infty$ vertices in $K_{14t+8}$.
+
+    \begin{proof} Recall that since $a,b\in \ZZ_{21},a<b,$ and they are distinct, $1\leq b-a\leq 20$.
+    
+    If $b-a\neq 7$, suppose $\alpha=\beta$. Then in $\ZZ_{14t+7}$: $a-14(t-1)=b+14(t-1)$ and so $b-a\equiv -28(t-1)\Mod{14t+7}$. Note that in $\ZZ_{14t+7}$: $-28=14t+7-(28)=14t-21=7(2t-3)\Rightarrow b-a\equiv 7(2t-3)(t-1)\Mod{14t+7}$.
+    
+    So if $t=2$, then $b-a \equiv 7\Mod{14t+7}$ and so $b-a=7$ or $b-a\geq 35+7=42$, both contradictions. If $t>2$, since $-28\equiv 21\Mod{14(3)+7}$ and $(7(2n-3))_{n>2}$ is strictly increasing, $b-a\geq 21$, a contradiction. So $b-a\neq 7\Rightarrow \alpha\neq \beta$.
+
+    If $b\not\equiv a\Mod{7}$, then suppose $\alpha=\beta$. By the sequence $(7(2n-3))_{n>1},\;b-a\equiv  7(2t-3)(t-1)\Mod{14t+7}$ and so $a-b\equiv 0\Mod{7}$, a contradiction. So $b\not\equiv a\Mod{7}\Rightarrow \alpha\neq \beta$. Therefore the statement is proven.
+    \end{proof}
+\end{thm}
+
+\begin{corollary}\label{newvertices}
+    Let $ab$ be a wraparound edge in $K_{21},\;t>1$ and $h=14(t-1)$ such that $a<b$. Then in $K_{14t+7}:\;a-h\geq 21$ and $b+h>21$. Next, let $u,v\in K_{21}$ with $v\in [u]_{7}$. If $t=2$, then $|u-v|\neq 14\Rightarrow u\pm h\neq v$ and $v\pm h \neq u$. If $t>2$, $u\pm h\neq v$ and $v\pm h\neq u$ in $K_{14t+7}$.
+\end{corollary}
+\begin{proof}
+    In the proof of Theorem \ref{safemapping} it is shown that $a-h=21+a$, so then since $0\leq a\leq 13$, $21\leq 21+a=a-h$ in $K_{14t+7}$. Now, suppose $b\leq 7$. Then since $a<b\leq 7$ and $|a-b|=b-a$, $1\leq |a-b|\leq 7<10$, the maximal length in $K_{21}$. But then by Theorem \ref{wraplarger}, $ab$ is not a wraparound edge, a contradiction. So $b>7$. Therefore $b+h>7+h\geq 21$.
+
+    Next if $t=2$, then $h=14$. So if $u+h = v$ or $u-h=v$, $|u-v|=h$. On the other hand if $|u-v|=h$, then $u-v=h$ or $u-v=-h$ so $u+h = v$ or $u-h=v$. 
+
+    Lastly if $t>2$, then recall that $14t+7=21+14(t-1)=21+h$ so then since $0<u,v<21$, $u+h,v+h<21+h=14t+7$. So then $u+h,v+h\not\in \ZZ_{21}$ and so necessarily $u+ h\neq v$ and $v+ h\neq u$. Now, since $14t+7-h=21$, $14t+7+(v-h)\equiv 21+v\Mod{14t+7}$ and similarly $14t+7+(u-h)\equiv 21+u\Mod{14t+7}$, $u-h,v-h$ are simply $21+u$ and $21+v$ in $K_{14t+7}$, respectively. Lastly, Since $u,v<20$ and $49\leq 14t+7$ we must have that $21\geq 21+u,21+v<20+21=41<49\leq 14t+7$. So then $u-h,v-h\not\in K_{21}$ and therefore necessarily $u-h\neq v$ and $v-h\neq u$. So the statement is proven.
+
+\end{proof}
+
+\begin{center}
+    \textbf{Summary of 2.8 through 2.10}
+\end{center}
+
+I do everything on an edge to edge basis. Similarly, in the last theorems I am basically creating pairwise vertex criteria to list for our blocks to say that they work.
+
+Theorem \ref{genmaps} tells us that the vertex mappings in our general constructions preserve edge length and sums modulo 7 from $K_{21}$ to larger members of the family. I prove that for any wraparound edge in $K_{21}$, my mapping does this. Therefore we can extend this to our wraparound edges from $K_{22}$ as well.
+
+Theorem \ref{safemapping} tells us that even if we have mapped vertices in the same equivalence class modulo $7$, as long as their absolute difference is not $7$ they will not map to the same vertex. I did not explicitly state that if we add or subtract our fixed increment $h$ uniformly to members in the same equivalence class modulo $7$ this won't happen because this is obvious and even should be given via the $v\mapsto v+1$ being an automorphism.  
+
+Corollary \ref{newvertices} states that these mappings take wraparound edge incident vertices from $K_{21}$ to 'new' vertices; the mapped vertices will never be elements in $\ZZ_{21}$. So for example if we have not touched $0$ but then $14$ is a member of a wraparound edge and we send $14$ somewhere, it can't be anywhere in $\ZZ_{21}$. Additionally it has a weaker statement: if we map a vertex in the same equivalence class modulo $7$ as one we don't map anywhere, they will not map to the same vertex as long as their difference is greater than $14$. This is important for the case where we are forced to send a vertex somewhere and it must also take it's non-wraparound neighbors on the journey as well. This entire corollary is pretty much to deal with the small size of $K_{35}$ relative to our increment. 
+
+The first part of Corollary \ref{newvertices} is to deal with the situation where we have a wraparound vertex mapped somewhere, and then another vertex which is untouched and both are equivalent modulo $7$. The second part ('Next,let...') is to deal with the situation where we have an untouched vertex, and a vertex which is mapped somewhere but which isnt a member of a wraparound edge in $K_{21}$. It's important to distinguish this case, because wraparound edge vertices are necessarily bounded more strictly than just any vertex.
+
+So to summarize the summary, basically if we have representative labelings that generate the blocks we can put together as outlined in Constructions \ref{K21design} and \ref{K22design} to get a decomposition for $K_{21}$ and $K_{22}$, respectively, if we can apply my algorithm (vertex mappings) such that the above conditions hold: length, sum modulo $7$, and isomorphism to the specified graph are preserved from our $K_{21}$ and $K_{22}$ designs and therefore we have the decompositions for the whole family.
+\newpage
+
+\begin{center}
+\textbf{Generalized Versions}
+\end{center}

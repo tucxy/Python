@@ -1,197 +1,197 @@
-%\documentclass[a4paper,10pt]{article}
-%\usepackage{a4}
-\documentclass[addpoints,11pt]{exam}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{graphicx, enumerate}
-\usepackage{amsmath}
-\usepackage{latexsym}
-\usepackage{longtable}
-\usepackage{tabularx}
+\documentclass{article}
+\usepackage[switch, modulo]{lineno}
+\linenumbers
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
 \usepackage{setspace}
+\usepackage{standalone}
+%removes default indents and sets paragraph spaces to custom size
+\usepackage{parskip}
+\parindent0pt
+\parskip5pt
+
+
 \usepackage{float}
-\usepackage{rotating}
-\usepackage{tikz}
-\usepackage{verbatim}
-\usepackage{xcolor}
-\usetikzlibrary{calc}
+\usepackage{amsfonts,amsmath,amsthm,amssymb,wasysym,latexsym,mathtools}
+\usepackage{verbatim,graphicx,rotating}
+\usepackage{enumerate,multirow,caption,subcaption,tabu,array,tabularx,longtable}
+\usepackage{tikz,tkz-graph}
+%\usetikzlibrary{calc}
 \usepackage{caption}
-\usepackage{mathtools}
+%\usepackage{tikz-network}
+%\usepackage[demo]{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{colortbl,color,xcolor}
+\usetikzlibrary{shapes}
+\tikzstyle{vertex}=[circle, draw, inner sep=1pt, fill, minimum size=4pt]
+\newcommand{\vertex}{\node[vertex]}
 
+\newenvironment{case}[1][]{\refstepcounter{case}\par\medskip
+   \textbf{Case~\thecase. #1} \rmfamily}{\newline}
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}[section]
+  \theoremstyle{definition}
+  \newtheorem{definition}[thm]{Definition}
+  \theoremstyle{plain}
+  \newtheorem{problem}[thm]{Problem}
+  \theoremstyle{plain}
+  \newtheorem{conjecture}[thm]{Conjecture}
+  \theoremstyle{plain}
+  \newtheorem{lemma}[thm]{Lemma}
+  \newtheorem{observation}[thm]{Observation}
+  \newtheorem{corollary}[thm]{Corollary}
+  \newtheorem{construction}[thm]{Construction}
+  \newtheorem{algorithm}[thm]{Algorithm}
+ %% \newtheorem{case}{\normalfont Case}
+  \newtheorem{example}[thm]{Example}
+\newcounter{case}[thm]
 
-%\begin{comment}
-\newtheorem{theorem}{Theorem}[section]
-%\newtheorem{thm}[theorem]{Theorem}%[section]
-%\newtheorem{cl}[theorem]{Claim}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{prop}[theorem]{Proposition}
-%\newtheorem{oprb}[theorem]{Open Problem}
-\newtheorem*{oprb}{Open Problem}
-\newtheorem{obs}[theorem]{Observation}
-%\newtheorem{cor}[theorem]{Corollary}
-%\newtheorem{conj}[theorem]{Conjecture}
-\newtheorem{const}[theorem]{Construction}
-\newtheorem{algo}[theorem]{Algorithm}
-%\newtheorem{dfn}[theorem]{Definition}
-%\newtheorem{dfn}[theorem]{Definition}
-\newtheorem{exm}[theorem]{Example}
-%\newtheorem{prm}[theorem]{Problem}
-\newtheorem{rem}[theorem]{Remark}
-\newtheorem*{rem*}{Remark}
-\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
-
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-
-%\end{comment}
-
+  \providecommand{\conjecturename}{Conjecture}
+  \providecommand{\lemmaname}{Lemma}
+  \providecommand{\problemname}{Problem}
+\providecommand{\theoremname}{Theorem}
+\newcommand{\noun}[1]{\textsc{#1}}
 
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-\newcommand{\rd}{{\rm d}}
-\newcommand{\dist}{{\rm{dist}}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\indeg}{indeg}
+\DeclareMathOperator{\outdeg}{outdeg}
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
-
-
-\def\amb{\allowbreak}
-\def\ni{\noindent}
-\footskip=30pt
-\vspace{5cm}
-%\begin{document}
-
-
-%colors
-\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
-\definecolor{blue-violet}{rgb}{0.54, 0.17, 0.89}
-\definecolor{dgreen}{RGB}{20,100,10}
-
-\newcommand{\bblue}[1]{{\color{blue}{#1}}}
-\newcommand{\ggreen}[1]{{\color{green}{#1}}}
-\newcommand{\dpgreen}[1]{{\color{darkpastelgreen}{#1}}}
-\newcommand{\rred}[1]{{\color{red}{#1}}}
-\newcommand{\mmag}[1]{{\color{magenta}{#1}}}
-\newcommand{\bv}[1]{{\color{blue-violet}{#1}}}
-
-
-\newcommand{\dal}[1]{\par\vskip2mm\noindent\bblue{Dalibor: #1}\par\noindent}
-\newcommand{\syl}[1]{\par\vskip2mm\noindentGreen{Sylwia: #1}\par\noindent}
-\marginparwidth1.5in
-%need to do \margbl{}{my own text} at least in some installations --- leave blank {} right after command
-
-
-
-\newcommand{\dalb}[1]{\par\vskip2mm\noindent\bblue{Dalibor: #1}\par\noindent}
-\newcommand{\dalr}[1]{\par\vskip2mm\noindent\rred{Dalibor: #1}\par\noindent}
-\newcommand{\dalm}[1]{\par\vskip2mm\noindent\mmag{Dalibor: #1}\par\noindent}
-\newcommand{\dalgr}[1]{\par\vskip2mm\noindent\dpgreen{Dalibor: #1}\par\noindent}
-\newcommand{\dalbv}[1]{\par\vskip2mm\noindent\bv{Dalibor: #1}\par\noindent}
-
-
-%http://joshua.smcvt.edu/latex2e/_005cnewcommand-_0026-_005crenewcommand.html
-
-\marginparwidth1.3in
-\newcommand{\margbl}[1]{\marginpar{\textcolor{blue}{#1}}}
-\newcommand{\margred}[1]{\marginpar{\textcolor{red}{#1}}}
-\newcommand{\marggr}[1]{\marginpar{\textcolor{green}{#1}}}
-
-%\usepackage{parskip}
 
 \newcommand{\GG}{\ensuremath{\mathcal{G}}}
 \newcommand{\BB}{\ensuremath{\mathcal{B}}}
 \newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
 \newcommand{\NN}{\ensuremath{\mathbb{N}}}
-\parindent0pt
-\parskip4pt
-
-%%% Formatting: Page Header
-\newcommand{\StudentName}{Danny Banegas}
-\newcommand{\AssignmentName}{Materials}
-\newcommand{\CourseName}{Thesis}
-
-\pagestyle{headandfoot}
-\runningheadrule
-\firstpageheadrule
-\firstpageheader{\CourseName}{\StudentName}{\AssignmentName}
-\runningheader{\CourseName}{\StudentName}{\AssignmentName}
-\firstpagefooter{}{\thepage}{}
-\runningfooter{}{\thepage}{}
-
-\printanswers
 
 \begin{document}
-
-\begin{definition}\label{sigmapm}
-  \cite{sigma} A $\sigma^{+-}$ labeling of $G$ is an injection $f:V(G) \rightarrow \{0, 1,\hdots, 2m-2\}$ which induces a bijective length function $\ell:E(G)\rightarrow \{1, 2,\hdots, m\}$ where $\ell(uv) = f(v)-f(u)$ for every edge $uv\in E(G)$ with $u\in A$ and $v\in B$, and $f$ has the additional property that $f(u)-f(v) \neq m$ for all $u\in A$ and $v\in B$.
-\end{definition}
-
-\begin{theorem}\label{sigmadec}
-  (Freyberg and Tran, \cite{sigma}). Let $G$ be a bipartite graph with $m$ edges and a $\sigma^{+-}$-labeling such that the edge of length $m$ is a pendant edge $e$. Then there exists a $G$-decomposition of $K_{2mr}$ and $K_{2mr+1}$ for every positive integer $r$.
-\end{theorem}
-
-\begin{const}\label{K21design}
-  Let $F$ be a forest on $7$ edges and consider $K_{21}$. By \ref{Knlen}, any edge in $K_{21}$ has a length in $L=\{1,\hdots,10\}$ via $\ell$ as stated in  Definition \ref{sigmapm}. Next, by Theorem \ref{sigmadesign}, if $F_{\sigma}$ is a $\sigma^{+-}-$labeling of $F$, then $B_{\sigma}=\langle F_{\sigma}\rangle$ via $\phi_{1}:=v\mapsto v+1$ contains all edges of $K_{21}$ with lengths in $L_{\sigma}=\{1,\hdots,7\}$ by the union of it's members. Additionally, all $G\in B_{\sigma}$ are isomorphic to $F$.
-
-  Now, clearly each edge in $K_{21}$ is uniquely determined by it's endpoints. So naturally observe that if we partition the vertices of $K_{21}$ modulo $7$, a singleton edge partition of $K_{21}$ modulo $7\times 7$ is induced. Let $\ell:=ab\mapsto a+b\Mod{7}$. We now partition the edges of $K_{21}$ modulo $\sim$ where $ab\sim cd\text{ if } \ell(ab)=\ell(cd)\text{ and }\ell_{7}(ab)=\ell_{7}(cd)$, and specify each partite set $P_{i,j}$ via $ab\in P_{i,j}$ if $\ell\times \ell_{7}(ab)=(i,j)$. Each $P_{i,j}$ contains three edges in the same equivalence class modulo $\sim$; three edges of the same length $i$ which are in the same endpoint equivalence class modulo $7\times 7$. Lastly, let $L_{i}=\{uv\in E(K_{21})\mid \ell(uv)=i\},\forall i\in L$, then  $L_{i}=\bigcup_{j\in \mathbb{Z}_{7}}P_{i,j}$.
-
-  Let $\phi_{7}:=v\mapsto v+7$ and $H_{i,j}\subseteq K_{21}$ be a subgraph containing some edge $ab$ such that $\ell\times \ell_{7}(ab)=(i,j)$. Then if $G_{i,j}=\bigcup_{G\in \langle H_{i,j}\rangle_{\phi_{7}}}G,\;P_{i,j}\subseteq E(G_{i,j});$ each $G_{i,j}$ contains the partition $P_{i,j}$. Then since for any $(i,j)\in L\times \ZZ_{7},$ such a subgraph $H_{i,j}$ exists, so does such a $G_{i,j}$. Therefore, for any $i\in L$, $L_{i}\subseteq E(\bigcup_{j\in \ZZ_{7}}G_{i,j})$ for such $G_{i,j}$. In other words, we can generate all edges of length $i\in L$ in $K_{21}$ by finding subgraphs containing edges of length $i$ from each distinct equivalence class modulo $7\times 7$ and applying $\phi_{7}$ to their vertices.
-
-  So finally, if there exist edge-disjoint subgraphs $F_{1},F_{2},F_{3}\cong F$ of $K_{21}$ with only edges of lengths in $L^{*}=\{8,9,10\}$, let $B_{i}=\langle F_{i}\rangle_{\phi_{7}}$ for each $i=1,2,3$. Then $\bigcup_{i=1,2,3}B_{i}$ must contain all edges of $K_{21}$ with lengths in $L^{*}$ by the union of it's members. Let $B_{21}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}$ and recall that $B_{\sigma}$ contains all edges of lengths in $L_{\sigma}$ by the union of it's members. So then since $L=L_{\sigma}\cup L^{*},\;K_{21}=\bigcup_{G\in B_{21}}G,$ and all $G\in B_{21}$ are isomorphic to $F$ and edge disjoint by definition. Therefore,
-  \begin{center}
-  the existence of such subgraphs $F_{\sigma},F_{1},F_{2},F_{3}$ give $B_{21}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}$ an $F-$decomposition of $K_{21}.$
-  \end{center}
-
-\end{const}
-
-\begin{const}\label{K22design}
-  Let $F$ be a forest graph on seven edges and consider $K_{22}$. For this construction we simply take the $22$nd vertex to be $\infty$; we add $\infty$ to the neighborhood of each vertex in $K_{21}$, and let $\ell(x\infty)=\infty$ for all $x\in V(K_{22})$. Next, we let $B_{\sigma}$ refer to the same block as previously described in Construction \ref{K21design}. Similarly to in the previous construction, if $F_{1},F_{2},F_{3},F_{4}\cong F$ are edge-wise disjoint subgraphs of $K_{21}$ with only edges of lengths in $L^{*}=\{8,9,10\}\cup \{\infty\}$, we let $B_{i}=\langle F_{i}\rangle_{\phi_{7}}$ via $\phi_{7}$ as defined in Construction \ref{K21design} with the new condition $\ell(x\infty)=x\Mod{7}.$ Then $B_{22}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}\cup B_{4}$ has the same properties as $B_{21}$ from Construction \ref{K21design} with $L^{*}$ as defined in this construction.
-  Therefore,
-
-  \begin{center}
-  the existence of such subgraphs $F_{\sigma},F_{1},F_{2},F_{3},F_{4}$ give $B_{22}=B_{\sigma}\cup B_{1}\cup B_{2}\cup B_{3}\cup B_{4}$, an $F-$decomposition of $K_{22}.$
-  \end{center}
-\end{const}
-\newpage
-
-\begin{definition}
-  Consider any edge $uv\in E(K_{n})$. We say:
-
-  \begin{align}
-  uv\text{ is a wraparound edge if }\ell(uv)=n-|u-v|\\
-  uv\text{ is a short edge if }\ell(uv)=|u-v|\\
-  \end{align}.
-
-  Now for any edge $uv\in E(K_{n})$, without loss of generality $v<u$ and we say:   
-
-  \begin{align}
-    v\text{ is a wraparound vertex if }uv\text{ is a wraparound edge}\\
-    u\text{ is a short vertex if }\forall ux\in E(K_{n}), ux\text{ is a short edge}
-  \end{align}.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Designs for forests with seven edges} }
+\author{Daniel Banegas and Bryan Freyberg$\footnote{\texttt{email: frey0031@d.umn.edu}}$ \\
+Department of Mathematics and Statistics,\\ University of Minnesota Duluth,
+ \\1117 University Drive, Duluth, MN 55812
+ }
   
-\end{definition}
+\date{} \maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+  Read our paper!
+ \end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \section{Introduction}\label{sec:Introduction}
 
-\begin{algo}
-Let $F$ be a forest on seven edges, $\BB_{21},\BB_{22}$ be the $F-$decompositions of $K_{21},K_{22}$, respectively, given by Constructions \ref{8910Bmod21} and \ref{8910Bmod22}, and consider $K_{14t+7}$ along with $K_{14+8}$ where we take the vertices to be members of $\ZZ_{21}\cup \{\infty\}$ in the natural way (according to $C_{14t+7}$ and $C_{14+8}$ where $22 \mapsto \infty$ along with all it's incident edge lengths).
-
-For each block in 
-\end{algo}
-
-\begin{const}
-Let $F$ be a forest on seven edges and consider $K_{14t+7}$ and $K_{14t+8}$ for $t > 1\in \NN$. By definition, $K_{14t+7}$ has edge-lengths $[1,7t+3]$.
-Let us define the following edge length intervals: $I_{\sigma}=[1,7],\;I_{0}=[8,10]$ and $I_{j}=(I_{\sigma}+10)+7(j-1)=[11+7(j-1),17+7(j-1)]$ for all $j>0$.
-
-So $L=\bigcup\limits_{0\leq j\leq t}\;I_{j}\cup I_{\sigma}$ is the set of all distinct lengths in $K_{14t+7}$ and $L\cup \{\infty\}$ is the set of all distinct lengths in $K_{14t+8}$ for $t>1$. 
-\end{const}
-
-\begin{thebibliography}{99}
-
-  \bibitem{sigma}
-  B. Freyberg and N. Tran, Decomposition of complete graphs into bipartite unicyclic graphs with eight edges, J. Combin. Math. Combin. Comput., \emph{114} (2020), 133-142.
-
-  \bibitem{tripartite}
-R. C. Bunge, A. Chantasartrassmee, S.I. El-Zanati, and C. Vanden Eyn-den, On cyclic decompositions of complete graphs into tripartite graphs, \emph{J. Graph Theory} \textbf{72} (2013), 90--111.
-
-  \end{thebibliography}
-
+ \input{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \section{Tools}\label{sec:Tools}
+ 
+ \input{Tools}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \newpage
+ \section{Main Results}\label{sec:Main Results}
+ 
+ \input{Main Results}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+ \begin{thebibliography}{10}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \bibitem{AFFK}
+ J. Ahern, B. Freyberg, D. Froncek, M. Keranen, Decompositions of complete graphs into disconnected unicyclic graphs with six edges, \emph{Preprint}.
+ 
+ \bibitem{bermond3}
+ J.C. Bermond, 
+ \emph{Cycles dans les graphes et $G$-configurations,}
+ PhD Thesis, University of Paris XI,
+ Orsay, 1975.
+ 
+ \bibitem{bermond1}
+ J.C. Bermond, C. Huang., A. Rosa, and D. Sotteau, 
+ Decomposition of complete graphs into isomorphic subgraphs with five vertices, 
+ \emph{Ars Combin.} 
+ \textbf{10} (1980), 211--254.
+ 
+ \bibitem{bermond2}
+ J.C. Bermond and J. Sch\"onheim, 
+ $G$-decomposition of $K_n$, where $G$ has four vertices or less,
+ \emph{Discrete Math.} 
+ \textbf{19} (1977), 113--120.
+ 
+ \bibitem{cain}
+ P. Cain, 
+ Decomposition of complete graphs into stars, 
+ \emph{Bull. Austral. Math. Soc.} 
+ \textbf{10} (1974), 23--30.
+ 
+ \bibitem{dewerra}
+ D. de Werra, 
+ On some combinatorial problems arising in scheduling, 
+ \emph{Can. Operational Res. Soc. J.}
+ \textbf{8} (1970), 165--175.
+ 
+ \bibitem{Saad} 
+ S. El-Zanati and C. Vanden Eynden, 
+ On Rosa-type labelings and cyclic
+ graph decompositions, 
+ \emph{Math. Slovaca} \textbf{59(1)} (2009), 1--18.
+ 
+ \bibitem{FreyTran}
+ B.~Freyberg and N.~Tran,
+ {Decomposition of complete graphs into bipartite unicyclic graphs with eight edges},
+ \emph{J. Combin. Math. Combin. Comput.},  \textbf{114} (2020), 133--142.
+ 
+ \bibitem{froncek}
+ D.~Fron{c}ek and B.~Kubesa,
+ {Decomposition of complete graphs  into connected  unicyclic bipartite graphs with seven edges},
+ \emph{Bull. Inst. Combin. Appl.},  \textbf{93} (2021), 52--80.
+ 
+ \bibitem{FroncekUROP}{D. Froncek and A. Sailstad}{Decompositions of complete graphs into forests with five edges}{2024}
+ 
+ \bibitem{hanani}
+ H. Hanani, 
+ The existence and construction of balanced incomplete block designs, 
+ \emph{Ann. Math. Statist.} \textbf{32} (1961), 361--386.
+ 
+ \bibitem{huang}
+ C.~Huang and A.~Rosa, 
+ {Decomposition of complete graphs into trees},
+ \emph{Ars Combin.} \textbf{5} (1978), 23--63.
+ 
+ \bibitem{kang} 
+ Q. Kang and Z. Wang, 
+ Optimal packings and coverings of $\lambda K_{v}$ with graphs $K_{5}-P_{5}$, 
+ {\em Bull. Inst. Combin. Appl.}
+ \textbf{41} (2004),  22--41.
+ 
+ \bibitem{kirkman}
+ T.P. Kirkman,
+ On a problem in combinations,
+ \emph{Cambridge and Dublin Math. J.}
+ \textbf{2} (1847), 191--204.
+ 
+ \bibitem{kotzig}
+ A. Kotzig, 
+ Decomposition of a complete graph into $4k$-gons, 
+ \emph{Mat.-Fyz. \v Casopis Sloven. Akad. Vied} 
+ \textbf{15} (1965), 229--233.
+ 
+ \bibitem{MM}
+ M. Miszka. Personal Communication (2024).
+ 
+ \bibitem{rosa} 
+ A. Rosa, 
+ {\em On certain valuations of the vertices of a graph}, 
+ {In: Theory of Graphs (Intl. Symp. Rome 1966)}, Gordon and Breach, Dunod, Paris, 1967, 349--355.
+ 
+ \bibitem{yamamoto}
+ S. Yamamoto, H. Ikeda, S. Shige-eda, K. Ushio, and N. Hamada,
+ On claw-decomposition of complete graphs and complete bigraphs,
+ \emph{Hiroshima Math.}
+ \textbf{5} (1975), 33--42.
+ 
+ \bibitem{yin} J. Yin and B. Gong, Existence of $G$-designs with $|V(G)|=6$, In: W.D. Wallis et al (eds), Combinatorial designs and applications, Marcel Dekker, New York, 1990, 201--218.
+ 
+ \end{thebibliography}
+ %%%%%%%%%
 \end{document}

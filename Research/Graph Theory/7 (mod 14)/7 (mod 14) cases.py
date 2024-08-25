@@ -113,7 +113,7 @@ def trees(n):
     return all_trees
 
 #notebook
-t = 2
+t = 50
 inc = 14*(t-1)
 
 #? 7 (mod 14)
@@ -127,7 +127,7 @@ G3  = merge(path([12,2,11,3,16+inc,6+inc,15+inc]), path([0,13+inc]))
 G4 = merge(path([0,6,1,5, 2, 9, 7]), path([3,4]))
 
 F_61_1 = [G1,G2,G3,G4] #defines the decomposition 'object' a list of graph labelings
-visualize(14*t+7,F_61_1, '(61)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+#visualize(14*t+7,F_61_1, '(61)-1', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
 
 #*(61)-2
 G1 = merge(path([15,5,14,1-inc,9-inc,0-inc]),path([1-inc,11-inc]), path([2,10]))
@@ -136,18 +136,18 @@ G3 = merge(path([7,20+inc,8,17,6-inc,16-inc]),path([4-inc,17]), path([0,10]))
 G4 = merge(path([0,6,1,5,2,9]),path([5,3]), path([7,8]))
 
 F_61_2 = [G1,G2,G3,G4]
-visualize(14*t+7,F_61_2, '(61)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+#visualize(14*t+7,F_61_2, '(61)-2', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
 
-#& above here is generalized
+
 #*(61)-3
-G1  = merge(path([0,9,1,14,5,16]),path([5,15]), path([7,17]))
-G2  = merge(path([8,18,5,13,4,14]),path([4,16]), path([6,15]))
-G3  = merge(path([12,3,16,6,17,8]),path([4,17]), path([0,13]))
+G1  = merge(path([0-inc,9-inc,1-inc,14,5,17+inc]),path([5,15]), path([2,12]))
+G2  = merge(path([8+inc,18+inc,5,13,4,14]),path([4,16+inc]), path([7,20+inc]))
+G3  = merge(path([14,3-inc,16,6,17+inc,8+inc]),path([4,17+inc]), path([1,13+inc]))
 G4  = merge(path([0,6,1,5,2,9]),path([2,4]), path([7,8]))
 
 F_61_3 = [G1,G2,G3,G4]
 #visualize(14*t+7,F_61_3, '(61)-3', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
-
+#& above here is generalized
 #*(61)-4
 
 G1 = merge(star(5,[16,15,17,14]),path([14,1,9]), path([0,13]))
