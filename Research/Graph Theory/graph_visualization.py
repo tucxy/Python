@@ -144,6 +144,7 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
 
         T = graph_data['T']
         distinct_lengths = set(T)
+        #print(distinct_lengths)
         sorted_lengths = sorted(T, key=lambda x: float('inf') if x == '∞' else x)
         grid = [""] * 9
 
@@ -170,14 +171,18 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
         chart_start_y = start_y
         max_rows = 0
 
-        if len(distinct_lengths) > 4:
-            headers = [8, 9, 10, '∞']
+        if len(distinct_lengths) > 4: # simply sets the headers to each distinct length in chart if there are <= 4 distinct lengths
+
+            headers = distinct_lengths # sets headers of the chart next to the box; sets headers to distinct lengths
             max_rows = max(len(graph_data['l_mod_7_values'].get(key, [])) for key in headers)
-            interval_text = l_mod_7_font.render("[1,7]", True, DARK_GREEN)
+            lmin = min(headers)
+            lmax = max(headers)
+            interval_text = l_mod_7_font.render(f"[{lmin},{lmax}]", True, DARK_GREEN)
             screen.blit(interval_text, (chart_start_x + chart_width // 2 - interval_text.get_width() // 2, chart_start_y))
             pygame.draw.line(screen, (0, 0, 0), (chart_start_x, chart_start_y + 30), (chart_start_x + chart_width, chart_start_y + 30), 2)
-        else:
-            headers = [8, 9, 10, '∞']
+        else: #else if 
+            headers = distinct_lengths # sets headers of the chart next to the box; sets headers to distinct lengths
+
             for i, header in enumerate(headers):
                 text = l_mod_7_font.render(str(header), True, DARK_GREEN)
                 screen.blit(text, (chart_start_x + i * (chart_width // len(headers)) + 10, chart_start_y))
@@ -336,9 +341,9 @@ def visualize(mod, graphs, name, location="default"):
                 l_mod_7_values[l_e].append(l_mod_7)
             else:
                 l_mod_7_values[l_e] = [l_mod_7] 
-
         T = edge_lengths
         all_graph_data.append({'T': T, 'l_mod_7_values': l_mod_7_values})
+        #print(l_mod_7_values)
 
     running = True
     selected_node = None
