@@ -175,8 +175,8 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
 
             headers = distinct_lengths # sets headers of the chart next to the box; sets headers to distinct lengths
             max_rows = max(len(graph_data['l_mod_7_values'].get(key, [])) for key in headers)
-            lmin = min(headers)
-            lmax = max(headers)
+            lmin = headers[0]
+            lmax = headers[len(headers)-1]
             interval_text = l_mod_7_font.render(f"[{lmin},{lmax}]", True, DARK_GREEN)
             screen.blit(interval_text, (chart_start_x + chart_width // 2 - interval_text.get_width() // 2, chart_start_y))
             pygame.draw.line(screen, (0, 0, 0), (chart_start_x, chart_start_y + 30), (chart_start_x + chart_width, chart_start_y + 30), 2)
@@ -214,8 +214,7 @@ def draw_slider(screen, slider_rect, scale_factor):
 # Function to draw the vertical slider for vertex and label size
 def draw_vertical_slider(screen, slider_rect, vertex_scale):
     pygame.draw.rect(screen, (200, 200, 200), slider_rect)  # Slider background
-    handle_y = slider_rect.y + int((1 - vertex_scale) * slider_rect.height)
-    handle_rect = pygame.Rect(slider_rect.x, handle_y, slider_rect.width, 10)
+    handle_rect = pygame.Rect(slider_rect.x, slider_rect.y + int((1 - vertex_scale) * slider_rect.height), slider_rect.width, 10)
     pygame.draw.rect(screen, (0, 128, 0), handle_rect)  # Slider handle (DARK_GREEN)
 
 # Function to generate LaTeX code and save to specified location

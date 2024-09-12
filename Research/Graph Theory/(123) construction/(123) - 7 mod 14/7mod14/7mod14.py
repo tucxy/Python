@@ -559,6 +559,6 @@ G3 = merge(star(12, [14]), star(6, [4,7]),path([5,3]),path([13,15]),path([17,20]
 G4 = merge(star(1, [11]), star(8, [14,16]),path([0,9]),path([3,10]),path([13,17]),path([2,7]))
 
 F_211111_1 = [ G1, G2, G3, G4]
-visualize(14*t+7, F_211111_1,  '(211111)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+#visualize(14*t+7, F_211111_1,  '(211111)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
 
 #^ done up to here

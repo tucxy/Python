@@ -5,6 +5,7 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 
+
 # Scatter plot function
 def scatter(dataframe,key,color,title,label,limits): #scatterplot function
 
@@ -36,7 +37,8 @@ def bar(dataframe,key,color,title,label,ytick): #bargraph function
     plt.show()
 
 # Line plot function
-def line(dataframe, key, color, title, label,limits, ytick):  # line graph function
+def line(dataframe, key, color, title, label,limits, ytick):  
+#line graph function
     plt.figure(figsize=(10, 6))
     plt.plot(dataframe[key[0]], dataframe[key[1]], color=color, marker='o', linestyle='-', linewidth=2)
 
@@ -65,7 +67,7 @@ df = pd.read_csv(csv_path, encoding='latin1') # needed latin1
 df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], errors='coerce')
 
 # Create 'Unit Price' interval bins
-bins = [0, 1, 5, 10, 20,30,40, 50, 100, df['UnitPrice'].max()] # gives intervals
+bins = [0, 1, 5, 10, 20, 30, 40, 50, 100, df['UnitPrice'].max()] # gives intervals
 
 labels = ['0-1', '1-5','5-10', '10-20', '20-30', '30-40','40-50','50-100', '100+'] #to be used for the bar graph 'x' labels
 
