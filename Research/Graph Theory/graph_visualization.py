@@ -143,7 +143,7 @@ def draw_boxes_and_charts(screen, all_graph_data, scale_factor):
         box_start_y = start_y + 10
 
         T = graph_data['T']
-        distinct_lengths = set(T)
+        distinct_lengths = sorted(set(T), key=lambda x: float('inf') if x == '∞' else x)
         #print(distinct_lengths)
         sorted_lengths = sorted(T, key=lambda x: float('inf') if x == '∞' else x)
         grid = [""] * 9
