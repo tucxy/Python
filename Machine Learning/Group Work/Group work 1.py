@@ -23,6 +23,7 @@ def scatter(dataframe,key,color,title,label,limits): #scatterplot function
     # shows the plot
     plt.show()
 
+#Bar plot function
 def bar(dataframe,key,color,title,label,ytick): #bargraph function
     # Plot the data
     plt.figure(figsize=(10, 6))
@@ -58,7 +59,7 @@ def line(dataframe, key, color, title, label,limits, ytick):
     plt.show()
 
 # Path to online_retail.csv
-csv_path = 'C:/Users/baneg/OneDrive/Desktop/Git/Python/Machine Learning/online_retail.csv'
+csv_path = 'C:/Users/baneg/OneDrive/Desktop/Git/Python/Machine Learning/Group Work/online_retail.csv'
 
 #translates the csv to the dataframe filetype
 df = pd.read_csv(csv_path, encoding='latin1') # needed latin1
