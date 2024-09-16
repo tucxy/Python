@@ -127,7 +127,7 @@ G3  = merge(path([8,11,12,10,7,5,6]),  path([1,3]))
 G4 = merge(path([0,4,9,15,8,16,7]),  path([1,11]))
 
 F_61_1 = [ G1, G2, G3, G4] #defines the decomposition 'object' a list of graph labelings
-visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+#visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
 
 #*(61)-2
 G1 = merge(path([1,2,4,6,9,12]), path([6,7]),  path([ 14,15]))
