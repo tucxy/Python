@@ -279,39 +279,39 @@ G5 = merge(star(0, [4,5,6,7,8]), path([1,11,2]))
 
 F_52_6 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_52_6,  '(52)-6',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
-#^ done up to here
+
 #! (43)
 
 #*(43)-1
-G1 = merge(path([ 11, 1, math.inf, 0, 9]), path([ 10, 2, 12, 20]))
-G2 = merge(path([ (13+inc)%(14*t+7), 2, math.inf, 3, 11]), path([ 5, 15, 6, (18+inc)%(14*t+7)]))
-G3 = merge(path([ 12, 4, math.inf, 5, 14]), path([ 8, 0, (11+inc)%(14*t+7),( 2+inc)%(14*t+7)]))
-G4 = merge(path([ (13+inc)%(14*t+7), 0, 10, 1, 9]), path([ 5, (17+inc)%(14*t+7), 6, math.inf]))
-G5 = merge(path([ 0, 6, 1, 5, 2]), path([ 3, 10, 8, 9]))
+G1 = merge(path([5,4,2,math.inf,1]),  path([11,13,12,15]))
+G2 = merge(path([0,2,5,math.inf,6]),  path([12,10,11,8]))
+G3 = merge(path([5,7,math.inf,3,6]),  path([16,13,14,15]))
+G4 = merge(path([math.inf,4,7,10,8]),  path([13,15,16,17]))
+G5 = merge(path([4,9,15,8,16]), path([5,1,11,2]))
 
 F_43_1 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_43_1,  '(43)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #*(43)-2
-G1 = merge(path([ 20, 12, 2, 10]), path([ 2, (13+inc)%(14*t+7)]), path([ 1, math.inf, 0, 9]))
-G2 = merge(path([ (18+inc)%(14*t+7), 6, 15, 5]), path([ 15,( 4-inc)%(14*t+7)]), path([ 2, math.inf, 3, 11]))
-G3 = merge(path([ 14, 5, math.inf, 4]), path([ math.inf, 6]), path([( 0-inc)%(14*t+7), 11, 2, (15+inc)%(14*t+7)]))
-G4 = merge(path([ 1, 10, 0, (13+inc)%(14*t+7)]), path([ 0, 8]), path([ (18+inc)%(14*t+7), 5, (17+inc)%(14*t+7), 6]))
-G5 = merge(path([ 5, 8, 1, 7]), path([ 1, 6]),  path([ 0, 4, 2, 3]))
+G1 = merge(path([5,4,2,math.inf]), path([0,2]), path([11,13,12,15]))
+G2 = merge(path([2,5,math.inf,6]),path([1,math.inf]),  path([12,10,11,8]))
+G3 = merge(path([7,math.inf,3,6]), path([1,3]), path([16,13,14,15]))
+G4 = merge(path([math.inf,4,7,10]), path([5,7]),  path([13,15,16,17]))
+G5 = merge(path([16,8,15,9]), path([8,12]),  path([2,11,1,6]))
 
 F_43_2 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_43_2,  '(43)-2',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #*(43)-3
-G1 = merge(path([ 1, math.inf, 0, 9]), path([ 0, (12+inc)%(14*t+7)]), star((16+inc)%(14*t+7), [ 3, 5,( 6+inc)%(14*t+7)]))
-G2 = merge(path([ 2, math.inf, 3, 11]), path([ 3, (15+inc)%(14*t+7)]), star(8, [ (20+inc)%(14*t+7), (19+inc)%(14*t+7), 18]))
-G3 = merge(path([ (15+inc)%(14*t+7), 2, 11,( 0-inc)%(14*t+7)]), path([ 11, 20]), star(14, [ 6,( 3-inc)%(14*t+7),( 1-inc)%(14*t+7)]))
-G4 = merge(path([ 6, (17+inc)%(14*t+7), 5, (18+inc)%(14*t+7)]), path([ 5, 13]), star(math.inf, [ 12, 4, 20]))
-G5 = merge(path([ 4, 8, 1, 7]), path([ 1, 6]), star(9, [ 10, 12, 11]))
+G1 = merge(path([3,4,2,math.inf]), path([0,2]), star(13,[11,12,15]))
+G2 = merge(path([2,5,math.inf,6]),path([1,math.inf]),  star(12,[10,11,15]))
+G3 = merge(path([7,math.inf,3,6]), path([1,3]), star(14,[12,13,15]))
+G4 = merge(path([math.inf,4,7,10]), path([4,1]),  star(16,[13,15,17]))
+G5 = merge(path([16,8,15,9]), path([8,12]), star(1, [11,10,6]))
 
 F_43_3 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_43_3,  '(43)-3',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
-
+#^ done up to here
 #*(43)-4
 G1 = merge(star(16, [ 7, 6,( 5-inc)%(14*t+7),( 3-inc)%(14*t+7)]), path([ math.inf,( 0-inc)%(14*t+7), 12, 20]))
 G2 = merge(star(8, [ (20+inc)%(14*t+7), (19+inc)%(14*t+7), 18, 17]), path([ 2, math.inf, 3, 11]))
