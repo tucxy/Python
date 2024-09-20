@@ -313,31 +313,31 @@ F_43_3 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_43_3,  '(43)-3',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 #^ done up to here
 #*(43)-4
-G1 = merge(star(16, [ 7, 6,( 5-inc)%(14*t+7),( 3-inc)%(14*t+7)]), path([ math.inf,( 0-inc)%(14*t+7), 12, 20]))
-G2 = merge(star(8, [ (20+inc)%(14*t+7), (19+inc)%(14*t+7), 18, 17]), path([ 2, math.inf, 3, 11]))
-G3 = merge(star(14, [ 6, 4,( 3-inc)%(14*t+7),( 1-inc)%(14*t+7)]), path([ 20, 11, 2, (15+inc)%(14*t+7)]))
-G4 = merge(star(math.inf, [ 20, 12, 4, 1]), path([ 18,( 5-inc)%(14*t+7), 17,( 6-inc)%(14*t+7)]))
-G5 = merge(star(0, [ 6, 5, 4, 3]), path([ 2, 9, 7, 8]))
+G1 = merge(star(2, [0,1,3,4]), path([6,math.inf,8,11]))
+G2 = merge(star(math.inf, [2,3,4,5]), path([15,13,12,9]))
+G3 = merge(star(7, [4,5,6,math.inf]), path([11,12,15,14]))
+G4 = merge(star(3, [0,1,5,6]), path([10,11,13,16]))
+G5 = merge(star(1, [5,6,10,11]), path([16,8,15,9]))
 
 F_43_4 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_43_4,  '(43)-4',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #*(43)-5
-G1 = merge(star(16, [ 7,( 5-inc)%(14*t+7),( 3-inc)%(14*t+7)]), path([ 1, math.inf,( 0-inc)%(14*t+7), 12, 20]))
-G2 = merge(star(8, [ (20+inc)%(14*t+7), (19+inc)%(14*t+7), 17]), path([ 2, math.inf, 3, 11, 1]))
-G3 = merge(star(14, [ 6, 4,( 3-inc)%(14*t+7)]), path([ 20, 11, 2, (15+inc)%(14*t+7),( 7+inc)%(14*t+7)]))
-G4 = merge(star(math.inf, [ 20, 12, 4]), path([ (18+inc)%(14*t+7), 5, (17+inc)%(14*t+7), 6, 16]))
-G5 = merge(star(9, [ 12, 11, 10]), path([ 4, 8, 1, 7, 2]))
+G1 = merge(star(2, [1,3,4]), path([10,13,math.inf,8,11]))
+G2 = merge(star(math.inf, [3,4,5]), path([15,13,12,9,7]))
+G3 = merge(star(7, [4,5,math.inf]), path([11,12,15,14,13]))
+G4 = merge(star(10, [7,8,12]), path([3,4,6,9,math.inf]))
+G5 = merge(star(1, [6,10,11]), path([16,8,15,9,5]))
 
 F_43_5 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_43_5,  '(43)-5',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #*(43)-6
-G1 = merge(star(16, [ 8, 6,( 5-inc)%(14*t+7),( 3-inc)%(14*t+7)]), star((0-inc)%(14*t+7), [ math.inf, 12,( 9-inc)%(14*t+7)]))
-G2 = merge(star(8, [ math.inf, (20+inc)%(14*t+7), (19+inc)%(14*t+7), 18]), star(14, [ 6,( 3-inc)%(14*t+7),( 1-inc)%(14*t+7)]))
-G3 = merge(star(3, [ math.inf, (15+inc)%(14*t+7), 11, 13]), star(18, [ 9,( 7-inc)%(14*t+7),( 6-inc)%(14*t+7)]))
-G4 = merge(star(math.inf, [ 20, 12, 4, 2]), star(5, [ (18+inc)%(14*t+7), (17+inc)%(14*t+7), 13]))
-G5 = merge(star(0, [ 6, 5, 4, 3]), star(9, [ 8, 7, 2]))
+G1 = merge(star(8, [9,11,math.inf]), star(2, [0,3,4,5]))
+G2 = merge(star(13, [12,14,15]), star(math.inf, [2,3,4,5]))
+G3 = merge(star(12, [10,11,15]), star(7, [4,5,8,math.inf]))
+G4 = merge(star(13, [11,16,math.inf]), star(3, [0,1,4,6]))
+G5 = merge(star(1, [5,6,11,10]), star(8, [14,15,16]))
 
 F_43_6 = [ G1, G2, G3, G4, G5]
 #visualize(14*t+7, F_43_6,  '(43)-6',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
