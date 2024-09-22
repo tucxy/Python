@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Basic Notions}{2}{0}{1}
+\beamer@sectionintoc {2}{Known Results}{14}{0}{2}
+\beamer@sectionintoc {3}{Edge Length}{17}{0}{3}
+\beamer@sectionintoc {4}{Rosa-type Labelings}{31}{0}{4}
+\beamer@sectionintoc {5}{Necessary Conditions and Tools}{60}{0}{5}
+\beamer@sectionintoc {6}{Examples}{65}{0}{6}
+\beamer@sectionintoc {7}{Main Result}{70}{0}{7}

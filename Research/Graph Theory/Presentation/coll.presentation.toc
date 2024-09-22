@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Basic Graph Notation}{2}{0}{1}
+\beamer@sectionintoc {2}{Families of Graphs}{11}{0}{2}
+\beamer@sectionintoc {3}{Graph Decomposition}{31}{0}{3}
+\beamer@sectionintoc {4}{G-Decompositions}{39}{0}{4}
+\beamer@sectionintoc {5}{cyclic designs}{50}{0}{5}
+\beamer@sectionintoc {6}{Edge Length}{60}{0}{6}
+\beamer@sectionintoc {7}{Edge Length and Cyclic Decomposition}{66}{0}{7}
