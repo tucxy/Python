@@ -266,7 +266,7 @@ G3 = merge(star(3, [0,1,4,5,6]), path([11,8,7]))
 G4 = merge(star(0, [4,5,6,7,8]), path([1,11,2]))
 
 F_52_6 = [ G1, G2, G3, G4]
-#visualize(14*t+7, F_52_6,  '(52)-6',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+visualize(14*t+7, F_52_6,  '(52)-6',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
 
 #! (43)
 

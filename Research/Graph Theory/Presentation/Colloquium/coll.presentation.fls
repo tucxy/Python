@@ -1,8 +1,8 @@
-PWD c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/Graph Theory/Presentation
+PWD c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/Graph Theory/Presentation/Colloquium
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/Graph Theory/Presentation/coll.presentation.tex
+INPUT c:/Users/baneg/OneDrive/Desktop/Git/Python/Research/Graph Theory/Presentation/Colloquium/coll.presentation.tex
 OUTPUT coll.presentation.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/beamer/beamer.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/beamer/beamer.cls
