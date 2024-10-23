@@ -1,0 +1,71 @@
+@RELATION nhl_player_performance
+
+@ATTRIBUTE player_name STRING
+@ATTRIBUTE goals NUMERIC
+@ATTRIBUTE assists NUMERIC
+@ATTRIBUTE points NUMERIC
+@ATTRIBUTE shots NUMERIC
+@ATTRIBUTE ice_time_per_game NUMERIC
+@ATTRIBUTE penalty_minutes NUMERIC
+@ATTRIBUTE position {Forward, Defenseman, Goalie}
+@ATTRIBUTE team {Team_A, Team_B, Team_C, Team_D}
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE games_played NUMERIC
+@ATTRIBUTE strength {Elite, Star, Top, Good, Average, Bottom}
+@ATTRIBUTE height STRING
+@ATTRIBUTE weight NUMERIC
+@ATTRIBUTE ethnicity {Asian, Black, Caucasian, Hispanic, Other}
+@ATTRIBUTE nationality {USA, Canada, Sweden, Finland, Russia}
+@ATTRIBUTE economic_background {Low, Middle, High}
+
+@DATA
+'Player1', 15, 13, 28, 166, 24.9, 114, 'Defenseman', 'Team_A', 34, 65, 'Average', '5ft11in', 172, 'Other', 'Sweden', 'Low'
+'Player2', 46, 75, 121, 254, 23.8, 92, 'Defenseman', 'Team_D', 18, 24, 'Elite', '5ft2in', 183, 'Black', 'Sweden', 'High'
+'Player3', 5, 48, 53, 182, 19.1, 101, 'Goalie', 'Team_D', 23, 77, 'Top', '5ft6in', 168, 'Asian', 'Russia', 'Middle'
+'Player4', 59, 15, 74, 342, 20.7, 129, 'Forward', 'Team_B', 20, 46, 'Star', '5ft10in', 162, 'Hispanic', 'Sweden', 'Middle'
+'Player5', 35, 53, 88, 146, 23.9, 74, 'Defenseman', 'Team_C', 22, 39, 'Elite', '6ft4in', 173, 'Caucasian', 'Sweden', 'High'
+'Player6', 10, 12, 22, 253, 17.5, 74, 'Goalie', 'Team_A', 29, 70, 'Average', '6ft4in', 159, 'Hispanic', 'Sweden', 'High'
+'Player7', 37, 46, 83, 109, 20.6, 49, 'Forward', 'Team_B', 38, 16, 'Elite', '5ft5in', 213, 'Other', 'USA', 'Middle'
+'Player8', 25, 25, 50, 98, 18.1, 13, 'Defenseman', 'Team_A', 35, 56, 'Top', '5ft8in', 176, 'Asian', 'Canada', 'Low'
+'Player9', 67, 43, 110, 307, 20.5, 47, 'Defenseman', 'Team_D', 22, 48, 'Elite', '5ft3in', 206, 'Caucasian', 'Canada', 'High'
+'Player10', 13, 62, 75, 193, 24.4, 14, 'Defenseman', 'Team_A', 21, 56, 'Star', '5ft11in', 183, 'Caucasian', 'Sweden', 'Middle'
+'Player11', 4, 10, 14, 347, 23.9, 19, 'Forward', 'Team_A', 18, 55, 'Bottom', '6ft0in', 199, 'Other', 'Russia', 'Middle'
+'Player12', 21, 88, 109, 243, 24.4, 89, 'Goalie', 'Team_D', 22, 31, 'Elite', '6ft10in', 206, 'Other', 'Finland', 'High'
+'Player13', 22, 99, 121, 244, 22.8, 122, 'Forward', 'Team_D', 32, 26, 'Elite', '6ft5in', 173, 'Other', 'Canada', 'High'
+'Player14', 51, 71, 122, 295, 15.8, 20, 'Defenseman', 'Team_D', 20, 18, 'Elite', '5ft0in', 152, 'Asian', 'Russia', 'Middle'
+'Player15', 70, 73, 143, 127, 23.0, 96, 'Forward', 'Team_D', 35, 37, 'Elite', '6ft11in', 186, 'Hispanic', 'Canada', 'Low'
+'Player16', 25, 50, 75, 97, 16.7, 74, 'Goalie', 'Team_D', 33, 34, 'Star', '6ft5in', 192, 'Black', 'Finland', 'Low'
+'Player17', 44, 94, 138, 175, 18.7, 8, 'Forward', 'Team_D', 25, 48, 'Elite', '5ft2in', 233, 'Black', 'Canada', 'High'
+'Player18', 10, 89, 99, 91, 19.3, 129, 'Goalie', 'Team_D', 21, 23, 'Elite', '5ft9in', 230, 'Other', 'Sweden', 'Middle'
+'Player19', 7, 100, 107, 143, 20.1, 94, 'Goalie', 'Team_A', 24, 57, 'Elite', '6ft8in', 157, 'Asian', 'USA', 'High'
+'Player20', 40, 80, 120, 244, 19.3, 84, 'Defenseman', 'Team_B', 27, 0, 'Elite', '5ft9in', 246, 'Asian', 'Russia', 'Low'
+'Player21', 26, 25, 51, 279, 18.2, 76, 'Forward', 'Team_D', 21, 4, 'Top', '5ft4in', 159, 'Asian', 'Canada', 'Middle'
+'Player22', 60, 50, 110, 147, 15.3, 38, 'Forward', 'Team_A', 36, 51, 'Elite', '6ft4in', 228, 'Other', 'Sweden', 'Low'
+'Player23', 13, 15, 28, 95, 15.6, 128, 'Defenseman', 'Team_B', 30, 46, 'Average', '5ft9in', 179, 'Asian', 'Finland', 'Low'
+'Player24', 20, 11, 31, 167, 22.9, 94, 'Defenseman', 'Team_D', 39, 42, 'Average', '5ft9in', 157, 'Asian', 'Finland', 'Low'
+'Player25', 50, 49, 99, 81, 21.6, 27, 'Forward', 'Team_B', 24, 61, 'Elite', '6ft3in', 169, 'Black', 'Canada', 'Low'
+'Player26', 30, 68, 98, 224, 16.1, 73, 'Goalie', 'Team_A', 28, 3, 'Elite', '5ft5in', 231, 'Asian', 'Canada', 'Middle'
+'Player27', 2, 15, 17, 96, 18.4, 72, 'Goalie', 'Team_A', 35, 30, 'Bottom', '6ft5in', 184, 'Asian', 'Finland', 'Middle'
+'Player28', 11, 26, 37, 285, 16.8, 104, 'Defenseman', 'Team_D', 26, 51, 'Average', '5ft7in', 217, 'Hispanic', 'Finland', 'High'
+'Player29', 3, 82, 85, 159, 20.4, 83, 'Goalie', 'Team_A', 29, 48, 'Elite', '6ft1in', 242, 'Other', 'Canada', 'Middle'
+'Player30', 43, 20, 63, 137, 22.7, 119, 'Forward', 'Team_B', 37, 38, 'Star', '5ft9in', 171, 'Caucasian', 'Canada', 'High'
+'Player31', 20, 61, 81, 260, 20.4, 61, 'Forward', 'Team_B', 26, 2, 'Elite', '6ft9in', 250, 'Caucasian', 'Canada', 'Low'
+'Player32', 30, 56, 86, 345, 21.5, 42, 'Forward', 'Team_B', 44, 0, 'Elite', '6ft8in', 233, 'Asian', 'USA', 'Low'
+'Player33', 34, 1, 35, 232, 16.0, 115, 'Forward', 'Team_C', 22, 46, 'Average', '6ft11in', 227, 'Asian', 'Finland', 'Low'
+'Player34', 59, 69, 128, 152, 17.7, 29, 'Forward', 'Team_C', 30, 38, 'Elite', '6ft11in', 151, 'Asian', 'Sweden', 'High'
+'Player35', 57, 14, 71, 218, 18.5, 112, 'Forward', 'Team_C', 22, 6, 'Star', '6ft3in', 223, 'Black', 'Finland', 'High'
+'Player36', 29, 41, 70, 329, 16.9, 53, 'Forward', 'Team_B', 34, 9, 'Star', '5ft5in', 200, 'Asian', 'Canada', 'Middle'
+'Player37', 68, 12, 80, 347, 16.3, 33, 'Goalie', 'Team_C', 28, 40, 'Elite', '5ft6in', 216, 'Black', 'Russia', 'Middle'
+'Player38', 32, 52, 84, 286, 22.4, 52, 'Defenseman', 'Team_C', 19, 82, 'Elite', '5ft10in', 162, 'Hispanic', 'Russia', 'Middle'
+'Player39', 19, 95, 114, 197, 18.8, 125, 'Defenseman', 'Team_B', 32, 43, 'Elite', '6ft11in', 237, 'Caucasian', 'Canada', 'Middle'
+'Player40', 61, 5, 66, 57, 23.3, 144, 'Forward', 'Team_C', 30, 25, 'Star', '6ft3in', 172, 'Black', 'Finland', 'Low'
+'Player41', 27, 40, 67, 271, 22.7, 14, 'Forward', 'Team_A', 35, 57, 'Star', '5ft0in', 196, 'Black', 'USA', 'Middle'
+'Player42', 62, 87, 149, 121, 24.2, 74, 'Goalie', 'Team_A', 22, 45, 'Elite', '6ft9in', 250, 'Other', 'USA', 'Middle'
+'Player43', 62, 28, 90, 122, 17.1, 29, 'Goalie', 'Team_C', 38, 19, 'Elite', '6ft3in', 189, 'Caucasian', 'Russia', 'Middle'
+'Player44', 6, 15, 21, 280, 18.0, 49, 'Goalie', 'Team_C', 20, 82, 'Average', '6ft7in', 169, 'Asian', 'Russia', 'Middle'
+'Player45', 68, 53, 121, 87, 23.5, 59, 'Defenseman', 'Team_D', 26, 30, 'Elite', '5ft6in', 207, 'Asian', 'Sweden', 'Low'
+'Player46', 52, 65, 117, 268, 15.5, 108, 'Defenseman', 'Team_A', 26, 59, 'Elite', '5ft6in', 198, 'Caucasian', 'Canada', 'Middle'
+'Player47', 15, 49, 64, 285, 15.9, 14, 'Forward', 'Team_B', 26, 2, 'Star', '6ft1in', 195, 'Other', 'Sweden', 'Middle'
+'Player48', 29, 94, 123, 82, 21.0, 68, 'Forward', 'Team_A', 38, 74, 'Elite', '5ft10in', 243, 'Black', 'Sweden', 'Middle'
+'Player49', 3, 97, 100, 314, 16.6, 141, 'Defenseman', 'Team_A', 24, 40, 'Elite', '5ft2in', 211, 'Hispanic', 'Canada', 'Middle'
+'Player50', 27, 16, 43, 282, 17.9, 48, 'Goalie', 'Team_D', 39, 77, 'Good', '6ft6in', 238, 'Hispanic', 'USA', 'High'
