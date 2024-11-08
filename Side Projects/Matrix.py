@@ -29,4 +29,4 @@ A = Matrix([[-4,2],
 [0,3]])
 
 
-print(B.inv())
+print(B)

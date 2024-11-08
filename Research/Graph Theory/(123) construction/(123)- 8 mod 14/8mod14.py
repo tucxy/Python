@@ -373,7 +373,7 @@ G4 = merge(path([6,8,10,7]), path([11,10,12]), path([13,16]),path([9,math.inf]))
 G5 = merge(path([4,8,0,6]), path([5,0,7]), path([1,11]),path([3,12]))
 
 F_511_3 = [ G1, G2, G3, G4, G5]
-#visualize(14*t+7, F_511_3,  '(511)-3',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+visualize(14*t+7, F_511_3,  '(511)-3',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #*(511)-4
 G1 = merge(path([5,4,2,3]), path([7,4,2,1]),  path([8,11]),path([18,math.inf]))
