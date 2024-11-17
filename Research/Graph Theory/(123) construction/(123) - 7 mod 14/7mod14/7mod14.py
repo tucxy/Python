@@ -1,6 +1,7 @@
 import networkx as nx
 import sys
 sys.path.append('C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\Graph Theory') # here is the path with GVIS
+import graph_visualization
 from graph_visualization import visualize
 from itertools import combinations
 import math
